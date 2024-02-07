@@ -13,7 +13,7 @@ require("mason-lspconfig").setup()
 -- LSP Config
 local lspconfig = require('lspconfig')
 
-lspconfig.pyright.setup{}
+lspconfig.ruff_lsp.setup{}
 lspconfig.rust_analyzer.setup{}
 lspconfig.lua_ls.setup{}
 lspconfig.clangd.setup{}

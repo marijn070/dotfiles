@@ -1,1 +1,1 @@
-return 'mocha'
+return 'latte'
