@@ -19,8 +19,10 @@ Finally, to symlink the dotfiles to your home directory, run the following comma
 
 ```bash
 cd ~/dotfiles
-stow .
+stow --adopt *
 ```
+
+This will symlink all the dotfiles to your home directory.
 
 
 
