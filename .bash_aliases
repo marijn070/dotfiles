@@ -12,9 +12,7 @@ alias lg='lazygit'
 
 alias vim=nvim
 
-alias gitcash=/home/marijn/gnucash/gitcash.sh
-
-alias gnucash='LANGUAGE=nl_NL LANG=nl_NL gnucash'
+alias gcash='bash -c "LANGUAGE=nl_NL LANG=nl_NL gnucash" &; disown'
 
 alias tdb-studio='/home/marijn/Applications/typedb-studio-linux/typedb-studio &'
 

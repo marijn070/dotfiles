@@ -18,6 +18,11 @@ vim.o.incsearch = true
 vim.o.hlsearch = true
 vim.o.showmatch = true
 
+-- set the mouse to show spelling popup
+vim.o.mousemodel = "popup"
+
+-- set the languages for markdown to english and dutch
+
 vim.o.clipboard = "unnamedplus"
 
 
