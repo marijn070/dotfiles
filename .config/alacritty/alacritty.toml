@@ -2,6 +2,7 @@
 TERM = "xterm-256color"
 
 [window]
+decorations = "none"
 
 [window.padding]
 x = 4
