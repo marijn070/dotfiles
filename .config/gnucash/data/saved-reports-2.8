@@ -1,0 +1,206 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Kosten Driftmania", based on template "b1f15b2052c149df93e698fe85a81ea6"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("c51ca78b684c4c798827697d74a38576" "7f060b8be975471faf66dedc72b20f88" "d416576d002c437495fbff456557e17b" "d0c7a2df8c3942de887d04e2ee26b428" "0d4cb0315fb44c3f8486994bebca247c" "9120843a53e74feaa8389f342a3690b8" "dad1b835513f47bea998827e1e6810e0" "43591b1d68e04503a103fa812677a823")))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Levels of Subaccounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '3))) option))
+
+
+; Section: Display
+
+
+; Section: General
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Kosten Driftmania"
+    'report-guid "f0588c36d0b1497fb2daf741083b83ce"
+    'parent-type "b1f15b2052c149df93e698fe85a81ea6"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Standen", based on template "2e22929e5c5b4b769f615a815ef0c20f"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "2e22929e5c5b4b769f615a815ef0c20f" "General Ledger"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("ff807da7f948489c995a4831cc838a79" "d3a0120aa7544722904e9d3f261f0cbe" "aa4a677e0e1e4a2fb0c79c786614d280" "7222eb303d6040aba6e30d5c6e08b679" "7614d211c98947528e7ee0679ed9db96" "dc0ca9b90b3746bfa14ee87fb80ad6ef")))) option))
+
+
+; Section: Currency
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Account Balance")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+
+; Section: Filter
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Waar is mijn money heen"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Stylesheet")))
+  ((lambda (o) (if o (gnc:option-set-value o 'Technicolor))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . start-prev-year)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . today)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Add options summary")))
+  ((lambda (o) (if o (gnc:option-set-value o 'never))) option))
+
+
+; Section: Sorting
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'account-name))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+
+; Section: __trep
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Standen"
+    'report-guid "f71430773ce441b0b0ab5bb0017c2640"
+    'parent-type "2e22929e5c5b4b769f615a815ef0c20f"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "2e22929e5c5b4b769f615a815ef0c20f" "General Ledger")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Balans", based on template "c4173ac99b2b448289bf4d11c731af13"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "c4173ac99b2b448289bf4d11c731af13" "Balance Sheet"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("ff807da7f948489c995a4831cc838a79" "d3a0120aa7544722904e9d3f261f0cbe" "aa4a677e0e1e4a2fb0c79c786614d280" "7222eb303d6040aba6e30d5c6e08b679" "7614d211c98947528e7ee0679ed9db96" "dc0ca9b90b3746bfa14ee87fb80ad6ef")))) option))
+
+
+; Section: Commodities
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Include assets total")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Label the liabilities section")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Include liabilities total")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Label the equity section")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Include equity total")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Stylesheet")))
+  ((lambda (o) (if o (gnc:option-set-value o 'Technicolor))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Balance Sheet Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . today)))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Balans"
+    'report-guid "da7f4739cc4941f7a523fd0d82ccd18e"
+    'parent-type "c4173ac99b2b448289bf4d11c731af13"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "c4173ac99b2b448289bf4d11c731af13" "Balance Sheet")
+  )
+)
+
