@@ -1,0 +1,10 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN5qogdiI+Qsp2toGaUOxBCgbuqGwLDjaba4K98vj2uw
+	email = derijkmarijn00@gmail.com
+	name = Marijn de Rijk
