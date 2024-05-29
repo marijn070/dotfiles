@@ -24,6 +24,17 @@ stow --adopt *
 
 This will symlink all the dotfiles to your home directory.
 
+## Gnucash
 
+When installing gnucash as a Flatpak, I use flatpak override commands to set environment variables. Firstly, to set the language of gnucash to dutch, we run
 
+```bash
+sudo flatpak override --env=LANG="nl_NL" --env=LANGUAGE="nl_NL" org.gnucash.GnuCash
+```
 
+Then, to correctly set the user data and user config directories, run
+
+```bash
+sudo flatpak override --env=GNC_CONFIG_HOME="$HOME/.config/gnucash/config/" org.gnucash.GnuCash
+sudo flatpak override --env=GNC_DATA_HOME="$HOME/.config/gnucash/data/" org.gnucash.GnuCash
+```
