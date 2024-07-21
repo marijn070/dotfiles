@@ -2,11 +2,16 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#firefox bugfis
+#firefox bugfix
 export MOZ_ENABLE_WAYLAND=1
 
 export EDITOR=nvim
 export VISUAL=nvim
+
+# source .profile file
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
 
 
 set -o vi
@@ -183,3 +188,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
