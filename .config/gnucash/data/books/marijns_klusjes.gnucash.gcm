@@ -81,7 +81,7 @@ credit_width=105
 [Register c801a7fc03e2436e9987525f06de92ce]
 date_width=111
 date-due_width=111
-num_width=61
+num_width=202
 balance_width=105
 transfer_width=187
 debit_width=105
@@ -144,12 +144,67 @@ hidden_visible=false
 placeholder_visible=false
 opening-balance_visible=false
 
+[Register ad9b6619938940759c97f07f99b7a99e]
+date_width=111
+num_width=61
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
+[Register 22b2c6bf19ca401bbef11f507110fb33]
+date_width=111
+num_width=61
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
+[Customers Overview]
+column_order=name;type;owner-id;currency;address-name;address-1;address-2;address-3;address-4;phone;fax;email;balance;balance-report;notes;active;
+type_visible=false
+type_width=0
+owner-id_visible=true
+currency_visible=false
+currency_width=0
+address-name_visible=false
+address-name_width=0
+address-1_visible=true
+address-2_visible=true
+address-3_visible=false
+address-3_width=0
+address-4_visible=false
+address-4_width=0
+phone_visible=true
+fax_visible=false
+fax_width=0
+email_visible=false
+email_width=0
+balance_visible=false
+balance_width=0
+balance-report_visible=false
+balance-report_width=0
+notes_visible=false
+notes_width=0
+active_visible=false
+
+[Register 9dddec3286a74ea28558e81aff66d417]
+date_width=111
+num_width=83
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
 [Window 1]
-PageCount=4
+PageCount=8
 FirstPage=1
-PageOrder=1;4;2;3;
+PageOrder=2;1;3;5;4;6;8;7;
 WindowPosition=26;23;
-WindowGeometry=948;517;
+WindowGeometry=1904;995;
 WindowMaximized=false
 ToolbarVisible=true
 SummarybarVisible=true
@@ -162,29 +217,14 @@ AccountTypes=-1
 ShowHidden=false
 ShowZeroTotal=true
 ShowUnused=true
-SelectedAccount=Activa:Persoonlijke Rekening
+SelectedAccount=Activa:Nog te ontvangen
 OpenAccount1=Activa
-NumberOfOpenAccounts=1
+OpenAccount2=Inkomsten
+OpenAccount3=Uitgaven
+OpenAccount4=Vermogen
+NumberOfOpenAccounts=4
 
 [Page 2]
-PageType=GncPluginPageRegister
-PageName=Sparen Belasting
-RegisterType=Account
-AccountName=Activa:Sparen Belasting
-AccountGuid=5eb5584d5952477894a4204410ed58f3
-RegisterStyle=Ledger
-DoubleLineMode=false
-
-[Page 3]
-PageType=GncPluginPageRegister
-PageName=KNAB
-RegisterType=Account
-AccountName=Activa:KNAB
-AccountGuid=48a0af73d27447d6ae9ed3e7bb2bffb1
-RegisterStyle=Ledger
-DoubleLineMode=false
-
-[Page 4]
 PageType=GncPluginPageRegister
 PageName=Nog te ontvangen
 RegisterType=Account
@@ -192,3 +232,101 @@ AccountName=Activa:Nog te ontvangen
 AccountGuid=c801a7fc03e2436e9987525f06de92ce
 RegisterStyle=Ledger
 DoubleLineMode=true
+
+[Page 3]
+PageType=GncPluginPageInvoice
+PageName=Verkoopfactuur bekijken - 000027
+InvoiceType=VIEW_INVOICE
+InvoiceGUID=d163cd50dfdc4407942a3964287ef9b4
+OwnerType=gncCustomer
+OwnerGUID=8bd6ba42736a45d094468f6d5e8d0125
+isinvoiced_width=25
+date_width=111
+action_width=73
+quantity_width=78
+price_width=96
+discount_width=78
+discount-type_width=39
+discount-how_width=39
+inv-account_width=187
+istaxable_width=31
+taxincluded_width=51
+taxtable_width=146
+line-value_width=96
+line-tax-val_width=65
+
+[Page 4]
+PageType=GncPluginPageInvoice
+PageName=Verkoopfactuur bekijken - 000041
+InvoiceType=VIEW_INVOICE
+InvoiceGUID=7f8883b806614fa3bc2e76d3f0d4e7e1
+OwnerType=gncCustomer
+OwnerGUID=3c5f9863ba44417c8a55a7e28846b43f
+isinvoiced_width=25
+date_width=111
+action_width=73
+quantity_width=78
+price_width=96
+discount_width=78
+discount-type_width=39
+discount-how_width=39
+inv-account_width=187
+istaxable_width=31
+taxincluded_width=51
+taxtable_width=146
+line-value_width=96
+line-tax-val_width=65
+
+[Page 5]
+PageType=GncPluginPageReport
+PageName=Afdrukbare factuur
+SchemeOptions=(let ((options (gnc:report-template-new-options/report-guid "5123a759ceb9483abf2182d01c140e8d" "Printable Invoice"))) (let ((option (gnc:lookup-option options                                  "General"                                  "Invoice Number")))   ((lambda (o) (if o (gnc:option-set-value o "7f8883b806614fa3bc2e76d3f0d4e7e1"))) option))   (gnc:restore-report-by-guid-with-custom-template 1 "5123a759ceb9483abf2182d01c140e8d" "Printable Invoice" "" options) )
+
+[Page 6]
+PageType=GncPluginPageInvoice
+PageName=Verkoopfactuur bekijken - 000032
+InvoiceType=VIEW_INVOICE
+InvoiceGUID=48642dbdce0549398df7effdaa3e0714
+OwnerType=gncCustomer
+OwnerGUID=3c5f9863ba44417c8a55a7e28846b43f
+isinvoiced_width=25
+date_width=111
+action_width=73
+quantity_width=78
+price_width=96
+discount_width=78
+discount-type_width=39
+discount-how_width=39
+inv-account_width=187
+istaxable_width=31
+taxincluded_width=51
+taxtable_width=146
+line-value_width=96
+line-tax-val_width=65
+
+[Page 7]
+PageType=GncPluginPageInvoice
+PageName=Verkoopfactuur bekijken - 000040
+InvoiceType=VIEW_INVOICE
+InvoiceGUID=78aa2b0ed0df420888edb7b62d81e07c
+OwnerType=gncCustomer
+OwnerGUID=026f8d2a33c24a52886115c8c434e036
+isinvoiced_width=25
+date_width=111
+action_width=73
+quantity_width=78
+price_width=96
+discount_width=78
+discount-type_width=39
+discount-how_width=39
+inv-account_width=187
+istaxable_width=31
+taxincluded_width=51
+taxtable_width=146
+line-value_width=96
+line-tax-val_width=65
+
+[Page 8]
+PageType=GncPluginPageReport
+PageName=Afdrukbare factuur
+SchemeOptions=(let ((options (gnc:report-template-new-options/report-guid "5123a759ceb9483abf2182d01c140e8d" "Printable Invoice"))) (let ((option (gnc:lookup-option options                                  "General"                                  "Invoice Number")))   ((lambda (o) (if o (gnc:option-set-value o "78aa2b0ed0df420888edb7b62d81e07c"))) option))   (gnc:restore-report-by-guid-with-custom-template 0 "5123a759ceb9483abf2182d01c140e8d" "Printable Invoice" "" options) )

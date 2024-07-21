@@ -182,12 +182,49 @@ hidden_visible=false
 placeholder_visible=false
 opening-balance_visible=false
 
+[Register 2aa60ab4da6c4e669cb110b9df974714]
+date_width=111
+num_width=61
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
+[Register 612df534d381416fbfe468ec4ac29943]
+date_width=111
+num_width=61
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
+[Register 28d1e45e89374c1f8190c46488445973]
+date_width=111
+num_width=61
+reconcile_width=25
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+
+[Register d3a0120aa7544722904e9d3f261f0cbe]
+date_width=111
+date-due_width=111
+num_width=61
+balance_width=105
+transfer_width=187
+debit_width=105
+credit_width=105
+split-type_width=24
+
 [Window 1]
-PageCount=5
+PageCount=3
 FirstPage=1
-PageOrder=2;1;4;5;3;
+PageOrder=1;2;3;
 WindowPosition=26;23;
-WindowGeometry=948;1027;
+WindowGeometry=1904;995;
 WindowMaximized=false
 ToolbarVisible=true
 SummarybarVisible=true
@@ -200,23 +237,13 @@ AccountTypes=-1
 ShowHidden=false
 ShowZeroTotal=true
 ShowUnused=true
-SelectedAccount=Uitgaven:Vaste Lasten:Energie
+SelectedAccount=Uitgaven:Uitsplitsing Vaste Lasten
 OpenAccount1=Activa
 OpenAccount2=Huisgenoten
 OpenAccount3=Uitgaven
-OpenAccount4=Uitgaven:Vaste Lasten
-NumberOfOpenAccounts=4
+NumberOfOpenAccounts=3
 
 [Page 2]
-PageType=GncPluginPageRegister
-PageName=Energie
-RegisterType=Account
-AccountName=Uitgaven:Vaste Lasten:Energie
-AccountGuid=9120843a53e74feaa8389f342a3690b8
-RegisterStyle=Ledger
-DoubleLineMode=false
-
-[Page 3]
 PageType=GncPluginPageRegister
 PageName=Uitsplitsing Vaste Lasten
 RegisterType=Account
@@ -225,16 +252,11 @@ AccountGuid=681ac691787e4b73b4eb6ff67751e0a6
 RegisterStyle=Ledger
 DoubleLineMode=false
 
-[Page 4]
-PageType=GncPluginPageReport
-PageName=Ontwikkeling kosten
-SchemeOptions=(let ((options (gnc:report-template-new-options/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time"))) (let ((option (gnc:lookup-option options                                  "Accounts"                                  "Accounts")))   ((lambda (o) (if o (gnc:option-set-value o '("c51ca78b684c4c798827697d74a38576" "7f060b8be975471faf66dedc72b20f88" "d416576d002c437495fbff456557e17b" "d0c7a2df8c3942de887d04e2ee26b428" "0d4cb0315fb44c3f8486994bebca247c" "9120843a53e74feaa8389f342a3690b8" "dad1b835513f47bea998827e1e6810e0" "43591b1d68e04503a103fa812677a823" "681ac691787e4b73b4eb6ff67751e0a6")))) option)) (let ((option (gnc:lookup-option options                                  "General"                                  "Start Date")))   ((lambda (o) (if o (gnc:option-set-value o '(relative . start-prev-year)))) option))   (gnc:restore-report-by-guid-with-custom-template 6 "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time" "" options) )
-
-[Page 5]
+[Page 3]
 PageType=GncPluginPageRegister
-PageName=borg
+PageName=Ward
 RegisterType=Account
-AccountName=borg
-AccountGuid=9954d046028c489493b874766fefc324
+AccountName=Huisgenoten:Ward
+AccountGuid=d3a0120aa7544722904e9d3f261f0cbe
 RegisterStyle=Ledger
-DoubleLineMode=false
+DoubleLineMode=true

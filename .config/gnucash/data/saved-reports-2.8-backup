@@ -11,11 +11,6 @@
 
 (let ((option (gnc:lookup-option options
                                  "Accounts"
-                                 "Accounts")))
-  ((lambda (o) (if o (gnc:option-set-value o '("c51ca78b684c4c798827697d74a38576" "7f060b8be975471faf66dedc72b20f88" "d416576d002c437495fbff456557e17b" "d0c7a2df8c3942de887d04e2ee26b428" "0d4cb0315fb44c3f8486994bebca247c" "9120843a53e74feaa8389f342a3690b8" "dad1b835513f47bea998827e1e6810e0" "43591b1d68e04503a103fa812677a823")))) option))
-
-(let ((option (gnc:lookup-option options
-                                 "Accounts"
                                  "Levels of Subaccounts")))
   ((lambda (o) (if o (gnc:option-set-value o '3))) option))
 
@@ -41,7 +36,7 @@
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Options for saved report "Waar is mijn money heen", based on template "2e22929e5c5b4b769f615a815ef0c20f"
+;; Options for saved report "Standen", based on template "2e22929e5c5b4b769f615a815ef0c20f"
 (let ()
   (define (options-gen)
     (let
@@ -120,12 +115,51 @@
   )
   (gnc:define-report 
     'version 1
-    'name "Waar is mijn money heen"
+    'name "Standen"
     'report-guid "f71430773ce441b0b0ab5bb0017c2640"
     'parent-type "2e22929e5c5b4b769f615a815ef0c20f"
     'options-generator options-gen
     'menu-path (list gnc:menuname-custom)
     'renderer (gnc:report-template-renderer/report-guid "2e22929e5c5b4b769f615a815ef0c20f" "General Ledger")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Stacks", based on template "c146317be32e4948a561ec7fc89d15c1"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "c146317be32e4948a561ec7fc89d15c1" "Customer Report"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Display Columns
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Stacks"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Customer")))
+  ((lambda (o) (if o (gnc:option-set-value o '(2 . "026f8d2a33c24a52886115c8c434e036")))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Stacks"
+    'report-guid "0b4097aecc254d0487ef87448a4844fe"
+    'parent-type "c146317be32e4948a561ec7fc89d15c1"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "c146317be32e4948a561ec7fc89d15c1" "Customer Report")
   )
 )
 
