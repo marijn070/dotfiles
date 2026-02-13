@@ -7,8 +7,8 @@ export LC_ALL=nl_NL.UTF-8
 # Run whichever Gnucash is available
 if command -v gnucash >/dev/null 2>&1; then
     exec gnucash "$@"
-elif flatpak info org.gnucash.Gnucash >/dev/null 2>&1; then
-    exec flatpak run org.gnucash.Gnucash "$@"
+elif flatpak info org.gnucash.GnuCash >/dev/null 2>&1; then
+    exec flatpak run org.gnucash.GnuCash "$@"
 else
     echo "Gnucash not installed!" >&2
     exit 1
