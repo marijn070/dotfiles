@@ -44,6 +44,9 @@ if not set -q SSH_AUTH_SOCK
     set SSH_AUTH_SOCK $HOME/.1password/agent.sock
 end
 
+# set zed as editor
+set -gx EDITOR zed
+
 # aliases
 alias cat='bat'
 alias la='ls -a'
