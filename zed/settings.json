@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "project_panel": {
+        "indent_size": 20.0,
+        "folder_icons": true,
+        "file_icons": true,
+        "entry_spacing": "standard",
+    },
     "base_keymap": "JetBrains",
     "buffer_font_family": ".ZedMono",
     "ui_font_family": ".SystemUIFont",
@@ -26,33 +32,33 @@
                             "images": false,
                             "parallel_tool_calls": false,
                             "prompt_cache_key": false,
-                            "chat_completions": true
-                        }
-                    }
-                ]
-            }
-        }
+                            "chat_completions": true,
+                        },
+                    },
+                ],
+            },
+        },
     },
     "which_key": {
-        "enabled": true
+        "enabled": true,
     },
     "git_panel": {
-        "dock": "right"
+        "dock": "right",
     },
     "edit_predictions": {
         "provider": "zed",
         "mode": "subtle",
         "copilot": {
             "proxy": null,
-            "proxy_no_verify": null
+            "proxy_no_verify": null,
         },
-        "enabled_in_text_threads": false
+        "enabled_in_text_threads": false,
     },
     "inlay_hints": {
-        "enabled": true
+        "enabled": true,
     },
     "file_types": {
-        "Turtle": ["rq"]
+        "Turtle": ["rq"],
     },
     "ssh_connections": [
         {
@@ -60,51 +66,51 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["~/stacks"]
-                }
-            ]
+                    "paths": ["~/stacks"],
+                },
+            ],
         },
         {
             "host": "kasdevcontainer.devpod",
             "args": [],
-            "projects": []
-        }
+            "projects": [],
+        },
     ],
     "format_on_save": "on",
     "languages": {
         "JSONC": {
-            "tab_size": 4
+            "tab_size": 4,
         },
         "JSON": {
             "hard_tabs": false,
             "tab_size": 4,
-            "formatter": "auto"
+            "formatter": "auto",
         },
         "Go": {
-            "show_edit_predictions": false
+            "show_edit_predictions": false,
         },
         "Rust": {
-            "show_edit_predictions": false
+            "show_edit_predictions": false,
         },
         "C": {
-            "show_edit_predictions": false
+            "show_edit_predictions": false,
         },
         "Python": {
             "language_servers": ["ruff", "ty"],
             "format_on_save": "on",
             "formatter": [
                 {
-                    "code_action": "source.organizeImports.ruff"
+                    "code_action": "source.organizeImports.ruff",
                 },
                 {
-                    "code_action": "source.fixAll.ruff"
+                    "code_action": "source.fixAll.ruff",
                 },
                 {
                     "language_server": {
-                        "name": "ruff"
-                    }
-                }
-            ]
+                        "name": "ruff",
+                    },
+                },
+            ],
         },
         "C++": {
             "formatter": {
@@ -112,12 +118,12 @@
                     "command": "clang-format",
                     "arguments": [
                         "--style=file",
-                        "--assume-filename={buffer_path}"
-                    ]
-                }
+                        "--assume-filename={buffer_path}",
+                    ],
+                },
             },
-            "format_on_save": "on"
-        }
+            "format_on_save": "on",
+        },
     },
     "lsp": {
         "ruff": {
@@ -125,29 +131,29 @@
                 "settings": {
                     "lineLength": 100,
                     "lint": {
-                        "extendSelect": ["I"]
-                    }
-                }
-            }
+                        "extendSelect": ["I"],
+                    },
+                },
+            },
         },
         "rust-analyzer": {
             "initialization_options": {
                 "checkOnSave": true,
                 "check": {
-                    "command": "clippy"
-                }
-            }
+                    "command": "clippy",
+                },
+            },
         },
         "yaml-language-server": {
             "initialization_options": {
                 "yaml": {
                     "schemaStore": {
-                        "enable": false
+                        "enable": false,
                     },
-                    "disableAdditionalPropertiesWarnings": [521]
-                }
-            }
-        }
+                    "disableAdditionalPropertiesWarnings": [521],
+                },
+            },
+        },
     },
     "terminal": {
         "cursor_shape": "block",
@@ -155,29 +161,29 @@
         "font_family": "FiraMono Nerd Font Mono",
         "line_height": "standard",
         "shell": {
-            "program": "fish"
+            "program": "fish",
         },
         "working_directory": "current_project_directory",
         "detect_venv": {
             "on": {
                 "directories": [".venv", "venv"],
-                "activate_script": "fish"
-            }
-        }
+                "activate_script": "fish",
+            },
+        },
     },
     "agent": {
         "always_allow_tool_actions": true,
         "single_file_review": true,
         "inline_assistant_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-5"
+            "model": "claude-sonnet-4-5",
         },
         "default_profile": "ask",
         "dock": "right",
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-5"
-        }
+            "model": "claude-sonnet-4-5",
+        },
     },
     "vim_mode": true,
     "relative_line_numbers": "enabled",
@@ -185,5 +191,5 @@
     "buffer_font_size": 16.0,
     "vertical_scroll_margin": 8,
     "soft_wrap": "editor_width",
-    "theme": "Omazed"
+    "theme": "Omazed",
 }
