@@ -1,0 +1,81 @@
+---
+# Install 1Password and 1Password CLI across all distros
+
+# Arch Linux
+- name: Check if 1Password is already installed on Arch Linux
+  command: 1password --version
+  register: onepassword_installed
+  failed_when: false
+  changed_when: false
+  when: ansible_os_family == "Archlinux"
+
+- name: Install 1Password on Arch Linux
+  block:
+    - name: Check if yay is installed
+      command: which yay
+      register: yay_check
+      failed_when: false
+      changed_when: false
+
+    - name: Install 1Password from AUR using yay
+      command: yay -S --noconfirm 1password 1password-cli
+      become: false
+      become_user: "{{ actual_user }}"
+      register: yay_install
+      failed_when: false
+      when: yay_check.rc == 0
+
+    - name: Warn if yay is not installed
+      debug:
+        msg: "Warning: yay is not installed. Cannot install 1Password from AUR. Please install yay first."
+      when: yay_check.rc != 0
+  when: ansible_os_family == "Archlinux" and onepassword_installed.rc != 0
+
+# Fedora
+- name: Install 1Password on Fedora
+  block:
+    - name: Download 1Password RPM package
+      get_url:
+        url: https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm
+        dest: /tmp/1password-latest.rpm
+        mode: "0644"
+
+    - name: Install 1Password RPM package
+      dnf:
+        name: /tmp/1password-latest.rpm
+        state: present
+        disable_gpg_check: false
+
+    - name: Clean up downloaded RPM
+      file:
+        path: /tmp/1password-latest.rpm
+        state: absent
+  when: ansible_distribution == "Fedora"
+
+# Debian/Ubuntu
+- name: Install 1Password on Debian/Ubuntu
+  block:
+    - name: Install required dependencies
+      apt:
+        name:
+          - curl
+          - gpg
+        state: present
+        update_cache: true
+
+    - name: Download 1Password DEB package
+      get_url:
+        url: https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
+        dest: /tmp/1password-latest.deb
+        mode: "0644"
+
+    - name: Install 1Password DEB package
+      apt:
+        deb: /tmp/1password-latest.deb
+        state: present
+
+    - name: Clean up downloaded DEB
+      file:
+        path: /tmp/1password-latest.deb
+        state: absent
+  when: ansible_os_family == "Debian"

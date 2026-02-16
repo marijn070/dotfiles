@@ -74,28 +74,19 @@
   when: ansible_distribution == "Fedora"
 
 # Install CLI tools on Debian/Ubuntu (apt)
-- name: Install base CLI tools on Debian/Ubuntu
+- name: Install CLI tools on Debian/Ubuntu
   apt:
     name:
+      - eza
       - bat
       - fish
       - fzf
       - ripgrep
       - fd-find
+      - zoxide
     state: present
     update_cache: true
   when: ansible_os_family == "Debian"
-
-# Install tools via cargo for Debian/Ubuntu (when not in repos)
-- name: Install eza via cargo on Debian/Ubuntu
-  shell: "{{ cargo_bin }} install eza"
-  args:
-    creates: "{{ actual_home }}/.cargo/bin/eza"
-  when: ansible_os_family == "Debian"
-  become: false
-  become_user: "{{ actual_user }}"
-  environment:
-    CARGO_HOME: "{{ actual_home }}/.cargo"
 
 - name: Download starship installer
   get_url:
@@ -109,16 +100,6 @@
   args:
     creates: /usr/local/bin/starship
   when: ansible_os_family == "Debian"
-
-- name: Install zoxide via cargo on Debian/Ubuntu
-  shell: "{{ cargo_bin }} install zoxide"
-  args:
-    creates: "{{ actual_home }}/.cargo/bin/zoxide"
-  when: ansible_os_family == "Debian"
-  become: false
-  become_user: "{{ actual_user }}"
-  environment:
-    CARGO_HOME: "{{ actual_home }}/.cargo"
 
 # Create symlinks for differently named packages on Debian/Ubuntu
 - name: Create symlink for bat on Debian/Ubuntu
