@@ -9,7 +9,7 @@
       - eza
       - zoxide
       - bat
-      - fd
+      - "{{ 'fd-find' if ansible_facts['os_family'] == 'Debian' else 'fd' }}"
     state: present
 
 # Create symlinks for differently named packages on Debian/Ubuntu
