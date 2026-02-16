@@ -77,18 +77,13 @@
 - name: Install base CLI tools on Debian/Ubuntu
   apt:
     name:
+      - bat
       - fish
       - fzf
       - ripgrep
       - fd-find
     state: present
     update_cache: true
-  when: ansible_os_family == "Debian"
-
-- name: Install bat on Debian/Ubuntu
-  apt:
-    name: batcat
-    state: present
   when: ansible_os_family == "Debian"
 
 # Install tools via cargo for Debian/Ubuntu (when not in repos)
