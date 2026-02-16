@@ -7,7 +7,7 @@
   register: onepassword_installed
   failed_when: false
   changed_when: false
-  when: ansible_os_family == "Archlinux"
+  when: ansible_facts['os_family'] == "Archlinux"
 
 - name: Install 1Password on Arch Linux
   block:
@@ -29,7 +29,7 @@
       debug:
         msg: "Warning: yay is not installed. Cannot install 1Password from AUR. Please install yay first."
       when: yay_check.rc != 0
-  when: ansible_os_family == "Archlinux" and onepassword_installed.rc != 0
+  when: ansible_facts['os_family'] == "Archlinux" and onepassword_installed.rc != 0
 
 # Fedora
 - name: Install 1Password on Fedora
@@ -50,7 +50,7 @@
       file:
         path: /tmp/1password-latest.rpm
         state: absent
-  when: ansible_distribution == "Fedora"
+  when: ansible_facts['distribution'] == "Fedora"
 
 # Debian/Ubuntu
 - name: Install 1Password on Debian/Ubuntu
@@ -78,4 +78,4 @@
       file:
         path: /tmp/1password-latest.deb
         state: absent
-  when: ansible_os_family == "Debian"
+  when: ansible_facts['os_family'] == "Debian"

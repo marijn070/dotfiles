@@ -1,12 +1,16 @@
 ---
 - name: Setup development environment
   hosts: localhost
+  gather_facts: true
   become: true
   vars:
     ansible_python_interpreter: /usr/bin/python3
+    actual_user: "{{ lookup('env', 'USER') }}"
+    actual_home: "{{ lookup('env', 'HOME') }}"
 
   roles:
-    - onepassword
+    # - onepassword
+    - rust
     - cli_tools
     - zen_browser
     - chezmoi_setup

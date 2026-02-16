@@ -8,6 +8,7 @@
   stat:
     path: /opt/zen-browser-bin/zen
   register: zen_installed
+  become: false
 
 - name: Download Zen Browser tarball
   get_url:
