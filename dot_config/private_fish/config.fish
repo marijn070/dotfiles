@@ -30,18 +30,23 @@ enable_transience
 # Source helper functions (inspired by omarchy)
 source $__fish_config_dir/helpers.fish
 
+# get venv to work
+set -gx WORKON_HOME $HOME/.virtualenvs
+set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3
+
 # use the 1password plugin
 if test -e ~/.config/op/plugins.sh
     source ~/.config/op/plugins.sh
 end
 
-# get venv to work
-set -gx WORKON_HOME $HOME/.virtualenvs
-set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3
-
 # set 1password as the ssh key agent
 if not set -q SSH_AUTH_SOCK
     set SSH_AUTH_SOCK $HOME/.1password/agent.sock
+end
+
+# get op cli completions
+if command -q op
+    op completion fish | source
 end
 
 # set zed as editor
