@@ -1,4 +1,11 @@
 ---
+# Get the actual user's home directory before any become operations
+- name: Get actual user information
+  set_fact:
+    actual_user: "{{ lookup('env', 'USER') }}"
+    actual_home: "{{ lookup('env', 'HOME') }}"
+  become: false
+
 # Install Rust toolchain in user's home directory
 - name: Check if cargo is installed for user
   command: which cargo
@@ -6,6 +13,7 @@
   failed_when: false
   changed_when: false
   become: false
+  become_user: "{{ actual_user }}"
 
 - name: Install dependencies for Rust installation
   package:
@@ -19,21 +27,21 @@
     dest: /tmp/rustup-init.sh
     mode: "0755"
   when: cargo_check.rc != 0
-  become: false
 
 - name: Install Rust via rustup in user home directory
   shell: /tmp/rustup-init.sh -y
   args:
-    creates: "{{ ansible_env.HOME }}/.cargo/bin/cargo"
+    creates: "{{ actual_home }}/.cargo/bin/cargo"
   when: cargo_check.rc != 0
   become: false
+  become_user: "{{ actual_user }}"
   environment:
-    CARGO_HOME: "{{ ansible_env.HOME }}/.cargo"
-    RUSTUP_HOME: "{{ ansible_env.HOME }}/.rustup"
+    CARGO_HOME: "{{ actual_home }}/.cargo"
+    RUSTUP_HOME: "{{ actual_home }}/.rustup"
 
 - name: Set cargo binary path
   set_fact:
-    cargo_bin: "{{ ansible_env.HOME }}/.cargo/bin/cargo"
+    cargo_bin: "{{ actual_home }}/.cargo/bin/cargo"
 
 # Install CLI tools on Arch Linux (pacman)
 - name: Install CLI tools on Arch Linux
@@ -87,11 +95,12 @@
 - name: Install eza via cargo on Debian/Ubuntu
   shell: "{{ cargo_bin }} install eza"
   args:
-    creates: "{{ ansible_env.HOME }}/.cargo/bin/eza"
+    creates: "{{ actual_home }}/.cargo/bin/eza"
   when: ansible_os_family == "Debian"
   become: false
+  become_user: "{{ actual_user }}"
   environment:
-    CARGO_HOME: "{{ ansible_env.HOME }}/.cargo"
+    CARGO_HOME: "{{ actual_home }}/.cargo"
 
 - name: Download starship installer
   get_url:
@@ -109,11 +118,12 @@
 - name: Install zoxide via cargo on Debian/Ubuntu
   shell: "{{ cargo_bin }} install zoxide"
   args:
-    creates: "{{ ansible_env.HOME }}/.cargo/bin/zoxide"
+    creates: "{{ actual_home }}/.cargo/bin/zoxide"
   when: ansible_os_family == "Debian"
   become: false
+  become_user: "{{ actual_user }}"
   environment:
-    CARGO_HOME: "{{ ansible_env.HOME }}/.cargo"
+    CARGO_HOME: "{{ actual_home }}/.cargo"
 
 # Create symlinks for differently named packages on Debian/Ubuntu
 - name: Create symlink for bat on Debian/Ubuntu
@@ -146,5 +156,5 @@
 
 - name: Change default shell to fish for current user
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ actual_user }}"
     shell: "{{ fish_path.stdout }}"
