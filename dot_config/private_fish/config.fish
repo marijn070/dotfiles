@@ -8,6 +8,7 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 fish_add_path -p ~/.local/bin
 fish_add_path -p ~/bin
+fish_add_path -p ~/.cargo/bin
 
 # rustup shell setup
 fish_add_path -p $HOME/.cargo/bin
