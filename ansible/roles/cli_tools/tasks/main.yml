@@ -9,9 +9,40 @@
       - eza
       - zoxide
       - bat
-      - bat-extras #needed for the bat man pager
       - "{{ 'fd-find' if ansible_facts['os_family'] == 'Debian' else 'fd' }}"
     state: present
+
+# Install bat-extras package
+- name: Install bat-extras Arch
+  package:
+    name:
+      - bat-extras
+    state: present
+  when: ansible_facts['os_family'] == 'Arch'
+
+- name: Clone bat-extras repository on Debian
+  git:
+    repo: https://github.com/eth-p/bat-extras.git
+    dest: /tmp/bat-extras
+    version: master
+  when: ansible_facts['os_family'] == 'Debian'
+
+- name: Build and install bat-extras on Debian
+  command: ./build.sh --install --prefix=/usr/local --alternate-executable:cat=batcat
+  args:
+    chdir: /tmp/bat-extras
+  when: ansible_facts['os_family'] == 'Debian'
+
+- name: Enable bat-extras COPR repository on Fedora
+  command: dnf copr enable awood/bat-extras -y
+  when: ansible_facts['os_family'] == 'RedHat'
+
+- name: Install bat-extras Fedora
+  package:
+    name:
+      - bat-extras
+    state: present
+  when: ansible_facts['os_family'] == 'RedHat'
 
 # Create symlinks for differently named packages on Debian/Ubuntu
 - name: Create symlink for bat on Debian/Ubuntu
