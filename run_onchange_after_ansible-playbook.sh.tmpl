@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# This script runs whenever the ansible folder contents change
+# The hash comments below ensure chezmoi detects changes in the ansible directory
+{{ range (glob "ansible/**") }}
+# {{ . }}: {{ include . | sha256sum }}
+{{ end }}
+
+echo "Detected changes in ansible folder. Running playbook..."
+
+cd "${HOME}/.local/share/chezmoi/ansible" || exit 1
+
+# Check if ansible is installed
+if ! command -v ansible-playbook >/dev/null 2>&1; then
+    echo "Error: Ansible is not installed. Please run the ansible-setup script first."
+    exit 1
+fi
+
+# Run playbook (will prompt for sudo password)
+ansible-playbook -i inventory.yml playbook.yml --ask-become-pass
+
+echo "Ansible playbook execution complete!"
