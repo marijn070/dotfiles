@@ -28,7 +28,7 @@
   when: ansible_facts['os_family'] == 'Debian'
 
 - name: Build and install bat-extras on Debian
-  command: ./build.sh --install --prefix=/usr/local --alternate-executable:cat=batcat
+  command: ./build.sh --install --prefix=/usr/local
   args:
     chdir: /tmp/bat-extras
   when: ansible_facts['os_family'] == 'Debian'
