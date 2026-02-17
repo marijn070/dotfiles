@@ -9,6 +9,7 @@
       - eza
       - zoxide
       - bat
+      - bat-extras #needed for the bat man pager
       - "{{ 'fd-find' if ansible_facts['os_family'] == 'Debian' else 'fd' }}"
     state: present
 

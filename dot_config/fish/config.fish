@@ -53,6 +53,9 @@ end
 # set zed as editor
 set -gx EDITOR zed
 
+# Use bat as man pager with nice colors
+batman --export-env | source
+
 # aliases
 alias cat='bat'
 alias la='ls -a'
