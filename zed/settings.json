@@ -178,7 +178,7 @@
             "provider": "zed.dev",
             "model": "claude-sonnet-4-5",
         },
-        "default_profile": "ask",
+        "default_profile": "write",
         "dock": "right",
         "default_model": {
             "provider": "zed.dev",
