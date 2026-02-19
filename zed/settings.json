@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "auto_update_extensions": {
+        "iwe": false
+    },
     "project_panel": {
         "indent_size": 20.0,
         "folder_icons": true,
@@ -191,5 +194,5 @@
     "buffer_font_size": 16.0,
     "vertical_scroll_margin": 8,
     "soft_wrap": "editor_width",
-    "theme": "Omazed",
+    "theme": "Rose Pine",
 }
