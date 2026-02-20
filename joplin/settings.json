@@ -8,10 +8,14 @@
 	"locale": "en_GB",
 	"theme": 2,
 	"layoutButtonSequence": 1,
+	"editor.tabMovesFocus": true,
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
-	"style.editor.fontFamily": "",
-	"style.editor.monospaceFontFamily": "",
+	"style.editor.fontSize": 15,
+	"style.editor.fontFamily": "Vollkorn",
+	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
+	"style.viewer.fontFamily": "Vollkorn",
+	"style.editor.contentMaxWidth": 800,
 	"ui.layout": {
 		"key": "root",
 		"children": [
