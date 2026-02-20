@@ -6,16 +6,8 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 1,
+	"theme": 2,
 	"layoutButtonSequence": 1,
-	"editor.tabMovesFocus": true,
-	"notes.sortOrder.reverse": true,
-	"notes.perFieldReverse": {
-		"user_updated_time": true,
-		"user_created_time": true,
-		"title": false,
-		"order": false
-	},
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
 	"style.editor.fontFamily": "",
@@ -41,7 +33,7 @@
 		"visible": true
 	},
 	"noteVisiblePanes": [
-		"editor"
+		"viewer"
 	],
 	"editor.keyboardMode": "vim",
 	"editor.spellcheckBeta": true,
