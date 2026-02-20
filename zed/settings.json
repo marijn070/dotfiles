@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "semantic_tokens": "off",
     "auto_update_extensions": {
         "iwe": false
     },
@@ -82,6 +83,9 @@
     "format_on_save": "on",
     "languages": {
         "Elixir": {
+            "tasks": {
+                "prefer_lsp": true
+            },
             "show_edit_predictions": false
         },
         "JSONC": {
