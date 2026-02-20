@@ -81,6 +81,9 @@
     ],
     "format_on_save": "on",
     "languages": {
+        "Elixir": {
+            "show_edit_predictions": false
+        },
         "JSONC": {
             "tab_size": 4,
         },
@@ -161,7 +164,7 @@
     "terminal": {
         "cursor_shape": "block",
         "dock": "bottom",
-        "font_family": "FiraMono Nerd Font Mono",
+        "font_family": "JetBrainsMono Nerd Font Mono",
         "line_height": "standard",
         "shell": {
             "program": "fish",
@@ -175,7 +178,9 @@
         },
     },
     "agent": {
-        "always_allow_tool_actions": true,
+        "tool_permissions": {
+            "default": "allow"
+        },
         "single_file_review": true,
         "inline_assistant_model": {
             "provider": "zed.dev",
@@ -194,5 +199,5 @@
     "buffer_font_size": 16.0,
     "vertical_scroll_margin": 8,
     "soft_wrap": "editor_width",
-    "theme": "Rose Pine",
+    "theme": "Catppuccin Latte",
 }
