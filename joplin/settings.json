@@ -8,7 +8,7 @@
 	"locale": "en_GB",
 	"theme": 2,
 	"layoutButtonSequence": 1,
-	"editor.tabMovesFocus": true,
+	"editor.tabMovesFocus": false,
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
 	"style.editor.fontSize": 15,
@@ -21,12 +21,12 @@
 		"children": [
 			{
 				"key": "sideBar",
-				"width": 193,
+				"width": 184,
 				"visible": true
 			},
 			{
 				"key": "noteList",
-				"width": 193,
+				"width": 167,
 				"visible": true
 			},
 			{
@@ -36,8 +36,9 @@
 		],
 		"visible": true
 	},
+	"clipperServer.autoStart": true,
 	"noteVisiblePanes": [
-		"viewer"
+		"editor"
 	],
 	"editor.keyboardMode": "vim",
 	"editor.spellcheckBeta": true,

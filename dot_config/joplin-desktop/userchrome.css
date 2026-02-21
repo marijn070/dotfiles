@@ -15,6 +15,10 @@
     font-weight: 350 !important;
 }
 
+.cm-content :not(.cm-codeBlock, .cm-inlineCode) {
+    font-family: inherit !important;
+}
+
 /*make the monospace font size smaller*/
 .cm-editor .cm-inlineCode {
     font-size: 0.82em !important;
