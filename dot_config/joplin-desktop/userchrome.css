@@ -1,0 +1,34 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+/* force all UI text to your font */
+
+:not(
+    .cm-content,
+    .cm-codeBlock,
+    .cm-inlineCode,
+    [role="img"],
+    [class^="fa-"],
+    [class*=" fa-"],
+    [class^="icon-"],
+    [class*=" icon-"]
+) {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 350 !important;
+}
+
+/*make the monospace font size smaller*/
+.cm-editor .cm-inlineCode {
+    font-size: 0.82em !important;
+}
+
+.cm-editor .cm-codeBlock {
+    font-size: 0.82em !important;
+}
+
+/*remove double underscore for links*/
+.cm-editor .cm-ext-unfocused-link {
+    text-decoration: none !important;
+}
+
+.cm-editor .tok-link {
+    text-decoration: underline !important;
+}

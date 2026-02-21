@@ -18,7 +18,7 @@
         "entry_spacing": "standard",
     },
     "base_keymap": "JetBrains",
-    "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+    "buffer_font_family": "JetBrainsMono Nerd Font",
     "ui_font_family": ".SystemUIFont",
     "icon_theme": "Zed (Default)",
     "language_models": {
