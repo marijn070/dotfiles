@@ -22,7 +22,7 @@
 			{
 				"key": "sideBar",
 				"width": 184,
-				"visible": true
+				"visible": false
 			},
 			{
 				"key": "noteList",
