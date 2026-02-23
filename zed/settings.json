@@ -190,7 +190,7 @@
             "provider": "zed.dev",
             "model": "claude-sonnet-4-5",
         },
-        "default_profile": "write",
+        "default_profile": "ask",
         "dock": "right",
         "default_model": {
             "provider": "zed.dev",
