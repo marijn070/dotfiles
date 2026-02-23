@@ -1,78 +1,84 @@
 ---
-# Install common CLI tools (available in all distros)
+# Install common CLI tools
 - name: Install common CLI tools
   package:
     name:
       - fish
       - fzf
       - ripgrep
-      - eza
       - zoxide
       - bat
-      - "{{ 'fd-find' if ansible_facts['os_family'] == 'Debian' else 'fd' }}"
+      - "{{ 'fd-find' if ansible_facts['os_family'] in ['Debian', 'RedHat'] else 'fd' }}"
     state: present
 
-# Install bat-extras package
-- name: Install bat-extras Arch
+# Install eza
+- name: Enable eza COPR repository (Fedora)
+  command: dnf copr enable alternatieved/eza -y
+  when: ansible_facts['os_family'] == 'RedHat'
+
+- name: Install eza
   package:
-    name:
-      - bat-extras
+    name: eza
     state: present
-  when: ansible_facts['os_family'] == 'Arch'
 
-- name: Clone bat-extras repository on Debian
-  git:
-    repo: https://github.com/eth-p/bat-extras.git
-    dest: /tmp/bat-extras
-    version: master
-  when: ansible_facts['os_family'] == 'Debian'
-
-- name: Build and install bat-extras on Debian
-  command: ./build.sh --install --prefix=/usr/local
-  args:
-    chdir: /tmp/bat-extras
-  when: ansible_facts['os_family'] == 'Debian'
-
-- name: Enable bat-extras COPR repository on Fedora
+# Install bat-extras
+- name: Enable bat-extras COPR repository (Fedora)
   command: dnf copr enable awood/bat-extras -y
   when: ansible_facts['os_family'] == 'RedHat'
 
-- name: Install bat-extras Fedora
+- name: Install bat-extras (Arch/Fedora)
   package:
-    name:
-      - bat-extras
+    name: bat-extras
     state: present
-  when: ansible_facts['os_family'] == 'RedHat'
+  when: ansible_facts['os_family'] in ['ArchLinux', 'RedHat']
 
-# Create symlinks for differently named packages on Debian/Ubuntu
-- name: Create symlink for bat on Debian/Ubuntu
+- name: Clone and install bat-extras (Debian)
+  block:
+    - name: Clone bat-extras repository
+      git:
+        repo: https://github.com/eth-p/bat-extras.git
+        dest: /tmp/bat-extras
+        version: master
+    - name: Build and install bat-extras
+      command: ./build.sh --install --prefix=/usr/local
+      args:
+        chdir: /tmp/bat-extras
+  when: ansible_facts['os_family'] == 'Debian'
+
+# Create symlinks for renamed packages
+- name: Check if batcat exists
+  stat:
+    path: /usr/bin/batcat
+  register: batcat_exists
+
+- name: Create symlink for bat
   file:
     src: /usr/bin/batcat
     dest: /usr/local/bin/bat
     state: link
-  when: ansible_facts['os_family'] == "Debian"
+  when: batcat_exists.stat.exists
   ignore_errors: true
 
-- name: Create symlink for fd on Debian/Ubuntu
+- name: Check if fdfind exists
+  stat:
+    path: /usr/bin/fdfind
+  register: fdfind_exists
+
+- name: Create symlink for fd
   file:
     src: /usr/bin/fdfind
     dest: /usr/local/bin/fd
     state: link
-  when: ansible_facts['os_family'] == "Debian"
+  when: fdfind_exists.stat.exists
   ignore_errors: true
 
-- name: Download starship installer
-  get_url:
-    url: https://starship.rs/install.sh
-    dest: /tmp/starship-install.sh
-    mode: "0755"
-
-- name: Install starship
-  shell: /tmp/starship-install.sh -y
+# Install starship
+- name: Download and install starship
+  shell: curl -sS https://starship.rs/install.sh | sh -s -- -y
   args:
-    creates: /usr/bin/starship
+    creates: /usr/local/bin/starship
 
-# Change default shell to fish
+# Configure fish shell
 - name: Get fish shell path
   command: which fish
   register: fish_path
@@ -85,7 +91,7 @@
     line: "{{ fish_path.stdout }}"
     state: present
 
-- name: Change default shell to fish for current user
+- name: Set fish as default shell
   user:
     name: "{{ actual_user }}"
     shell: "{{ fish_path.stdout }}"
