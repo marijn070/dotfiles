@@ -5,12 +5,19 @@
   become: true
   vars:
     ansible_python_interpreter: /usr/bin/python3
-    actual_user: "{{ lookup('env', 'USER') }}"
-    actual_home: "{{ lookup('env', 'HOME') }}"
+    actual_user: "{{ ansible_user_id }}"
+    actual_home: "{{ ansible_env.HOME }}"
+    has_display: "{{ ansible_env.DISPLAY is defined or ansible_env.WAYLAND_DISPLAY is defined }}"
 
   roles:
-    # - onepassword
-    - rust
+    # always
     - cli_tools
-    - zen_browser
-    - chezmoi_setup
+    # when on a local machine
+    - role: rust
+      when: has_display
+    - role: zen_browser
+      when: has_display
+    - role: keyd
+      when: has_display
+    - role: chezmoi_setup
+      when: has_display

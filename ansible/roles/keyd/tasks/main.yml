@@ -1,0 +1,68 @@
+---
+# Install keyd - key remapping daemon
+- name: Install dependencies for building keyd
+  package:
+    name:
+      - git
+      - gcc
+      - make
+    state: present
+
+- name: Check if keyd is already installed
+  stat:
+    path: /usr/local/bin/keyd
+  register: keyd_installed
+
+- name: Clone keyd repository
+  git:
+    repo: https://github.com/rvaiya/keyd.git
+    dest: /tmp/keyd
+    version: master
+    force: yes
+  when: not keyd_installed.stat.exists
+
+- name: Build keyd
+  make:
+    chdir: /tmp/keyd
+    target: all
+  when: not keyd_installed.stat.exists
+
+- name: Install keyd
+  make:
+    chdir: /tmp/keyd
+    target: install
+  when: not keyd_installed.stat.exists
+
+- name: Clean up keyd build directory
+  file:
+    path: /tmp/keyd
+    state: absent
+  when: not keyd_installed.stat.exists
+
+- name: Create keyd configuration directory
+  file:
+    path: /etc/keyd
+    state: directory
+    mode: "0755"
+
+- name: Copy keyd configuration file
+  copy:
+    src: default.conf
+    dest: /etc/keyd/default.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify: restart keyd
+
+- name: Enable and start keyd service
+  systemd:
+    name: keyd
+    enabled: yes
+    state: started
+    daemon_reload: yes
+
+- name: Add user to keyd group
+  user:
+    name: "{{ actual_user }}"
+    groups: keyd
+    append: yes
