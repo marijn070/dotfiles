@@ -13,7 +13,7 @@
 
 # Install eza
 - name: Enable eza COPR repository (Fedora)
-  command: dnf copr enable alternatieved/eza -y
+  command: dnf copr enable alternatived/eza -y
   when: ansible_facts['os_family'] == 'RedHat'
 
 - name: Install eza
