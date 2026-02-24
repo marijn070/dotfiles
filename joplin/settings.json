@@ -32,13 +32,6 @@
 			{
 				"key": "editor",
 				"visible": true
-			},
-			{
-				"key": "plugin-view-com.tuibyte.EasyBacklinks-easy_backlinks_panel",
-				"context": {
-					"pluginId": "com.tuibyte.EasyBacklinks"
-				},
-				"visible": false
 			}
 		],
 		"visible": true

@@ -1,0 +1,106 @@
+[
+  {
+    "command": "synchronize",
+    "accelerator": null
+  },
+  {
+    "command": "focusSearch",
+    "accelerator": "Ctrl+Shift+F"
+  },
+  {
+    "command": "toggleSideBar",
+    "accelerator": "Ctrl+S"
+  },
+  {
+    "command": "richTables.insertTable",
+    "accelerator": "Alt+Shift+T"
+  },
+  {
+    "command": "richTables.addRowAbove",
+    "accelerator": "Alt+Shift+Up"
+  },
+  {
+    "command": "richTables.addRowBelow",
+    "accelerator": "Alt+Shift+Down"
+  },
+  {
+    "command": "richTables.addColumnLeft",
+    "accelerator": "Alt+Shift+Left"
+  },
+  {
+    "command": "richTables.addColumnRight",
+    "accelerator": "Alt+Shift+Right"
+  },
+  {
+    "command": "richTables.deleteRow",
+    "accelerator": "Alt+Shift+D"
+  },
+  {
+    "command": "richTables.deleteColumn",
+    "accelerator": "Ctrl+Alt+Shift+D"
+  },
+  {
+    "command": "richTables.alignLeft",
+    "accelerator": "Alt+Shift+Q"
+  },
+  {
+    "command": "richTables.alignCenter",
+    "accelerator": "Alt+Shift+W"
+  },
+  {
+    "command": "richTables.alignRight",
+    "accelerator": "Alt+Shift+E"
+  },
+  {
+    "command": "richTables.moveRowUp",
+    "accelerator": "Ctrl+Alt+Up"
+  },
+  {
+    "command": "richTables.moveRowDown",
+    "accelerator": "Ctrl+Alt+Down"
+  },
+  {
+    "command": "richTables.moveColumnLeft",
+    "accelerator": "Ctrl+Alt+Left"
+  },
+  {
+    "command": "richTables.moveColumnRight",
+    "accelerator": "Ctrl+Alt+Right"
+  },
+  {
+    "command": "richTables.toggleSourceMode",
+    "accelerator": "Ctrl+Shift+/"
+  },
+  {
+    "command": "toggleNoteBacklinksIgnoreList",
+    "accelerator": "Ctrl+Alt+I"
+  },
+  {
+    "command": "toggleBacklinksIgnoreList",
+    "accelerator": "Ctrl+Alt+L"
+  },
+  {
+    "command": "pruneBacklinksIgnoreList",
+    "accelerator": "Ctrl+Alt+P"
+  },
+  {
+    "command": "insertBacklinksHeader",
+    "accelerator": "Ctrl+Alt+H"
+  },
+  {
+    "command": "insertBacklinksList",
+    "accelerator": "Ctrl+Alt+B"
+  },
+  {
+    "command": "formatNote",
+    "accelerator": "Alt+Shift+F"
+  },
+  {
+    "command": "jop-freehand-drawing-jsdraw-plugin-insertDrawing",
+    "accelerator": null
+  },
+  {
+    "command": "CreateBackup",
+    "accelerator": null
+  }
+]
