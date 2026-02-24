@@ -6,7 +6,7 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 1,
+	"theme": 2,
 	"layoutButtonSequence": 1,
 	"editor.tabMovesFocus": false,
 	"markdown.plugin.softbreaks": false,
@@ -32,6 +32,13 @@
 			{
 				"key": "editor",
 				"visible": true
+			},
+			{
+				"key": "plugin-view-com.tuibyte.EasyBacklinks-easy_backlinks_panel",
+				"context": {
+					"pluginId": "com.tuibyte.EasyBacklinks"
+				},
+				"visible": false
 			}
 		],
 		"visible": true
@@ -47,7 +54,9 @@
 	"editor.highlightActiveLine": true,
 	"api.token": "33c5ee190ab1e01e82d067c131df39168d5b4c22a18b239058340b32d5d7495c979e5a7f18785cda703fddc22785efb2d84fcb815885b25c9f8646441648a5e2",
 	"spellChecker.languages": [
-		"en-US"
+		"en-US",
+		"nl"
 	],
-	"windowContentZoomFactor": 130
+	"windowContentZoomFactor": 130,
+	"plugin-com.tuibyte.EasyBacklinks.showPanel": false
 }
