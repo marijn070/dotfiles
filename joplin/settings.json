@@ -6,7 +6,7 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 2,
+	"theme": 1,
 	"layoutButtonSequence": 1,
 	"editor.tabMovesFocus": false,
 	"markdown.plugin.softbreaks": false,
@@ -22,7 +22,7 @@
 			{
 				"key": "sideBar",
 				"width": 184,
-				"visible": false
+				"visible": true
 			},
 			{
 				"key": "noteList",

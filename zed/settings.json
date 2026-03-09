@@ -183,6 +183,11 @@
     },
     "agent": {
         "tool_permissions": {
+            "tools": {
+                "open": {
+                    "default": "allow"
+                }
+            },
             "default": "allow"
         },
         "single_file_review": true,
@@ -190,11 +195,11 @@
             "provider": "zed.dev",
             "model": "claude-sonnet-4-5",
         },
-        "default_profile": "minimal",
+        "default_profile": "write",
         "dock": "right",
         "default_model": {
             "effort": "high",
-            "enable_thinking": false,
+            "enable_thinking": true,
             "provider": "zed.dev",
             "model": "claude-sonnet-4-6",
         },
