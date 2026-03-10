@@ -9,7 +9,7 @@
 {
     "semantic_tokens": "off",
     "auto_update_extensions": {
-        "iwe": false
+        "iwe": false,
     },
     "project_panel": {
         "indent_size": 20.0,
@@ -84,9 +84,9 @@
     "languages": {
         "Elixir": {
             "tasks": {
-                "prefer_lsp": true
+                "prefer_lsp": true,
             },
-            "show_edit_predictions": false
+            "show_edit_predictions": false,
         },
         "JSONC": {
             "tab_size": 4,
@@ -185,10 +185,10 @@
         "tool_permissions": {
             "tools": {
                 "open": {
-                    "default": "allow"
-                }
+                    "default": "allow",
+                },
             },
-            "default": "allow"
+            "default": "allow",
         },
         "single_file_review": true,
         "inline_assistant_model": {
