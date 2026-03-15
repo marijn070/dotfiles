@@ -1,3 +1,11 @@
+# Remove an image background
+function remove-background
+    set -l input "$argv[1]"
+    set -l base (string replace -r '\.[^.]*$' '' "$input")
+    set -l ext (string match -r '\.[^.]*$' "$input")
+    magick convert "$input" -background none -flatten "$base"_no_bg"$ext"
+end
+
 # Compression
 function compress
     set -l input (string trim -r -c '/' "$argv[1]")
