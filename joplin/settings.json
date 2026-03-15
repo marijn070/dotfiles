@@ -6,11 +6,16 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 1,
+	"theme": 2,
 	"layoutButtonSequence": 1,
+	"editor.pastePreserveColors": false,
+	"editor.enableTextPatterns": false,
 	"editor.tabMovesFocus": false,
+	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
+	"markdown.plugin.emoji": false,
+	"markdown.plugin.multitable": true,
 	"style.editor.fontSize": 16,
 	"style.editor.fontFamily": "Vollkorn",
 	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
@@ -22,7 +27,7 @@
 			{
 				"key": "sideBar",
 				"width": 184,
-				"visible": true
+				"visible": false
 			},
 			{
 				"key": "noteList",
@@ -51,5 +56,6 @@
 		"nl"
 	],
 	"windowContentZoomFactor": 120,
+	"featureFlag.plugins.isolatePluginWebViews": true,
 	"plugin-com.tuibyte.EasyBacklinks.showPanel": false
 }

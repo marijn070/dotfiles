@@ -201,7 +201,7 @@
             "effort": "high",
             "enable_thinking": true,
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-6",
+            "model": "claude-opus-4-6",
         },
     },
     "vim_mode": true,
