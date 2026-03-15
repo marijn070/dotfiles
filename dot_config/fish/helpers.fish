@@ -1,9 +1,13 @@
 # Remove an image background
 function remove-background
+    if test (count $argv) -eq 0
+        echo "Usage: remove-background <input_image>"
+        return 1
+    end
     set -l input "$argv[1]"
     set -l base (string replace -r '\.[^.]*$' '' "$input")
     set -l ext (string match -r '\.[^.]*$' "$input")
-    magick convert "$input" -background none -flatten "$base"_no_bg"$ext"
+    magick "$input" -background none -flatten "$base"_no_bg"$ext"
 end
 
 # Compression
