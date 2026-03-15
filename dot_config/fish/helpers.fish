@@ -1,13 +1,23 @@
-# Remove an image background
+# Remove a solid-fill background (auto-detected from the corner pixel)
 function remove-background
     if test (count $argv) -eq 0
-        echo "Usage: remove-background <input_image>"
+        echo "Usage: remove-background <input_image> [fuzz_percent]"
+        echo "  fuzz_percent: color tolerance (default: 10)"
         return 1
     end
     set -l input "$argv[1]"
+    set -l fuzz 10
+    if test (count $argv) -ge 2
+        set fuzz "$argv[2]"
+    end
     set -l base (string replace -r '\.[^.]*$' '' "$input")
-    set -l ext (string match -r '\.[^.]*$' "$input")
-    magick "$input" -background none -flatten "$base"_no_bg"$ext"
+    # Output must be PNG to support transparency
+    magick "$input" \
+        -bordercolor "%[pixel:p{0,0}]" -border 1 \
+        -fuzz "$fuzz"% -fill none -draw "color 0,0 floodfill" \
+        -shave 1x1 \
+        "$base"_no_bg.png
+    echo "Saved to "$base"_no_bg.png (fuzz: $fuzz%)"
 end
 
 # Compression
