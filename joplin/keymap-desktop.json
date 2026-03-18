@@ -1,15 +1,19 @@
 [
   {
     "command": "synchronize",
-    "accelerator": null
+    "accelerator": "Ctrl+Shift+S"
   },
   {
-    "command": "focusSearch",
-    "accelerator": "Ctrl+Shift+F"
+    "command": "focusElementSideBar",
+    "accelerator": null
   },
   {
     "command": "toggleSideBar",
     "accelerator": "Ctrl+S"
+  },
+  {
+    "command": "historyBackward",
+    "accelerator": "Ctrl+Backspace"
   },
   {
     "command": "richTables.insertTable",
@@ -72,6 +76,10 @@
     "accelerator": "Ctrl+Shift+/"
   },
   {
+    "command": "jop-freehand-drawing-jsdraw-plugin-insertDrawing",
+    "accelerator": null
+  },
+  {
     "command": "toggleNoteBacklinksIgnoreList",
     "accelerator": "Ctrl+Alt+I"
   },
@@ -92,15 +100,11 @@
     "accelerator": "Ctrl+Alt+B"
   },
   {
-    "command": "formatNote",
-    "accelerator": "Alt+Shift+F"
-  },
-  {
-    "command": "jop-freehand-drawing-jsdraw-plugin-insertDrawing",
-    "accelerator": null
-  },
-  {
     "command": "CreateBackup",
     "accelerator": null
+  },
+  {
+    "command": "formatNote",
+    "accelerator": "Alt+Shift+F"
   }
 ]
