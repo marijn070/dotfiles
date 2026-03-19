@@ -51,7 +51,7 @@
     },
     "edit_predictions": {
         "provider": "zed",
-        "mode": "subtle",
+        "mode": "eager",
         "copilot": {
             "proxy": null,
             "proxy_no_verify": null,
@@ -70,18 +70,36 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["~/stacks"],
-                },
-            ],
+                    "paths": [
+                        "~/stacks"
+                    ]
+                }
+            ]
         },
         {
             "host": "kasdevcontainer.devpod",
             "args": [],
-            "projects": [],
+            "projects": []
         },
+        {
+            "host": "connect-4",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/marijn/connect-4"
+                    ]
+                }
+            ]
+        }
     ],
     "format_on_save": "on",
     "languages": {
+        "TOML": {
+            "prettier": {
+                "allowed": true
+            }
+        },
         "Elixir": {
             "tasks": {
                 "prefer_lsp": true,
