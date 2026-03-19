@@ -8,6 +8,7 @@
       - ripgrep
       - zoxide
       - bat
+      - lazygit
       - "{{ 'fd-find' if ansible_facts['os_family'] in ['Debian', 'RedHat'] else 'fd' }}"
     state: present
 
