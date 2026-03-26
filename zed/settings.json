@@ -210,8 +210,8 @@
         },
         "single_file_review": true,
         "inline_assistant_model": {
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
+            "provider": "copilot_chat",
+            "model": "gemini-3.1-pro-preview",
         },
         "default_profile": "write",
         "dock": "right",
