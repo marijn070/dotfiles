@@ -35,7 +35,7 @@ source $__fish_config_dir/helpers.fish
 set -gx WORKON_HOME $HOME/.virtualenvs
 set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3
 
-{{ if .isDesktop }}
+{{ if eq .role "desktop" }}
 #use the 1password plugin
 if test -e ~/.config/op/plugins.sh
     source ~/.config/op/plugins.sh
@@ -52,7 +52,7 @@ if command -q op
 end
 
 # set editor
-{{ if .isDesktop }}
+{{ if eq .role "desktop" }}
 set -gx EDITOR zed
 {{ else }}
 set -gx EDITOR vim
