@@ -163,6 +163,8 @@
         "tinymist": {
             "settings": {
                 "projectResolution": "lockDatabase",
+                "exportPdf": "onSave",
+                "outputPath": "$root/$name",
             },
         },
         "rust-analyzer": {
