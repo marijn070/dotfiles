@@ -70,35 +70,31 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "~/stacks"
-                    ]
-                }
-            ]
+                    "paths": ["~/stacks"],
+                },
+            ],
         },
         {
             "host": "kasdevcontainer.devpod",
             "args": [],
-            "projects": []
+            "projects": [],
         },
         {
             "host": "connect-4",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/marijn/connect-4"
-                    ]
-                }
-            ]
-        }
+                    "paths": ["/home/marijn/connect-4"],
+                },
+            ],
+        },
     ],
     "format_on_save": "on",
     "languages": {
         "TOML": {
             "prettier": {
-                "allowed": true
-            }
+                "allowed": true,
+            },
         },
         "Elixir": {
             "tasks": {
@@ -164,6 +160,11 @@
                 },
             },
         },
+        "tinymist": {
+            "settings": {
+                "projectResolution": "lockDatabase",
+            },
+        },
         "rust-analyzer": {
             "initialization_options": {
                 "checkOnSave": true,
@@ -213,13 +214,12 @@
             "provider": "copilot_chat",
             "model": "gemini-3.1-pro-preview",
         },
-        "default_profile": "write",
+        "default_profile": "ask",
         "dock": "right",
         "default_model": {
-            "effort": "high",
-            "enable_thinking": true,
+            "enable_thinking": false,
             "provider": "zed.dev",
-            "model": "claude-opus-4-6",
+            "model": "gpt-5-mini",
         },
     },
     "vim_mode": true,
