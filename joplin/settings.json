@@ -11,6 +11,13 @@
 	"editor.pastePreserveColors": false,
 	"editor.enableTextPatterns": false,
 	"editor.tabMovesFocus": false,
+	"notes.sortOrder.reverse": true,
+	"notes.perFieldReverse": {
+		"user_updated_time": true,
+		"user_created_time": true,
+		"title": false,
+		"order": false
+	},
 	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
@@ -57,5 +64,6 @@
 	],
 	"windowContentZoomFactor": 120,
 	"featureFlag.plugins.isolatePluginWebViews": true,
-	"plugin-com.tuibyte.EasyBacklinks.showPanel": false
+	"plugin-com.tuibyte.EasyBacklinks.showPanel": false,
+	"plugin-com.tuibyte.EasyBacklinks.ignorePanel": false
 }

@@ -20,7 +20,11 @@
     "base_keymap": "JetBrains",
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "ui_font_family": ".SystemUIFont",
-    "icon_theme": "Zed (Default)",
+    "icon_theme": {
+        "mode": "light",
+        "light": "Zed (Default)",
+        "dark": "Zed (Default)",
+    },
     "language_models": {
         "openai_compatible": {
             "Cerebras": {
@@ -230,5 +234,9 @@
     "buffer_font_size": 16.0,
     "vertical_scroll_margin": 8,
     "soft_wrap": "editor_width",
-    "theme": "Omazed",
+    "theme": {
+        "mode": "light",
+        "light": "Catppuccin Latte",
+        "dark": "Gruvbox Dark Hard",
+    },
 }
