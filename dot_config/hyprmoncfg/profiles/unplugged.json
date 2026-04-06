@@ -1,0 +1,85 @@
+{
+  "name": "unplugged",
+  "created_at": "2026-04-06T14:04:02.792906811Z",
+  "updated_at": "2026-04-06T14:05:23.219422246Z",
+  "outputs": [
+    {
+      "key": "boe|0x0a86",
+      "name": "eDP-1",
+      "make": "BOE",
+      "model": "0x0A86",
+      "enabled": true,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60,
+      "x": 0,
+      "y": 0,
+      "scale": 1,
+      "transform": 0
+    }
+  ],
+  "workspaces": {
+    "enabled": true,
+    "strategy": "sequential",
+    "max_workspaces": 10,
+    "group_size": 3,
+    "monitor_order": [
+      "boe|0x0a86"
+    ],
+    "rules": [
+      {
+        "workspace": "1",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "2",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "3",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "4",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "5",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "6",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "7",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "8",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "9",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "10",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "name": "bureau",
+  "created_at": "2026-04-06T14:00:50.446025274Z",
+  "updated_at": "2026-04-06T14:09:54.515553901Z",
+  "outputs": [
+    {
+      "key": "aoc|2490w1|apgl69a003315",
+      "name": "DP-3",
+      "make": "AOC",
+      "model": "2490W1",
+      "serial": "APGL69A003315",
+      "enabled": true,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60,
+      "x": 1920,
+      "y": 0,
+      "scale": 1,
+      "transform": 0
+    },
+    {
+      "key": "aoc|2490w1|apgl89a004124",
+      "name": "DP-4",
+      "make": "AOC",
+      "model": "2490W1",
+      "serial": "APGL89A004124",
+      "enabled": true,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60,
+      "x": 0,
+      "y": 0,
+      "scale": 1,
+      "transform": 0
+    },
+    {
+      "key": "boe|0x0a86",
+      "name": "eDP-1",
+      "make": "BOE",
+      "model": "0x0A86",
+      "enabled": false,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60,
+      "x": 1130,
+      "y": 1125,
+      "scale": 1.25,
+      "transform": 0
+    }
+  ],
+  "workspaces": {
+    "enabled": true,
+    "strategy": "manual",
+    "max_workspaces": 9,
+    "group_size": 3,
+    "monitor_order": [
+      "aoc|2490w1|apgl89a004124",
+      "boe|0x0a86",
+      "aoc|2490w1|apgl69a003315"
+    ],
+    "rules": [
+      {
+        "workspace": "1",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "2",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
+      },
+      {
+        "workspace": "3",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
+      },
+      {
+        "workspace": "4",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
+      },
+      {
+        "workspace": "5",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
+      },
+      {
+        "workspace": "6",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
+      },
+      {
+        "workspace": "7",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "8",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "9",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "10",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "11",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      }
+    ]
+  }
+}
