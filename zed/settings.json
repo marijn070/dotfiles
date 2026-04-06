@@ -223,9 +223,9 @@
         "default_profile": "ask",
         "dock": "right",
         "default_model": {
-            "enable_thinking": false,
+            "enable_thinking": true,
             "provider": "zed.dev",
-            "model": "gpt-5-mini",
+            "model": "claude-sonnet-4-5",
         },
     },
     "vim_mode": true,

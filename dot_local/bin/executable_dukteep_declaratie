@@ -1,0 +1,49 @@
+#!/usr/bin/env fish
+
+# --- CONFIG ---
+set TEMPLATE_PATH ~/Documents/DUKTEEP/Declaraties/template.xltx
+
+set MONTH_NAME (env LC_TIME=nl_NL.UTF-8 date -d "last month" +%B) # previous month
+
+set OUTPUT_DIR ~/Documents/DUKTEEP/Declaraties/$MONTH_NAME
+set NEW_NAME "$OUTPUT_DIR/declaratieformulier_marijn_$MONTH_NAME"
+set NEW_XLSX "$NEW_NAME.xlsx"
+set NEW_PDF "$NEW_NAME.pdf"
+
+set MERGED_PDF "$OUTPUT_DIR/declaraties_$MONTH_NAME.pdf"
+
+set ONLYOFFICE_CMD "onlyoffice-desktopeditors"
+
+# --- STEP 1: Create new XLSX for this month ---
+if not test -d $OUTPUT_DIR
+    mkdir -p $OUTPUT_DIR
+end
+if test -f $NEW_XLSX
+    echo "Opening existing spreadsheet: $NEW_XLSX"
+else
+    cp $TEMPLATE_PATH $NEW_XLSX
+    echo "Created new spreadsheet: $NEW_XLSX"
+end
+
+# --- STEP 2: Open in OnlyOffice ---
+$ONLYOFFICE_CMD $NEW_XLSX
+# Script waits until OnlyOffice is closed
+
+# --- STEP 3: Export to PDF ---
+soffice --headless --convert-to pdf $NEW_XLSX --outdir $OUTPUT_DIR
+
+# --- STEP 4: GUI file picker for additional PDFs ---
+# Zenity returns a string of paths separated by |
+set ADDITIONAL_PDFS (zenity --file-selection --multiple --file-filter="*.pdf" --title="Select PDFs to merge")
+set FILES_TO_MERGE $NEW_PDF
+
+if test -n "$ADDITIONAL_PDFS"
+    for pdf in (string split "|" $ADDITIONAL_PDFS)
+        cp $pdf $OUTPUT_DIR/
+        set -a FILES_TO_MERGE $OUTPUT_DIR/(basename $pdf)
+    end
+end
+
+# --- STEP 5: Merge PDFs ---
+pdfunite $FILES_TO_MERGE $MERGED_PDF
+echo "Merged PDF created at: $MERGED_PDF"
