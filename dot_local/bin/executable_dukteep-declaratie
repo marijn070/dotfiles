@@ -1,51 +1,57 @@
 #!/usr/bin/env fish
 
-# --- CONFIG ---
+# --- CONFIGURATION ---
+# Define paths for templates and output directories
 set TEMPLATE_PATH ~/Documents/DUKTEEP/Declaraties/template.xltx
 
-set MONTH_NAME (env LC_TIME=nl_NL.UTF-8 date -d "last month" +%B) # previous month
+# Determine the name of the previous month in Dutch
+set MONTH_NAME (env LC_TIME=nl_NL.UTF-8 date -d "last month" +%B)
 
+# Set up output file paths based on the month
 set OUTPUT_DIR ~/Documents/DUKTEEP/Declaraties/$MONTH_NAME
 set NEW_NAME "$OUTPUT_DIR/declaratieformulier_marijn_$MONTH_NAME"
 set NEW_XLSX "$NEW_NAME.xlsx"
 set NEW_PDF "$NEW_NAME.pdf"
-
 set MERGED_PDF "$OUTPUT_DIR/declaraties_$MONTH_NAME.pdf"
+set ONLYOFFICE_CMD onlyoffice-desktopeditors
 
-set ONLYOFFICE_CMD "onlyoffice-desktopeditors"
+# --- STEP 1: Ensure directory exists ---
+# Create the output directory if it doesn't already exist
+mkdir -p $OUTPUT_DIR
 
-# --- STEP 1: Create new XLSX for this month ---
-if not test -d $OUTPUT_DIR
-    mkdir -p $OUTPUT_DIR
-end
+# --- STEP 2: Create or open XLSX ---
+# Check if the spreadsheet for the previous month already exists
 if test -f $NEW_XLSX
     echo "Opening existing spreadsheet: $NEW_XLSX"
 else
+    # Copy the template to create a new spreadsheet
     cp $TEMPLATE_PATH $NEW_XLSX
     echo "Created new spreadsheet: $NEW_XLSX"
 end
 
-# --- STEP 2: Open in OnlyOffice ---
+# Open the spreadsheet for editing
 $ONLYOFFICE_CMD $NEW_XLSX
-# Script waits until OnlyOffice is closed
 
 # --- STEP 3: Export to PDF ---
+# Convert the spreadsheet to PDF using LibreOffice if the PDF doesn't exist yet
 if not test -f $NEW_PDF
     soffice --headless --convert-to pdf $NEW_XLSX --outdir $OUTPUT_DIR
     echo "Exported to PDF: $NEW_PDF"
 end
 
-# --- STEP 4: GUI file picker for additional PDFs ---
-# Zenity returns a string of paths separated by |
+# --- STEP 4: Gather additional PDFs ---
+# Prompt the user to select any additional PDFs (e.g., receipts) to merge
 set ADDITIONAL_PDFS (zenity --file-selection --multiple --file-filter="*.pdf" --title="Select PDFs to merge")
 set FILES_TO_MERGE $NEW_PDF
 
+# If the user selected additional PDFs, copy them to the output directory
 if test -n "$ADDITIONAL_PDFS"
     for pdf in (string split "|" $ADDITIONAL_PDFS)
         cp $pdf $OUTPUT_DIR/
     end
 end
 
+# Find all PDFs in the output directory (excluding the main declaration PDF) and add them to the merge list
 for pdf in $OUTPUT_DIR/*.pdf
     if test "$pdf" != "$NEW_PDF"
         set -a FILES_TO_MERGE $pdf
@@ -53,10 +59,12 @@ for pdf in $OUTPUT_DIR/*.pdf
 end
 
 # --- STEP 5: Merge PDFs ---
+# Combine the main PDF and any additional PDFs into a single file
 if not test -f $MERGED_PDF
     pdfunite $FILES_TO_MERGE $MERGED_PDF
     echo "Merged PDF created at: $MERGED_PDF"
 end
 
 # --- STEP 6: Email the merged PDF ---
+# Open Thunderbird to compose an email with the merged PDF attached
 thunderbird -compose "from=marijn@marijnsklusjes.nl,subject=declaratie marijn $MONTH_NAME,attachment=$MERGED_PDF"
