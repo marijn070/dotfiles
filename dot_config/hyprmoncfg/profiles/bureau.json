@@ -1,7 +1,7 @@
 {
   "name": "bureau",
   "created_at": "2026-04-06T14:00:50.446025274Z",
-  "updated_at": "2026-04-06T14:12:45.4057635Z",
+  "updated_at": "2026-04-06T14:29:59.834740218Z",
   "outputs": [
     {
       "key": "aoc|2490w1|apgl69a003315",
@@ -45,9 +45,9 @@
       "width": 1920,
       "height": 1080,
       "refresh": 60,
-      "x": 1130,
-      "y": 1125,
-      "scale": 1.25,
+      "x": 0,
+      "y": 0,
+      "scale": 1,
       "transform": 0
     }
   ],
@@ -64,8 +64,10 @@
     "rules": [
       {
         "workspace": "1",
-        "output_key": "boe|0x0a86",
-        "output_name": "eDP-1"
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4",
+        "default": true,
+        "persistent": true
       },
       {
         "workspace": "2",
@@ -89,8 +91,10 @@
       },
       {
         "workspace": "6",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3",
+        "default": true,
+        "persistent": true
       },
       {
         "workspace": "7",
@@ -104,16 +108,6 @@
       },
       {
         "workspace": "9",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
-      },
-      {
-        "workspace": "10",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
-      },
-      {
-        "workspace": "11",
         "output_key": "aoc|2490w1|apgl69a003315",
         "output_name": "DP-3"
       }
