@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "agent_servers": {
+        "opencode": {
+            "type": "registry"
+        }
+    },
     "semantic_tokens": "off",
     "auto_update_extensions": {
         "iwe": false,
@@ -235,8 +240,8 @@
     "vertical_scroll_margin": 8,
     "soft_wrap": "editor_width",
     "theme": {
-        "mode": "light",
+        "mode": "dark",
         "light": "Catppuccin Latte",
-        "dark": "Gruvbox Dark Hard",
+        "dark": "Omazed",
     },
 }
