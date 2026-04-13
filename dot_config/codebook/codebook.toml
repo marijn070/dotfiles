@@ -2,7 +2,12 @@ dictionaries = [
     "en_us",
     "nl_nl",
 ]
-words = ["venv"]
+words = [
+    "geospatial",
+    "triplestore",
+    "triplestores",
+    "venv",
+]
 flag_words = [
     "todo",
     "fixme",

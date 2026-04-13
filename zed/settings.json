@@ -8,9 +8,11 @@
 // command palette
 {
     "agent_servers": {
-        "opencode": {
-            "type": "registry"
-        }
+        "OpenCode": {
+            "type": "custom",
+            "command": "opencode",
+            "args": ["acp"],
+        },
     },
     "semantic_tokens": "off",
     "auto_update_extensions": {
@@ -30,28 +32,7 @@
         "light": "Zed (Default)",
         "dark": "Zed (Default)",
     },
-    "language_models": {
-        "openai_compatible": {
-            "Cerebras": {
-                "api_url": "https://api.cerebras.ai/v1/chat/completions",
-                "available_models": [
-                    {
-                        "name": "llama-3.3-70b",
-                        "max_tokens": 200000,
-                        "max_output_tokens": 32000,
-                        "max_completion_tokens": 1024,
-                        "capabilities": {
-                            "tools": true,
-                            "images": false,
-                            "parallel_tool_calls": false,
-                            "prompt_cache_key": false,
-                            "chat_completions": true,
-                        },
-                    },
-                ],
-            },
-        },
-    },
+    "language_models": {},
     "which_key": {
         "enabled": true,
     },
@@ -59,7 +40,7 @@
         "dock": "right",
     },
     "edit_predictions": {
-        "provider": "zed",
+        "provider": "copilot",
         "mode": "eager",
         "copilot": {
             "proxy": null,
@@ -222,15 +203,16 @@
         },
         "single_file_review": true,
         "inline_assistant_model": {
-            "provider": "copilot_chat",
-            "model": "gemini-3.1-pro-preview",
+            "provider": "zed.dev",
+            "model": "claude-sonnet-4-6",
         },
-        "default_profile": "ask",
+        "default_profile": "write",
         "dock": "right",
         "default_model": {
+            "effort": "high",
             "enable_thinking": true,
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
+            "provider": "copilot_chat",
+            "model": "gemini-3.1-pro-preview",
         },
     },
     "vim_mode": true,
