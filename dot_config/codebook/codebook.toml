@@ -4,8 +4,12 @@ dictionaries = [
 ]
 words = [
     "geospatial",
+    "hypergraph",
+    "hypergraphs",
+    "natively",
     "triplestore",
     "triplestores",
+    "unasserted",
     "venv",
 ]
 flag_words = [

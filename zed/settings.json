@@ -41,7 +41,7 @@
     },
     "edit_predictions": {
         "provider": "copilot",
-        "mode": "eager",
+        "mode": "subtle",
         "copilot": {
             "proxy": null,
             "proxy_no_verify": null,
@@ -204,7 +204,7 @@
         "single_file_review": true,
         "inline_assistant_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-6",
+            "model": "claude-sonnet-4-5",
         },
         "default_profile": "write",
         "dock": "right",
