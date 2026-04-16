@@ -4,11 +4,12 @@
 # Define paths for templates and output directories
 set TEMPLATE_PATH ~/Documents/DUKTEEP/Declaraties/template.xltx
 
-# Determine the name of the previous month in Dutch
 set MONTH_NAME (env LC_TIME=nl_NL.UTF-8 date -d "last month" +%B)
+set MONTH_NR (env LC_TIME=nl_NL.UTF-8 date -d "last month" +%m)
+set YEAR (date -d "last month" +%Y)
 
 # Set up output file paths based on the month
-set OUTPUT_DIR ~/Documents/DUKTEEP/Declaraties/$MONTH_NAME
+set OUTPUT_DIR ~/Documents/DUKTEEP/Declaraties/$YEAR/$MONTH_NR-$MONTH_NAME
 set NEW_NAME "$OUTPUT_DIR/declaratieformulier_marijn_$MONTH_NAME"
 set NEW_XLSX "$NEW_NAME.xlsx"
 set NEW_PDF "$NEW_NAME.pdf"

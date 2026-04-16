@@ -3,14 +3,18 @@ dictionaries = [
     "nl_nl",
 ]
 words = [
+    "crs",
+    "geof",
     "geospatial",
     "hypergraph",
     "hypergraphs",
     "natively",
+    "sparql",
     "triplestore",
     "triplestores",
     "unasserted",
     "venv",
+    "wkt",
 ]
 flag_words = [
     "todo",

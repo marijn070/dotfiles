@@ -1,5 +1,6 @@
 zed/settings.json
 zed
+bootstrap.sh
 ansible
 joplin
 README.md

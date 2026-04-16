@@ -41,7 +41,7 @@
     },
     "edit_predictions": {
         "provider": "copilot",
-        "mode": "subtle",
+        "mode": "eager",
         "copilot": {
             "proxy": null,
             "proxy_no_verify": null,
@@ -51,9 +51,7 @@
     "inlay_hints": {
         "enabled": true,
     },
-    "file_types": {
-        "Turtle": ["rq"],
-    },
+    "file_types": {},
     "ssh_connections": [
         {
             "host": "homelab",
@@ -81,6 +79,9 @@
     ],
     "format_on_save": "on",
     "languages": {
+        "XML": {
+            "tab_size": 1
+        },
         "TOML": {
             "prettier": {
                 "allowed": true,
