@@ -41,7 +41,7 @@
     },
     "edit_predictions": {
         "provider": "copilot",
-        "mode": "eager",
+        "mode": "subtle",
         "copilot": {
             "proxy": null,
             "proxy_no_verify": null,
@@ -210,10 +210,9 @@
         "default_profile": "write",
         "dock": "right",
         "default_model": {
-            "effort": "high",
             "enable_thinking": true,
-            "provider": "copilot_chat",
-            "model": "gemini-3.1-pro-preview",
+            "provider": "zed.dev",
+            "model": "claude-sonnet-4-5",
         },
     },
     "vim_mode": true,
