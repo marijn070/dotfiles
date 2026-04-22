@@ -210,9 +210,10 @@
         "default_profile": "write",
         "dock": "right",
         "default_model": {
+            "effort": "high",
             "enable_thinking": true,
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
+            "provider": "copilot_chat",
+            "model": "gemini-3.1-pro-preview",
         },
     },
     "vim_mode": true,
