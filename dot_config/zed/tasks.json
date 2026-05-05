@@ -10,6 +10,12 @@
         "hide": "always",
     },
     {
+        "label": "typst watch and view",
+        "command": "zathura $ZED_STEM.pdf & typst w $ZED_FILENAME",
+        "cwd": "$ZED_DIRNAME",
+        "use_new_terminal": true,
+    },
+    {
         "label": "Example task",
         "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
         //"args": [],

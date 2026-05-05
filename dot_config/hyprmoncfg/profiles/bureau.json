@@ -1,10 +1,11 @@
 {
   "name": "bureau",
   "created_at": "2026-04-06T14:00:50.446025274Z",
-  "updated_at": "2026-04-06T14:29:59.834740218Z",
+  "updated_at": "2026-04-30T08:52:07.547047498Z",
   "outputs": [
     {
       "key": "aoc|2490w1|apgl69a003315",
+      "match_key": "aoc|2490w1|apgl69a003315",
       "name": "DP-3",
       "make": "AOC",
       "model": "2490W1",
@@ -17,10 +18,16 @@
       "x": 1920,
       "y": 0,
       "scale": 1,
-      "transform": 0
+      "transform": 0,
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
     },
     {
       "key": "aoc|2490w1|apgl89a004124",
+      "match_key": "aoc|2490w1|apgl89a004124",
       "name": "DP-4",
       "make": "AOC",
       "model": "2490W1",
@@ -33,10 +40,16 @@
       "x": 0,
       "y": 0,
       "scale": 1,
-      "transform": 0
+      "transform": 0,
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
     },
     {
       "key": "boe|0x0a86",
+      "match_key": "boe|0x0a86",
       "name": "eDP-1",
       "make": "BOE",
       "model": "0x0A86",
@@ -48,14 +61,19 @@
       "x": 0,
       "y": 0,
       "scale": 1,
-      "transform": 0
+      "transform": 0,
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
     }
   ],
   "workspaces": {
     "enabled": true,
     "strategy": "sequential",
-    "max_workspaces": 9,
-    "group_size": 5,
+    "max_workspaces": 11,
+    "group_size": 6,
     "monitor_order": [
       "aoc|2490w1|apgl89a004124",
       "boe|0x0a86",
@@ -110,7 +128,18 @@
         "workspace": "9",
         "output_key": "aoc|2490w1|apgl69a003315",
         "output_name": "DP-3"
+      },
+      {
+        "workspace": "10",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "11",
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
       }
     ]
-  }
+  },
+  "exec": ""
 }
