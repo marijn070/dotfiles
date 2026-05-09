@@ -1,0 +1,5 @@
+#!/bin/fish
+
+touch .config/omarchy/current/theme/zathura
+echo "set recolor-lightcolor \\$(tomlq -r '.background' ~/.config/omarchy/current/theme/colors.toml)" > .config/omarchy/current/theme/zathura
+echo "set recolor-darkcolor \\$(tomlq -r '.foreground' ~/.config/omarchy/current/theme/colors.toml)" >> .config/omarchy/current/theme/zathura
