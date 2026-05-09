@@ -7,12 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "diff_view_style": "unified",
     "cli_default_open_behavior": "new_window",
     "outline_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "collaboration_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "agent_servers": {
         "OpenCode": {
@@ -87,8 +88,14 @@
     ],
     "format_on_save": "on",
     "languages": {
+        "YAML": {
+            "prettier": {
+                "allowed": false,
+            },
+            "tab_size": 2,
+        },
         "XML": {
-            "tab_size": 1
+            "tab_size": 1,
         },
         "TOML": {
             "prettier": {
@@ -212,15 +219,16 @@
         },
         "single_file_review": true,
         "inline_assistant_model": {
-            "provider": "zed.dev",
-            "model": "gpt-5.3-codex",
+            "provider": "copilot_chat",
+            "model": "gemini-3.1-pro-preview",
         },
         "default_profile": "write",
         "dock": "right",
         "default_model": {
+            "effort": "high",
             "enable_thinking": true,
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
+            "provider": "copilot_chat",
+            "model": "gemini-3.1-pro-preview",
         },
     },
     "vim_mode": true,

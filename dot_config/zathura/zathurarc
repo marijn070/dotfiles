@@ -1,0 +1,4 @@
+include /home/marijn/.config/omarchy/current/theme/zathura
+
+set recolor-keephue true
+set recolor true
