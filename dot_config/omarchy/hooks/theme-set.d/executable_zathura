@@ -1,5 +1,17 @@
-#!/bin/fish
+#!/usr/bin/env bash
+set -euo pipefail
 
-touch .config/omarchy/current/theme/zathura
-echo "set recolor-lightcolor \\$(tomlq -r '.background' ~/.config/omarchy/current/theme/colors.toml)" > .config/omarchy/current/theme/zathura
-echo "set recolor-darkcolor \\$(tomlq -r '.foreground' ~/.config/omarchy/current/theme/colors.toml)" >> .config/omarchy/current/theme/zathura
+theme_dir="${HOME}/.config/omarchy/current/theme"
+
+mkdir -p "$theme_dir"
+
+# retrieve the background color from the current theme
+background=$(tomlq -r '.background' "$theme_dir/colors.toml")
+
+# get a good text color
+foreground="$(pastel textcolor "$background" | pastel format hex)"
+
+cat > "$theme_dir/zathura" <<EOF
+set recolor-lightcolor \\$background
+set recolor-darkcolor \\$foreground
+EOF
