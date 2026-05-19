@@ -24,7 +24,7 @@ require("default.hypr.toggles")
 o.window("io.github.alainm23.planify", { float = true })
 
 -- default workspaces
+o.window("zen", { workspace = 2 })
 o.window("org.mozilla.Thunderbird", { workspace = 10 })
 o.window("signal", { workspace = 11 })
 o.window("chrome-web.whatsapp.com__-Default", { workspace = 11 })
-o.window("zen", { workspace = 2 })

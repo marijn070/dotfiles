@@ -39,6 +39,12 @@ hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "t
 hl.unbind("SUPER + code:61")
 o.bind("SUPER + code:61", "1Password", { launch = "1password" })
 
+-- Planify Tasks
+hl.unbind("SUPER + P")
+hl.unbind("SUPER + SHIFT + P")
+o.bind("SUPER + P", "Add Task", { launch = "planify.quick-add" })
+o.bind("SUPER + CTRL + P", "Planify", { launch = "planify" })
+
 -- Vim Motions
 hl.unbind("SUPER + H")
 hl.unbind("SUPER + J")
