@@ -1,0 +1,22 @@
+# Changes require a relaunch of Hyprland to take effect.
+
+# Ensure Omarchy bins are in the path
+export OMARCHY_PATH=$HOME/.local/share/omarchy
+export PATH=$OMARCHY_PATH/bin/:$PATH
+
+# Set default terminal and editor
+source ~/.config/uwsm/default
+
+# Activate mise if present on the system
+omarchy-cmd-present mise && eval "$(mise activate bash --shims)"
+
+# Nvidia env variables
+export __VK_LAYER_NV_optimus=NVIDIA_only
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __NV_PRIME_RENDER_OFFLOAD=1
+export NVD_BACKEND=direct
+export GBM_BACKEND=nvidia-drm
+export MOZ_ENABLE_WAYLAND=1
+export __GL_MaxFramesAllowed=1
+export __GL_VRR_ALLOWED=0
+export VDPAU_DRIVER=nvidia
