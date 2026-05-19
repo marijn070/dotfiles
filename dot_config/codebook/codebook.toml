@@ -11,11 +11,14 @@ words = [
     "lazydocker",
     "natively",
     "omarchy",
+    "pulseaudio",
+    "screenrecording",
     "sparql",
     "triplestore",
     "triplestores",
     "unasserted",
     "venv",
+    "voxtype",
     "wkt",
 ]
 flag_words = [

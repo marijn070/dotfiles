@@ -20,8 +20,6 @@ export __NV_PRIME_RENDER_OFFLOAD=1
 export NVD_BACKEND=direct
 
 export MOZ_ENABLE_WAYLAND=1
-export MOZ_DISABLE_RDD_SANDBOX=1
-export LIBVA_DRIVER_NAME=nvidia
 
 export VDPAU_DRIVER=nvidia
 
