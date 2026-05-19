@@ -1,10 +1,11 @@
 {
   "name": "unplugged",
   "created_at": "2026-04-06T14:04:02.792906811Z",
-  "updated_at": "2026-04-06T14:16:54.067232634Z",
+  "updated_at": "2026-05-19T09:31:16.884734286Z",
   "outputs": [
     {
       "key": "boe|0x0a86",
+      "match_key": "boe|0x0a86",
       "name": "eDP-1",
       "make": "BOE",
       "model": "0x0A86",
@@ -16,14 +17,21 @@
       "x": 0,
       "y": 0,
       "scale": 1,
-      "transform": 0
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
     }
   ],
   "workspaces": {
     "enabled": true,
-    "strategy": "sequential",
-    "max_workspaces": 10,
-    "group_size": 3,
+    "strategy": "interleave",
+    "max_workspaces": 11,
+    "group_size": 1,
     "monitor_order": [
       "boe|0x0a86"
     ],
@@ -79,7 +87,13 @@
         "workspace": "10",
         "output_key": "boe|0x0a86",
         "output_name": "eDP-1"
+      },
+      {
+        "workspace": "11",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
       }
     ]
-  }
+  },
+  "exec": ""
 }

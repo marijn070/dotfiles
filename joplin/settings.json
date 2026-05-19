@@ -10,7 +10,7 @@
 	"layoutButtonSequence": 1,
 	"editor.pastePreserveColors": false,
 	"editor.enableTextPatterns": false,
-	"editor.tabMovesFocus": false,
+	"editor.tabMovesFocus": true,
 	"notes.sortOrder.reverse": true,
 	"notes.perFieldReverse": {
 		"user_updated_time": true,

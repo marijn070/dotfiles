@@ -55,7 +55,6 @@
             "proxy": null,
             "proxy_no_verify": null,
         },
-        "enabled_in_text_threads": false,
     },
     "inlay_hints": {
         "enabled": true,
@@ -88,6 +87,12 @@
     ],
     "format_on_save": "on",
     "languages": {
+        "Lua": {
+            "tab_size": 4
+        },
+        "Shell Script": {
+            "tab_size": 4
+        },
         "YAML": {
             "prettier": {
                 "allowed": false,
@@ -95,7 +100,9 @@
             "tab_size": 2,
         },
         "XML": {
-            "tab_size": 1,
+            "preferred_line_length": 99,
+            "tab_size": 2,
+            "formatter": "auto",
         },
         "TOML": {
             "prettier": {
