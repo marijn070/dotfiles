@@ -1,5 +1,9 @@
 @import "../omarchy/current/theme/waybar.css";
 
+/*@define-color border_color alpha(@foreground, 0.5);*/
+@define-color border_color rgba(89, 89, 89, 0.67);
+@define-color visible_bg alpha(@foreground, 0.8);
+
 * {
     color: @foreground;
 
@@ -14,18 +18,23 @@ window#waybar {
     background: transparent;
 }
 
-.modules-left {
-    margin-left: 8px;
+.modules-center,
+.modules-right {
+    border: 2px solid @border_color;
+    background: @background;
+    transition: all 0.2s ease;
 }
 
+.modules-left,
+.modules-center,
 .modules-right {
-    margin-right: 8px;
-    border-radius: 20;
-    border: 2px solid alpha(@foreground, 0.7);
-    background: @background;
+    margin: 5px 8px 0px 8px;
+    border-radius: 15px;
+}
+
+.modules-center,
+.modules-right {
     padding: 0 8px;
-    margin: 3px;
-    transition: all 0.2s ease;
 }
 
 #workspaces {
@@ -34,28 +43,35 @@ window#waybar {
 
 #workspaces button {
     border-radius: 20;
-    border: 2px solid alpha(@foreground, 0.7);
+    border: 2px solid @border_color;
     background: @background;
     padding: 0 8px;
-    margin: 3px 2px;
+    margin: 2px;
+}
+
+#workspaces button:first-child {
+    margin-left: 0;
+}
+
+#workspaces button {
     transition: all 0.2s ease;
 }
 
 #workspaces button label {
-    background: @background;
     padding: 0 3px 0 0;
     min-width: 15px;
     transition: all 0.2s ease;
 }
 
 #workspaces button.visible {
-    background: @foreground;
+    background: @visible_bg;
     color: @background;
+    border-color: transparent;
     padding: 0 15px;
 }
 
 #workspaces button.visible label {
-    background: @foreground;
+    background: transparent;
     color: @background;
 }
 
@@ -63,11 +79,14 @@ window#waybar {
     opacity: 0.5;
 }
 
-#workspaces button:hover,
-#workspaces button:hover label {
-    background: @foreground;
+#workspaces button:hover {
+    background: @visible_bg;
     color: @background;
-    transition: 0;
+}
+
+#workspaces button:hover label {
+    background: transparent;
+    color: @background;
 }
 
 #cpu,
