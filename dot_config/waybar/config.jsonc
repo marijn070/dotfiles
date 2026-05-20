@@ -26,10 +26,10 @@
     ],
     "hyprland/workspaces": {
         "on-click": "activate",
-        "format": "{icon} {id}",
+        "format": "{icon}",
         "format-icons": {
             "urgent": "",
-            "active": "",
+            // "active": "",
             "visible": "",
             "default": "",
             "empty": "",
