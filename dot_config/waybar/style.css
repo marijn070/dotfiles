@@ -1,14 +1,14 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-    background-color: @background;
+    background: @background;
     color: @foreground;
 
-    border: none;
+    border: 0;
     border-radius: 0;
     min-height: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .modules-left {
@@ -36,6 +36,7 @@
 
 #workspaces button.active {
     background: @foreground;
+    color: @background;
     padding: 0 11px 0 10px;
 }
 
@@ -46,6 +47,14 @@
 
 #workspaces button.empty {
     opacity: 0.5;
+}
+
+/*#workspaces button.active:hover,*/
+#workspaces button:hover {
+    background: @foreground;
+    color: @background;
+    opacity: 1;
+    transition: 0.7s;
 }
 
 #cpu,

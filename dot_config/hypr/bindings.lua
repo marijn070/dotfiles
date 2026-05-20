@@ -67,8 +67,10 @@ hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 -- moving between workspaces
 hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind("SUPER + mouse:down", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind("SUPER + mouse:up", hl.dsp.focus({ workspace = "m-1" }))
+hl.unbind("SUPER + mouse_up")
+hl.unbind("SUPER + mouse_down")
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
 
 hl.unbind("SUPER + GRAVE")
 hl.unbind("SUPER + code:11")
