@@ -6,7 +6,7 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 1,
+	"theme": 2,
 	"layoutButtonSequence": 1,
 	"editor.pastePreserveColors": false,
 	"editor.enableTextPatterns": false,

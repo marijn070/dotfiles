@@ -1,7 +1,7 @@
 {
   "name": "bureau",
   "created_at": "2026-04-06T14:00:50.446025274Z",
-  "updated_at": "2026-04-30T08:52:07.547047498Z",
+  "updated_at": "2026-05-20T12:53:34.479543541Z",
   "outputs": [
     {
       "key": "aoc|2490w1|apgl69a003315",
@@ -54,12 +54,12 @@
       "make": "BOE",
       "model": "0x0A86",
       "enabled": false,
-      "mode": "1920x1080@60.00Hz",
-      "width": 1920,
-      "height": 1080,
+      "mode": "preferred",
+      "width": 0,
+      "height": 0,
       "refresh": 60,
-      "x": 0,
-      "y": 0,
+      "x": -1,
+      "y": -1,
       "scale": 1,
       "transform": 0,
       "sdr_brightness": 1,
@@ -75,8 +75,8 @@
     "max_workspaces": 11,
     "group_size": 6,
     "monitor_order": [
-      "aoc|2490w1|apgl89a004124",
       "boe|0x0a86",
+      "aoc|2490w1|apgl89a004124",
       "aoc|2490w1|apgl69a003315"
     ],
     "rules": [
@@ -109,15 +109,15 @@
       },
       {
         "workspace": "6",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3",
-        "default": true,
-        "persistent": true
+        "output_key": "aoc|2490w1|apgl89a004124",
+        "output_name": "DP-4"
       },
       {
         "workspace": "7",
         "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
+        "output_name": "DP-3",
+        "default": true,
+        "persistent": true
       },
       {
         "workspace": "8",
@@ -136,8 +136,8 @@
       },
       {
         "workspace": "11",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
       }
     ]
   },
