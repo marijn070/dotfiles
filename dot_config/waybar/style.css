@@ -21,28 +21,22 @@
 
 #workspaces button {
     border: none;
+    border-radius: 10px;
     margin: 3px 1.5px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 2;
-    padding-right: 6;
-    min-width: 7px;
+    padding: 0 6px 0 2px;
+    min-width: 5px;
     transition: all 0.2s ease;
 }
 
 #workspaces button label {
-    padding-right: 2.5;
-    padding-left: 0;
-    margin: 0;
-    min-width: 10px;
+    padding: 0 3px 0 0;
+    min-width: 15px;
     transition: all 0.2s ease;
 }
 
 #workspaces button.active {
     background: @foreground;
-    border-radius: 10px;
-    padding-right: 11px;
-    padding-left: 10px;
+    padding: 0 11px 0 10px;
 }
 
 #workspaces button.active label {
