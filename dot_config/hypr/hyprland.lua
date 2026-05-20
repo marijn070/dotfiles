@@ -28,3 +28,6 @@ o.window("zen", { workspace = 2 })
 o.window("org.mozilla.Thunderbird", { workspace = 10 })
 o.window("signal", { workspace = 11 })
 o.window("chrome-web.whatsapp.com__-Default", { workspace = 11 })
+
+-- workspace rules
+hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = 0, no_rounding = true, no_border = true })

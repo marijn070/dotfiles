@@ -1,14 +1,17 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-    background: @background;
     color: @foreground;
 
     border: 0;
-    border-radius: 0;
     min-height: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
+}
+
+window#waybar {
+    /*background: alpha(@background, 0.5);*/
+    background: transparent;
 }
 
 .modules-left {
@@ -17,44 +20,54 @@
 
 .modules-right {
     margin-right: 8px;
+    border-radius: 20;
+    border: 2px solid alpha(@foreground, 0.7);
+    background: @background;
+    padding: 0 8px;
+    margin: 3px;
+    transition: all 0.2s ease;
+}
+
+#workspaces {
+    font-weight: bold;
 }
 
 #workspaces button {
-    border: none;
-    border-radius: 10px;
-    margin: 3px 1.5px;
-    padding: 0 6px 0 2px;
-    min-width: 5px;
+    border-radius: 20;
+    border: 2px solid alpha(@foreground, 0.7);
+    background: @background;
+    padding: 0 8px;
+    margin: 3px 2px;
     transition: all 0.2s ease;
 }
 
 #workspaces button label {
+    background: @background;
     padding: 0 3px 0 0;
     min-width: 15px;
     transition: all 0.2s ease;
 }
 
-#workspaces button.active {
+#workspaces button.visible {
     background: @foreground;
     color: @background;
-    padding: 0 11px 0 10px;
+    padding: 0 15px;
 }
 
-#workspaces button.active label {
-    color: @background;
+#workspaces button.visible label {
     background: @foreground;
+    color: @background;
 }
 
 #workspaces button.empty {
     opacity: 0.5;
 }
 
-/*#workspaces button.active:hover,*/
-#workspaces button:hover {
+#workspaces button:hover,
+#workspaces button:hover label {
     background: @foreground;
     color: @background;
-    opacity: 1;
-    transition: 0.7s;
+    transition: 0;
 }
 
 #cpu,
