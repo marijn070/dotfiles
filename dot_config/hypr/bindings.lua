@@ -27,7 +27,7 @@ o.bind("SUPER + SHIFT + I", "Immich", { webapp = "https://photos.marijnderijk.co
 
 o.bind("SUPER + SHIFT + S", "Google Maps", { webapp = "https://maps.google.com/", focus = true })
 
--- Configure
+-- Configure [launch the edit configs script]
 o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
 
 -- Maximize, Close
