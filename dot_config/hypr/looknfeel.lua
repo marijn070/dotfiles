@@ -4,7 +4,7 @@
 local gap = 8
 hl.config({
     general = {
-        gaps_out = { top = 5, bottom = gap, left = gap, right = gap },
+        gaps_out = { top = 0, bottom = gap, left = gap, right = gap },
         gaps_in = 3,
     },
 })
@@ -30,4 +30,4 @@ hl.config({
 hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default", style = "slidevert" })
 
 -- workspace rules
-hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 5 }, no_rounding = true, no_border = true })
+hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 0 }, no_rounding = true, no_border = true })

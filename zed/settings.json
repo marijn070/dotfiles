@@ -94,7 +94,9 @@
       "tab_size": 4
     },
     "YAML": {
+      "hard_tabs": false,
       "tab_size": 2,
+      "formatter": "language_server"
     },
     "XML": {
       "preferred_line_length": 99,
@@ -187,18 +189,6 @@
         "checkOnSave": true,
         "check": {
           "command": "clippy",
-        },
-      },
-    },
-    "yaml-language-server": {
-      "initialization_options": {
-        "yaml": {
-          "schemaStore": {
-            "enable": false,
-          },
-          "disableAdditionalPropertiesWarnings": [
-            521
-          ],
         },
       },
     },
