@@ -21,7 +21,13 @@ hl.config({
     },
 })
 
+hl.config({
+    animations = {
+        -- workspace_wraparound = true,
+    }
+})
+
 hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default", style = "slidevert" })
 
 -- workspace rules
-hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 5, bottom = 0, left = 0, right = 0 }, no_rounding = true, no_border = true })
+hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 5 }, no_rounding = true, no_border = true })

@@ -3,6 +3,7 @@
 /*@define-color border_color alpha(@foreground, 0.5);*/
 @define-color border_color rgba(89, 89, 89, 0.67);
 @define-color visible_bg alpha(@foreground, 0.8);
+@define-color bg alpha(@background, 0.8);
 
 * {
     color: @foreground;
@@ -21,7 +22,7 @@ window#waybar {
 .modules-center,
 .modules-right {
     border: 2px solid @border_color;
-    background: @background;
+    background: @bg;
     transition: all 0.2s ease;
 }
 
@@ -44,17 +45,14 @@ window#waybar {
 #workspaces button {
     border-radius: 20;
     border: 2px solid @border_color;
-    background: @background;
-    padding: 0 8px;
+    background: @bg;
+    padding: 0px 5px;
     margin: 2px;
+    transition: all 0.2s ease;
 }
 
 #workspaces button:first-child {
     margin-left: 0;
-}
-
-#workspaces button {
-    transition: all 0.2s ease;
 }
 
 #workspaces button label {
@@ -67,7 +65,7 @@ window#waybar {
     background: @visible_bg;
     color: @background;
     border-color: transparent;
-    padding: 0 15px;
+    padding: 0 12px;
 }
 
 #workspaces button.visible label {

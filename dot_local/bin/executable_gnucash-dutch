@@ -3,6 +3,7 @@
 # Set locale
 export LANG=nl_NL.UTF-8
 export LC_ALL=nl_NL.UTF-8
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
 
 # Run whichever Gnucash is available
 if command -v gnucash >/dev/null 2>&1; then
