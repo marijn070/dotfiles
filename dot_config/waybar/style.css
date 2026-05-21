@@ -20,19 +20,22 @@ window#waybar {
     background: transparent;
 }
 
+
+/*margin is set in the waybar so that shadows look good
+top gap in hyprland is then set to zero */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 5px 8px 8px 8px;
+    border-radius: 999px;
+}
+
 .modules-center,
 .modules-right {
     background: @bg;
     border: 2px solid @border_color;
     padding: 0 8px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-    margin: 5px 8px 8px 8px;
-    border-radius: 15px;
 }
 
 #workspaces {
