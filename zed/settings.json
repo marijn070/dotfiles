@@ -224,7 +224,7 @@
     "single_file_review": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gemini-3.1-pro-preview",
+      "model": "gemini-3-flash-preview",
     },
     "default_profile": "write",
     "dock": "right",
