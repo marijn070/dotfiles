@@ -1,7 +1,7 @@
 {
   "name": "bureau",
-  "created_at": "2026-04-06T14:00:50.446025274Z",
-  "updated_at": "2026-05-20T12:53:34.479543541Z",
+  "created_at": "2026-05-21T14:25:45.073526731Z",
+  "updated_at": "2026-05-21T14:33:50.873182657Z",
   "outputs": [
     {
       "key": "aoc|2490w1|apgl69a003315",
@@ -15,10 +15,12 @@
       "width": 1920,
       "height": 1080,
       "refresh": 60,
-      "x": 1920,
-      "y": 0,
+      "x": -753,
+      "y": -1154,
       "scale": 1,
       "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
       "sdr_brightness": 1,
       "sdr_saturation": 1,
       "sdr_min_luminance": 0.2,
@@ -26,21 +28,23 @@
       "min_luminance": 0
     },
     {
-      "key": "aoc|2490w1|apgl89a004124",
-      "match_key": "aoc|2490w1|apgl89a004124",
-      "name": "DP-4",
-      "make": "AOC",
-      "model": "2490W1",
-      "serial": "APGL89A004124",
+      "key": "synaptics inc|non-pnp|0x00bc614e",
+      "match_key": "synaptics inc|non-pnp|0x00bc614e",
+      "name": "DP-5",
+      "make": "Synaptics Inc",
+      "model": "Non-PnP",
+      "serial": "0x00BC614E",
       "enabled": true,
       "mode": "1920x1080@60.00Hz",
       "width": 1920,
       "height": 1080,
       "refresh": 60,
-      "x": 0,
-      "y": 0,
+      "x": 1167,
+      "y": -1117,
       "scale": 1,
       "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
       "sdr_brightness": 1,
       "sdr_saturation": 1,
       "sdr_min_luminance": 0.2,
@@ -54,14 +58,16 @@
       "make": "BOE",
       "model": "0x0A86",
       "enabled": false,
-      "mode": "preferred",
-      "width": 0,
-      "height": 0,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
       "refresh": 60,
-      "x": -1,
-      "y": -1,
+      "x": 70,
+      "y": 157,
       "scale": 1,
       "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
       "sdr_brightness": 1,
       "sdr_saturation": 1,
       "sdr_min_luminance": 0.2,
@@ -75,69 +81,69 @@
     "max_workspaces": 11,
     "group_size": 6,
     "monitor_order": [
+      "aoc|2490w1|apgl69a003315",
       "boe|0x0a86",
-      "aoc|2490w1|apgl89a004124",
-      "aoc|2490w1|apgl69a003315"
+      "synaptics inc|non-pnp|0x00bc614e"
     ],
     "rules": [
       {
         "workspace": "1",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4",
-        "default": true,
-        "persistent": true
-      },
-      {
-        "workspace": "2",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
-      },
-      {
-        "workspace": "3",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
-      },
-      {
-        "workspace": "4",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
-      },
-      {
-        "workspace": "5",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
-      },
-      {
-        "workspace": "6",
-        "output_key": "aoc|2490w1|apgl89a004124",
-        "output_name": "DP-4"
-      },
-      {
-        "workspace": "7",
         "output_key": "aoc|2490w1|apgl69a003315",
         "output_name": "DP-3",
         "default": true,
         "persistent": true
       },
       {
-        "workspace": "8",
+        "workspace": "2",
         "output_key": "aoc|2490w1|apgl69a003315",
         "output_name": "DP-3"
+      },
+      {
+        "workspace": "3",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "4",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "5",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "6",
+        "output_key": "aoc|2490w1|apgl69a003315",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "7",
+        "output_key": "synaptics inc|non-pnp|0x00bc614e",
+        "output_name": "DP-5",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "8",
+        "output_key": "synaptics inc|non-pnp|0x00bc614e",
+        "output_name": "DP-5"
       },
       {
         "workspace": "9",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
+        "output_key": "synaptics inc|non-pnp|0x00bc614e",
+        "output_name": "DP-5"
       },
       {
         "workspace": "10",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
+        "output_key": "synaptics inc|non-pnp|0x00bc614e",
+        "output_name": "DP-5"
       },
       {
         "workspace": "11",
-        "output_key": "aoc|2490w1|apgl69a003315",
-        "output_name": "DP-3"
+        "output_key": "synaptics inc|non-pnp|0x00bc614e",
+        "output_name": "DP-5"
       }
     ]
   },
