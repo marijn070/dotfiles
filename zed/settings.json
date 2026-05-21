@@ -7,246 +7,253 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-    "diff_view_style": "unified",
-    "cli_default_open_behavior": "new_window",
-    "outline_panel": {
-        "dock": "left",
+  "prettier": {
+    "allowed": false
+  },
+  "diff_view_style": "unified",
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "semantic_tokens": "off",
+  "auto_update_extensions": {
+    "iwe": false,
+  },
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 20.0,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "standard",
+  },
+  "base_keymap": "JetBrains",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": ".SystemUIFont",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "language_models": {},
+  "which_key": {
+    "enabled": true,
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
     },
-    "collaboration_panel": {
-        "dock": "left",
-    },
-    "agent_servers": {
-        "OpenCode": {
-            "type": "custom",
-            "command": "opencode",
-            "args": ["acp"],
-        },
-    },
-    "semantic_tokens": "off",
-    "auto_update_extensions": {
-        "iwe": false,
-    },
-    "project_panel": {
-        "dock": "left",
-        "indent_size": 20.0,
-        "folder_icons": true,
-        "file_icons": true,
-        "entry_spacing": "standard",
-    },
-    "base_keymap": "JetBrains",
-    "buffer_font_family": "JetBrainsMono Nerd Font",
-    "ui_font_family": ".SystemUIFont",
-    "icon_theme": {
-        "mode": "dark",
-        "light": "Zed (Default)",
-        "dark": "Zed (Default)",
-    },
-    "language_models": {},
-    "which_key": {
-        "enabled": true,
-    },
-    "git_panel": {
-        "dock": "right",
-    },
-    "edit_predictions": {
-        "provider": "zed",
-        "mode": "subtle",
-        "copilot": {
-            "proxy": null,
-            "proxy_no_verify": null,
-        },
-    },
-    "inlay_hints": {
-        "enabled": true,
-    },
-    "file_types": {},
-    "ssh_connections": [
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "file_types": {},
+  "ssh_connections": [
+    {
+      "host": "homelab",
+      "args": [],
+      "projects": [
         {
-            "host": "homelab",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["~/stacks"],
-                },
-            ],
+          "paths": [
+            "~/stacks"
+          ],
+        },
+      ],
+    },
+    {
+      "host": "kasdevcontainer.devpod",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "connect-4",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/marijn/connect-4"
+          ],
+        },
+      ],
+    },
+  ],
+  "format_on_save": "on",
+  "languages": {
+    "Lua": {
+      "tab_size": 4
+    },
+    "Shell Script": {
+      "tab_size": 4
+    },
+    "YAML": {
+      "tab_size": 2,
+    },
+    "XML": {
+      "preferred_line_length": 99,
+      "tab_size": 2,
+      "formatter": "auto",
+    },
+    "TOML": {
+      "prettier": {
+        "allowed": true,
+      },
+    },
+    "Elixir": {
+      "tasks": {
+        "prefer_lsp": true,
+      },
+      "show_edit_predictions": false,
+    },
+    "JSONC": {
+      "tab_size": 2,
+    },
+    "JSON": {
+      "hard_tabs": false,
+      "tab_size": 2,
+      "formatter": "auto",
+    },
+    "Go": {
+      "show_edit_predictions": false,
+    },
+    "Rust": {
+      "show_edit_predictions": true,
+    },
+    "C": {
+      "show_edit_predictions": false,
+    },
+    "Python": {
+      "language_servers": [
+        "ruff",
+        "ty"
+      ],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_action": "source.organizeImports.ruff",
         },
         {
-            "host": "kasdevcontainer.devpod",
-            "args": [],
-            "projects": [],
+          "code_action": "source.fixAll.ruff",
         },
         {
-            "host": "connect-4",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/home/marijn/connect-4"],
-                },
+          "language_server": {
+            "name": "ruff",
+          },
+        },
+      ],
+    },
+    "C++": {
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": [
+            "--style=file",
+            "--assume-filename={buffer_path}",
+          ],
+        },
+      },
+      "format_on_save": "on",
+    },
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100,
+          "lint": {
+            "extendSelect": [
+              "I"
             ],
+          },
         },
-    ],
-    "format_on_save": "on",
-    "languages": {
-        "Lua": {
-            "tab_size": 4
-        },
-        "Shell Script": {
-            "tab_size": 4
-        },
-        "YAML": {
-            "prettier": {
-                "allowed": false,
-            },
-            "tab_size": 2,
-        },
-        "XML": {
-            "preferred_line_length": 99,
-            "tab_size": 2,
-            "formatter": "auto",
-        },
-        "TOML": {
-            "prettier": {
-                "allowed": true,
-            },
-        },
-        "Elixir": {
-            "tasks": {
-                "prefer_lsp": true,
-            },
-            "show_edit_predictions": false,
-        },
-        "JSONC": {
-            "tab_size": 4,
-        },
-        "JSON": {
-            "hard_tabs": false,
-            "tab_size": 4,
-            "formatter": "auto",
-        },
-        "Go": {
-            "show_edit_predictions": false,
-        },
-        "Rust": {
-            "show_edit_predictions": true,
-        },
-        "C": {
-            "show_edit_predictions": false,
-        },
-        "Python": {
-            "language_servers": ["ruff", "ty"],
-            "format_on_save": "on",
-            "formatter": [
-                {
-                    "code_action": "source.organizeImports.ruff",
-                },
-                {
-                    "code_action": "source.fixAll.ruff",
-                },
-                {
-                    "language_server": {
-                        "name": "ruff",
-                    },
-                },
-            ],
-        },
-        "C++": {
-            "formatter": {
-                "external": {
-                    "command": "clang-format",
-                    "arguments": [
-                        "--style=file",
-                        "--assume-filename={buffer_path}",
-                    ],
-                },
-            },
-            "format_on_save": "on",
-        },
+      },
     },
-    "lsp": {
-        "ruff": {
-            "initialization_options": {
-                "settings": {
-                    "lineLength": 100,
-                    "lint": {
-                        "extendSelect": ["I"],
-                    },
-                },
-            },
-        },
-        "tinymist": {
-            "settings": {
-                "projectResolution": "lockDatabase",
-                "exportPdf": "onSave",
-                "outputPath": "$root/$name",
-            },
-        },
-        "rust-analyzer": {
-            "initialization_options": {
-                "checkOnSave": true,
-                "check": {
-                    "command": "clippy",
-                },
-            },
-        },
-        "yaml-language-server": {
-            "initialization_options": {
-                "yaml": {
-                    "schemaStore": {
-                        "enable": false,
-                    },
-                    "disableAdditionalPropertiesWarnings": [521],
-                },
-            },
-        },
+    "tinymist": {
+      "settings": {
+        "projectResolution": "lockDatabase",
+        "exportPdf": "onSave",
+        "outputPath": "$root/$name",
+      },
     },
-    "terminal": {
-        "cursor_shape": "block",
-        "dock": "bottom",
-        "font_family": "JetBrainsMono Nerd Font Mono",
-        "line_height": "standard",
-        "shell": {
-            "program": "fish",
+    "rust-analyzer": {
+      "initialization_options": {
+        "checkOnSave": true,
+        "check": {
+          "command": "clippy",
         },
-        "working_directory": "current_project_directory",
-        "detect_venv": {
-            "on": {
-                "directories": [".venv", "venv"],
-                "activate_script": "fish",
-            },
-        },
+      },
     },
-    "agent": {
-        "tool_permissions": {
-            "tools": {
-                "open": {
-                    "default": "allow",
-                },
-            },
-            "default": "allow",
+    "yaml-language-server": {
+      "initialization_options": {
+        "yaml": {
+          "schemaStore": {
+            "enable": false,
+          },
+          "disableAdditionalPropertiesWarnings": [
+            521
+          ],
         },
-        "single_file_review": true,
-        "inline_assistant_model": {
-            "provider": "copilot_chat",
-            "model": "gemini-3.1-pro-preview",
-        },
-        "default_profile": "write",
-        "dock": "right",
-        "default_model": {
-            "effort": "high",
-            "enable_thinking": true,
-            "provider": "copilot_chat",
-            "model": "gemini-3.1-pro-preview",
-        },
+      },
     },
-    "vim_mode": true,
-    "relative_line_numbers": "enabled",
-    "ui_font_size": 16.0,
-    "buffer_font_size": 16.0,
-    "vertical_scroll_margin": 8,
-    "soft_wrap": "editor_width",
-    "theme": {
-        "mode": "light",
-        "light": "Omazed",
-        "dark": "Everforest",
+  },
+  "terminal": {
+    "cursor_shape": "block",
+    "dock": "bottom",
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "line_height": "standard",
+    "shell": {
+      "program": "fish",
     },
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+          "venv"
+        ],
+        "activate_script": "fish",
+      },
+    },
+  },
+  "agent": {
+    "tool_permissions": {
+      "tools": {
+        "open": {
+          "default": "allow",
+        },
+      },
+      "default": "allow",
+    },
+    "single_file_review": true,
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gemini-3.1-pro-preview",
+    },
+    "default_profile": "write",
+    "dock": "right",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "gemini-3.1-pro-preview",
+    },
+  },
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
+  "vertical_scroll_margin": 8,
+  "soft_wrap": "editor_width",
+  "theme": {
+    "mode": "light",
+    "light": "Omazed",
+    "dark": "Everforest",
+  },
 }
