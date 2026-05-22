@@ -18,6 +18,15 @@ hl.config({
         -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
         dim_inactive = true,
         dim_strength = 0.10,
+
+        inactive_opacity = 0.70,
+        blur = {
+            enabled = true,
+            size = 5 ,
+            passes = 2 ,
+            new_optimizations = true
+        },
+
     },
 })
 
@@ -31,3 +40,11 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default
 
 -- workspace rules
 hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 0 }, no_rounding = true, no_border = true })
+
+-- -- terminal rules
+hl.window_rule({
+    name = "blur terminal",
+    match = { class = "com.mitchellh.ghostty"},
+    opacity = "0.75 0.6",
+    -- border_size = 0,
+})

@@ -1,4 +1,6 @@
 @import "/home/marijn/.local/share/omarchy/default/walker/themes/omarchy-default/style.css";
+
 .box-wrapper {
     border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
