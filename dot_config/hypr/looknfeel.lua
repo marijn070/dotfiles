@@ -5,7 +5,7 @@ local gap = 8
 hl.config({
     general = {
         gaps_out = { top = 0, bottom = gap, left = gap, right = gap },
-        gaps_in = 3,
+        gaps_in = gap/2,
     },
 })
 
