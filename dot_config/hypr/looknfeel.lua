@@ -5,7 +5,7 @@ local gap = 8
 hl.config({
     general = {
         gaps_out = { top = 0, bottom = gap, left = gap, right = gap },
-        gaps_in = gap/2,
+        gaps_in = gap / 2,
     },
 })
 
@@ -19,11 +19,11 @@ hl.config({
         dim_inactive = true,
         dim_strength = 0.10,
 
-        inactive_opacity = 0.70,
+        inactive_opacity = 0.85,
         blur = {
             enabled = true,
-            size = 5 ,
-            passes = 2 ,
+            size = 5,
+            passes = 2,
             new_optimizations = true
         },
 
@@ -42,9 +42,9 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default
 hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 0 }, no_rounding = true, no_border = true })
 
 -- -- terminal rules
-hl.window_rule({
-    name = "blur terminal",
-    match = { class = "com.mitchellh.ghostty"},
-    opacity = "0.75 0.6",
-    -- border_size = 0,
-})
+-- hl.window_rule({
+--     name = "blur terminal",
+--     match = { class = "com.mitchellh.ghostty" },
+--     opacity = "0.9 0.6",
+--     -- border_size = 0,
+-- })

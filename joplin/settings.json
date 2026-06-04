@@ -6,11 +6,11 @@
 	"sync.5.path": "https://nextcloud.marijnderijk.com/remote.php/dav/files/marijn/Joplin",
 	"sync.5.username": "marijn",
 	"locale": "en_GB",
-	"theme": 2,
+	"theme": 1,
 	"layoutButtonSequence": 1,
 	"editor.pastePreserveColors": false,
 	"editor.enableTextPatterns": false,
-	"editor.tabMovesFocus": true,
+	"editor.tabMovesFocus": false,
 	"notes.sortOrder.reverse": true,
 	"notes.perFieldReverse": {
 		"user_updated_time": true,
@@ -23,10 +23,11 @@
 	"markdown.plugin.typographer": false,
 	"markdown.plugin.emoji": false,
 	"markdown.plugin.multitable": true,
+	"showTrayIcon": true,
 	"style.editor.fontSize": 16,
 	"style.editor.fontFamily": "Vollkorn",
-	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font",
-	"style.viewer.fontFamily": "Vollkorn",
+	"style.editor.monospaceFontFamily": "JetBrainsMono Nerd Font Propo",
+	"style.viewer.fontFamily": "Symbols Nerd Font",
 	"style.editor.contentMaxWidth": 900,
 	"ui.layout": {
 		"key": "root",
@@ -48,6 +49,7 @@
 		],
 		"visible": true
 	},
+	"autoUpdate.includePreReleases": true,
 	"clipperServer.autoStart": true,
 	"noteVisiblePanes": [
 		"editor"
@@ -57,6 +59,7 @@
 	"editor.inlineRendering": true,
 	"editor.imageRendering": true,
 	"editor.highlightActiveLine": true,
+	"editor.legacyMarkdown": false,
 	"api.token": "33c5ee190ab1e01e82d067c131df39168d5b4c22a18b239058340b32d5d7495c979e5a7f18785cda703fddc22785efb2d84fcb815885b25c9f8646441648a5e2",
 	"spellChecker.languages": [
 		"en-US",

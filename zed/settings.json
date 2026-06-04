@@ -45,7 +45,7 @@
     "dock": "right",
   },
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "copilot",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
@@ -223,8 +223,8 @@
     },
     "single_file_review": true,
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "gemini-3-flash-preview",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
     },
     "default_profile": "write",
     "dock": "right",

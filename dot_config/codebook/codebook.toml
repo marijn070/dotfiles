@@ -4,6 +4,7 @@ dictionaries = [
 ]
 words = [
     "crs",
+    "derijk",
     "geof",
     "geospatial",
     "hypergraph",
@@ -16,6 +17,7 @@ words = [
     "sparql",
     "triplestore",
     "triplestores",
+    "tudelft",
     "unasserted",
     "venv",
     "voxtype",

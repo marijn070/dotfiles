@@ -52,16 +52,13 @@ hl.unbind("SUPER + SHIFT + J")
 hl.unbind("SUPER + SHIFT + K")
 hl.unbind("SUPER + SHIFT + L")
 
+-- moving focus
+-- windows
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }))
 hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
-hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-
--- moving between workspaces
+-- workspaces
 hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1" }))
 hl.unbind("SUPER + mouse_up")
@@ -69,6 +66,14 @@ hl.unbind("SUPER + mouse_down")
 hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
 
+-- moving windows
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+
+
+-- selecting workspaces
 hl.unbind("SUPER + GRAVE")
 hl.unbind("SUPER + code:11")
 hl.unbind("SUPER + code:12")
@@ -118,15 +123,8 @@ hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
 hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind("SUPER + CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
 
-
--- Add extra bindings below.
--- o.bind("SUPER + SHIFT + R", "SSH", "alacritty -e ssh your-server")
-
--- Overwrite existing bindings with hl.unbind() first if needed.
--- hl.unbind("SUPER + SPACE")
--- o.bind("SUPER + SPACE", "Omarchy menu", "omarchy-menu")
-
--- Logitech MX Keys examples:
--- o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot")
--- o.bind("SUPER + H", nil, "voxtype record toggle")
--- o.bind("SUPER + PERIOD", nil, { omarchy = "walker -m symbols" })
+-- moving workspaces
+hl.bind("SUPER + CTRL + ALT + J", hl.dsp.workspace.move({ monitor = "d" }))
+hl.bind("SUPER + CTRL + ALT + K", hl.dsp.workspace.move({ monitor = "u" }))
+hl.bind("SUPER + CTRL + ALT + H", hl.dsp.workspace.move({ monitor = "l" }))
+hl.bind("SUPER + CTRL + ALT + L", hl.dsp.workspace.move({ monitor = "r" }))

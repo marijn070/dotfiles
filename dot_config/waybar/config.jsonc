@@ -25,7 +25,8 @@
     "battery",
   ],
   "hyprland/workspaces": {
-    "on-click": "activate",
+    // "on-click": "activate",
+    "on-click": "hl.dsp.focus({{workspace= {id} }})",
     "format": "{icon}",
     "format-icons": {
       "urgent": "",
@@ -35,12 +36,12 @@
       "empty": "",
       "1": "0",
       "2": "",
-      "3": 2,
-      "4": 3,
-      "5": 4,
-      "6": 5,
-      "7": 6,
-      "8": 7,
+      "3": "2",
+      "4": "3",
+      "5": "4",
+      "6": "5",
+      "7": "6",
+      "8": "7",
       "9": "", // music
       "10": "", // mail
       "11": "", // chats
