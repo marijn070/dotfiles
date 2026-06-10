@@ -6,7 +6,7 @@ shell-integration = fish
 # Font
 font-family = "Iosevka Nerd Font"
 font-style = Regular
-font-size = 14
+font-size = 13
 
 # Window
 window-padding-x = 14

@@ -233,7 +233,7 @@
       "effort": "high",
       "enable_thinking": true,
       "provider": "deepseek",
-      "model": "deepseek-v4-flash",
+      "model": "deepseek-v4-pro",
     },
   },
   "vim_mode": true,
