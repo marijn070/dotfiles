@@ -30,12 +30,6 @@ hl.config({
     },
 })
 
-hl.config({
-    animations = {
-        -- workspace_wraparound = true,
-    }
-})
-
 hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default", style = "slidevert" })
 
 -- workspace rules

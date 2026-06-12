@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "buffer_font_weight": 450.0,
+  "agent_buffer_font_size": 15.0,
+  "agent_ui_font_size": 16.0,
+  "ui_font_weight": 450.0,
   "prettier": {
     "allowed": false
   },
@@ -30,8 +34,8 @@
     "entry_spacing": "standard",
   },
   "base_keymap": "JetBrains",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_family": ".SystemUIFont",
+  "buffer_font_family": "Iosevka Nerd Font",
+  "ui_font_family": "Iosevka Aile",
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
@@ -184,6 +188,26 @@
         "outputPath": "$root/$name",
       },
     },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "executable": "tectonic",
+            "args": [
+              "-X",
+              "build",
+              // "%f",
+              // "--synctex",
+              "--keep-logs",
+              // "--keep-intermediates",
+              // "-Zshell-escape",
+            ],
+            "forwardSearchAfter": false,
+            "onSave": true
+          }
+        }
+      }
+    },
     "rust-analyzer": {
       "initialization_options": {
         "checkOnSave": true,
@@ -224,21 +248,21 @@
     },
     "single_file_review": true,
     "inline_assistant_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
     },
     "default_profile": "write",
     "dock": "right",
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
     },
   },
   "vim_mode": true,
   "relative_line_numbers": "enabled",
-  "ui_font_size": 16.0,
+  "ui_font_size": 15.0,
   "buffer_font_size": 16.0,
   "vertical_scroll_margin": 8,
   "soft_wrap": "editor_width",

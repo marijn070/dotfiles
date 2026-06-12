@@ -4,7 +4,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 shell-integration = fish
 
 # Font
-font-family = "Iosevka Nerd Font"
+font-family = "IosevkaTerm Nerd Font Mono"
 font-style = Regular
 font-size = 13
 
