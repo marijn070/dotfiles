@@ -7,24 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "buffer_font_weight": 450.0,
+  // --- Font ---
+  "buffer_font_family": "Iosevka Nerd Font",
+  "buffer_font_size": 16.0,
+  "buffer_font_weight": 400.0,
+  "ui_font_family": "Iosevka Aile",
+  "ui_font_size": 15.0,
+  "ui_font_weight": 450.0,
   "agent_buffer_font_size": 15.0,
   "agent_ui_font_size": 16.0,
-  "ui_font_weight": 450.0,
+  // --- Theme & Icons ---
+  "theme": {
+    "mode": "light",
+    "light": "Omazed",
+    "dark": "Everforest",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  // --- Editor ---
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "vertical_scroll_margin": 8,
+  "soft_wrap": "editor_width",
+  "diff_view_style": "unified",
+  "format_on_save": "on",
+  "semantic_tokens": "combined",
+  "inlay_hints": {
+    "enabled": true,
+  },
   "prettier": {
     "allowed": false
   },
-  "diff_view_style": "unified",
-  "cli_default_open_behavior": "new_window",
+  // --- UI Panels ---
   "outline_panel": {
     "dock": "left",
   },
   "collaboration_panel": {
     "dock": "left",
-  },
-  "semantic_tokens": "off",
-  "auto_update_extensions": {
-    "iwe": false,
   },
   "project_panel": {
     "dock": "left",
@@ -33,21 +55,34 @@
     "file_icons": true,
     "entry_spacing": "standard",
   },
-  "base_keymap": "JetBrains",
-  "buffer_font_family": "Iosevka Nerd Font",
-  "ui_font_family": "Iosevka Aile",
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)",
-  },
-  "language_models": {},
-  "which_key": {
-    "enabled": true,
-  },
   "git_panel": {
     "dock": "right",
   },
+  // --- Agent ---
+  "agent": {
+    "tool_permissions": {
+      "tools": {
+        "open": {
+          "default": "allow",
+        },
+      },
+      "default": "allow",
+    },
+    "single_file_review": true,
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+    "default_profile": "write",
+    "dock": "right",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+  },
+  // --- Edit Predictions ---
   "edit_predictions": {
     "provider": "copilot",
     "mode": "subtle",
@@ -56,40 +91,40 @@
       "proxy_no_verify": null,
     },
   },
-  "inlay_hints": {
+  // --- Terminal ---
+  "terminal": {
+    "font_size": 16.0,
+    "font_family": "IosevkaTerm Nerd Font Mono",
+    "cursor_shape": "block",
+    "line_height": "standard",
+    "dock": "bottom",
+    "shell": {
+      "program": "fish",
+    },
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+          "venv"
+        ],
+        "activate_script": "fish",
+      },
+    },
+  },
+  // --- Keymaps & Behaviour ---
+  "base_keymap": "VSCode",
+  "cli_default_open_behavior": "new_window",
+  "which_key": {
     "enabled": true,
   },
+  // --- Extensions ---
+  "auto_update_extensions": {
+    "iwe": false,
+  },
+  // --- Languages ---
+  "language_models": {},
   "file_types": {},
-  "ssh_connections": [
-    {
-      "host": "homelab",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "~/stacks"
-          ],
-        },
-      ],
-    },
-    {
-      "host": "kasdevcontainer.devpod",
-      "args": [],
-      "projects": [],
-    },
-    {
-      "host": "connect-4",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/marijn/connect-4"
-          ],
-        },
-      ],
-    },
-  ],
-  "format_on_save": "on",
   "languages": {
     "Lua": {
       "tab_size": 4
@@ -168,6 +203,7 @@
       "format_on_save": "on",
     },
   },
+  // --- LSP ---
   "lsp": {
     "ruff": {
       "initialization_options": {
@@ -217,58 +253,34 @@
       },
     },
   },
-  "terminal": {
-    "font_size": 16.0,
-    "cursor_shape": "block",
-    "dock": "bottom",
-    "font_family": "IosevkaTerm Nerd Font Mono",
-    "line_height": "standard",
-    "shell": {
-      "program": "fish",
-    },
-    "working_directory": "current_project_directory",
-    "detect_venv": {
-      "on": {
-        "directories": [
-          ".venv",
-          "venv"
-        ],
-        "activate_script": "fish",
-      },
-    },
-  },
-  "agent": {
-    "tool_permissions": {
-      "tools": {
-        "open": {
-          "default": "allow",
+  // --- SSH Connections ---
+  "ssh_connections": [
+    {
+      "host": "homelab",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "~/stacks"
+          ],
         },
-      },
-      "default": "allow",
+      ],
     },
-    "single_file_review": true,
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+    {
+      "host": "kasdevcontainer.devpod",
+      "args": [],
+      "projects": [],
     },
-    "default_profile": "write",
-    "dock": "right",
-    "default_model": {
-      "effort": "high",
-      "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+    {
+      "host": "connect-4",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/marijn/connect-4"
+          ],
+        },
+      ],
     },
-  },
-  "vim_mode": true,
-  "relative_line_numbers": "enabled",
-  "ui_font_size": 15.0,
-  "buffer_font_size": 16.0,
-  "vertical_scroll_margin": 8,
-  "soft_wrap": "editor_width",
-  "theme": {
-    "mode": "light",
-    "light": "Omazed",
-    "dark": "Everforest",
-  },
+  ],
 }
