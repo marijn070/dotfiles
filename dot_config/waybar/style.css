@@ -32,6 +32,7 @@ top gap in hyprland is then set to zero */
 
 .modules-center,
 .modules-right {
+    font-family: 'Iosevka Aile';
     background: @bg;
     border: 2px solid @border_color;
     padding: 0 8px;
