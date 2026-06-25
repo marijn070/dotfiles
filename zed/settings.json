@@ -71,15 +71,15 @@
     "single_file_review": true,
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4-5",
     },
     "default_profile": "write",
     "dock": "right",
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
     },
   },
   // --- Edit Predictions ---
