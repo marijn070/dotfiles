@@ -9,6 +9,7 @@
       - zoxide
       - bat
       - lazygit
+      - direnv
       - "{{ 'fd-find' if ansible_facts['os_family'] in ['Debian', 'RedHat'] else 'fd' }}"
     state: present
 

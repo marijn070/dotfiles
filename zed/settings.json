@@ -177,6 +177,10 @@
     "Go": {
       "show_edit_predictions": false,
     },
+    "Markdown": {
+      "format_on_save": "on",
+      "formatter": "language_server"
+    },
     "Rust": {
       "show_edit_predictions": true,
     },

@@ -51,6 +51,10 @@ hl.unbind("SUPER + SHIFT + H")
 hl.unbind("SUPER + SHIFT + J")
 hl.unbind("SUPER + SHIFT + K")
 hl.unbind("SUPER + SHIFT + L")
+hl.unbind("SUPER + CTRL + H")
+hl.unbind("SUPER + CTRL + J")
+hl.unbind("SUPER + CTRL + K")
+hl.unbind("SUPER + CTRL + L")
 
 -- moving focus
 -- windows
