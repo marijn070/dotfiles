@@ -8,6 +8,15 @@
 // command palette
 {
   // --- Font ---
+  "agent_servers": {
+    "github-copilot-cli": {
+      "default_config_options": {
+        "mode": "https://agentclientprotocol.com/protocol/session-modes#agent",
+        "allow_all": "on"
+      },
+      "type": "registry"
+    }
+  },
   "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_size": 16.0,
   "buffer_font_weight": 400.0,
@@ -70,21 +79,20 @@
     },
     "single_file_review": true,
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
     },
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "high",
       "enable_thinking": true,
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "google",
+      "model": "gemini-2.5-flash",
     },
   },
   // --- Edit Predictions ---
   "edit_predictions": {
-    "provider": "copilot",
+    "provider": "zed",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
@@ -126,6 +134,9 @@
   "language_models": {},
   "file_types": {},
   "languages": {
+    "SQL": {
+      "tab_size": 4
+    },
     "Lua": {
       "tab_size": 4
     },
@@ -143,9 +154,11 @@
       "formatter": "auto",
     },
     "TOML": {
-      "prettier": {
-        "allowed": true,
-      },
+      "formatter": {
+        "language_server": {
+          "name": "tombi"
+        }
+      }
     },
     "Elixir": {
       "tasks": {
