@@ -7,72 +7,30 @@
 // from the command palette.
 [
   {
-    "context": "Workspace && vim_mode == normal",
+    "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-t": "workspace::NewTerminal",
-      "ctrl-w": "pane::CloseActiveItem"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "space": null,
-      "space e": "workspace::ToggleLeftDock"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space e": "workspace::ToggleLeftDock",
-      "space g g": [
+      "space g": [
         "task::Spawn",
-        { "task_name": "lazygit", "reveal_target": "center" }
+        {
+          "task_name": "lazygit",
+          "reveal_target": "center"
+        }
       ],
-      "space w": "workspace::Save",
-      "space t": "terminal_panel::ToggleFocus",
-      "space q": "pane::CloseActiveItem",
-      "space a i": "workspace::ToggleRightDock"
     }
   },
   {
-    "context": "GitPanel",
+    "context": "Editor && vim_mode == insert",
     "bindings": {
-      "p": "git::Push",
-      "shift p": "git::Pull",
-      "f": "git::Fetch"
-    }
+      // "j k": "vim::NormalBefore"
+    },
   },
   {
+    "context": "!Editor",
     "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-m": "workspace::ToggleZoom"
-    }
-  },
-  {
-    "context": "vim_mode == normal",
-      "bindings": {
-      "ctrl-shift-b": "editor::ToggleBookmark"
-    }
-  },
-  {
-    "context": "vim_mode == normal",
-      "bindings": {
-      "space b b": "editor::ViewBookmarks"
-    }
-  },
-  {
-    "context": "vim_mode == normal",
-    "bindings": {
-      "space f f": "file_finder::Toggle"
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w j": "workspace::ActivatePaneDown",
+      "space w k": "workspace::ActivatePaneUp",
+      "space w l": "workspace::ActivatePaneRight",
     }
   }
 ]

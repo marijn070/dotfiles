@@ -8,6 +8,11 @@
 // command palette
 {
   // --- Font ---
+  "disable_ai": false,
+  "minimap": {
+    "show": "auto"
+  },
+  "helix_mode": true,
   "agent_servers": {
     "github-copilot-cli": {
       "default_config_options": {
@@ -69,6 +74,7 @@
   },
   // --- Agent ---
   "agent": {
+    "sidebar_side": "right",
     "tool_permissions": {
       "tools": {
         "open": {
@@ -80,7 +86,7 @@
     "single_file_review": true,
     "inline_assistant_model": {
       "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "model": "deepseek-v4-flash",
     },
     "default_profile": "write",
     "dock": "right",
@@ -134,6 +140,9 @@
   "language_models": {},
   "file_types": {},
   "languages": {
+    "Gleam": {
+      "show_edit_predictions": false
+    },
     "SQL": {
       "tab_size": 4
     },
