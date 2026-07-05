@@ -70,11 +70,12 @@
     "entry_spacing": "standard",
   },
   "git_panel": {
+    "button": false,
     "dock": "right",
   },
   // --- Agent ---
   "agent": {
-    "sidebar_side": "right",
+    "sidebar_side": "left",
     "tool_permissions": {
       "tools": {
         "open": {
@@ -127,10 +128,11 @@
     },
   },
   // --- Keymaps & Behaviour ---
-  "base_keymap": "VSCode",
+  "base_keymap": null,
   "cli_default_open_behavior": "new_window",
   "which_key": {
     "enabled": true,
+    "delay_ms": 10
   },
   // --- Extensions ---
   "auto_update_extensions": {

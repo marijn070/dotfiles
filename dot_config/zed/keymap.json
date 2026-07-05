@@ -7,8 +7,22 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
     "bindings": {
+      // for whichkey to work
+      "space": null,
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-[": "pane::ActivatePreviousItem",
+      "ctrl-]": "pane::ActivateNextItem",
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "bindings": {
+      "space w m": "workspace::ToggleZoom",
+      "space e": "vim::ToggleProjectPanelFocus",
       "space g": [
         "task::Spawn",
         {
@@ -16,21 +30,22 @@
           "reveal_target": "center"
         }
       ],
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
     },
   },
   {
-    "context": "!Editor",
+    "context": "ProjectPanel",
     "bindings": {
-      "space w h": "workspace::ActivatePaneLeft",
-      "space w j": "workspace::ActivatePaneDown",
-      "space w k": "workspace::ActivatePaneUp",
-      "space w l": "workspace::ActivatePaneRight",
+      "space w q": "workspace::CloseActiveDock",
+      "space e": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-t": "workspace::NewTerminal",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-[": "pane::ActivatePreviousItem",
+      "ctrl-]": "pane::ActivateNextItem",
     }
   }
 ]
