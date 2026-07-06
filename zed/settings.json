@@ -92,9 +92,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
+      "effort": "high",
       "enable_thinking": true,
-      "provider": "google",
-      "model": "gemini-2.5-flash",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
     },
   },
   // --- Edit Predictions ---
@@ -134,15 +135,17 @@
     "enabled": true,
     "delay_ms": 30,
   },
-  // --- Extensions ---
-  "auto_update_extensions": {
-    "iwe": false,
-  },
   // --- Languages ---
   "language_models": {},
   "file_types": {},
   "languages": {
     "Gleam": {
+      "indent_guides": {
+        "background_coloring": "disabled",
+        "coloring": "indent_aware",
+        "enabled": true
+      },
+      "tab_size": 2,
       "show_edit_predictions": false
     },
     "SQL": {
@@ -165,6 +168,7 @@
       "formatter": "auto",
     },
     "TOML": {
+      "tab_size": 2,
       "formatter": {
         "language_server": {
           "name": "tombi"
@@ -199,24 +203,15 @@
       "show_edit_predictions": false,
     },
     "Python": {
+      "tab_size": 2,
+      "document_symbols": "on",
+      "document_folding_ranges": "on",
       "language_servers": [
         "ruff",
         "ty"
       ],
       "format_on_save": "on",
-      "formatter": [
-        {
-          "code_action": "source.organizeImports.ruff",
-        },
-        {
-          "code_action": "source.fixAll.ruff",
-        },
-        {
-          "language_server": {
-            "name": "ruff",
-          },
-        },
-      ],
+      "formatter": "language_server"
     },
     "C++": {
       "formatter": {

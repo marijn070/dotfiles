@@ -7,30 +7,45 @@
 // from the command palette.
 [
   {
+    "unbind": {
+      "ctrl-w": "workspace::CloseActiveDock"
+    },
     "bindings": {
-      // for whichkey to work
-      "space": null,
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-[": "pane::ActivatePreviousItem",
       "ctrl-]": "pane::ActivateNextItem",
+      "ctrl-m": "workspace::ToggleZoom",
+      // for whichkey to work
+      "space": null,
     }
   },
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
     "bindings": {
+      "space t": "workspace::ToggleBottomDock",
       "space w m": "workspace::ToggleZoom",
+      "space w H": "workspace::ToggleLeftDock",
+      "space w J": "workspace::ToggleBottomDock",
+      "space w L": "workspace::ToggleRightDock",
       "space e": "vim::ToggleProjectPanelFocus",
+      "space A": "agent::ToggleFocus",
       "space g": [
         "task::Spawn",
         {
           "task_name": "lazygit",
-          "reveal_target": "center"
+          "reveal_target": "center",
         }
       ],
     },
+  },
+  {
+    "context": "vim_mode == helix_normal && MessageEditor",
+    "bindings": {
+      "space w q": "workspace::CloseActiveDock",
+    }
   },
   {
     "context": "ProjectPanel",
@@ -47,5 +62,31 @@
       "ctrl-[": "pane::ActivatePreviousItem",
       "ctrl-]": "pane::ActivateNextItem",
     }
-  }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-backspace": [
+        "terminal::SendKeystroke",
+        "ctrl-w"
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "shift-c": "project_panel::Duplicate"
+    }
+  },
 ]

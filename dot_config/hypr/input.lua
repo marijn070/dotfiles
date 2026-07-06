@@ -10,7 +10,7 @@ hl.config({
 
         kb_options = "compose:caps", -- ,grp:alts_toggle
 
-        follow_mouse = 1,
+        follow_mouse = 3,
         mouse_refocus = false,
 
         -- Change speed of keyboard repeat.
