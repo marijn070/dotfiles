@@ -1,7 +1,7 @@
 # Dynamic theme colors
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
-shell-integration = fish
+shell-integration = nushell
 
 # Font
 font-family = "IosevkaTerm Nerd Font Mono"
@@ -35,14 +35,6 @@ keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
 keybind = ctrl+l=goto_split:right
 
-keybind = ctrl+a>h=new_split:left
-keybind = ctrl+a>j=new_split:down
-keybind = ctrl+a>k=new_split:up
-keybind = ctrl+a>l=new_split:right
-keybind = ctrl+a>f=toggle_split_zoom
-
-keybind = ctrl+a>n=next_tab
-keybind = ctrl+a>p=previous_tab
 
 keybind = super+r=reload_config
 

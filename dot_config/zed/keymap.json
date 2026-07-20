@@ -89,4 +89,34 @@
       "shift-c": "project_panel::Duplicate"
     }
   },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select || vim_mode == visual) && !menu",
+    "bindings": {
+      "space c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-n": "workspace::NewFile"
+    }
+  },
+  {
+    "context": "Workspace && !Terminal",
+    "bindings": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select || vim_mode == visual) && !menu",
+    "bindings": {
+      "s": "vim::HelixSelectRegex"
+    }
+  }
 ]

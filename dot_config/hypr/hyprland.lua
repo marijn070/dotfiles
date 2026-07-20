@@ -21,7 +21,7 @@ require("hypr.autostart")
 require("default.hypr.toggles")
 
 -- float planify
-o.window("io.github.alainm23.planify", { float = true })
+-- o.window("io.github.alainm23.planify", { float = true })
 
 -- default workspaces
 o.window("zen", { workspace = 2 })

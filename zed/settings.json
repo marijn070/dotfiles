@@ -8,6 +8,7 @@
 // command palette
 {
   // --- Font ---
+  "colorize_brackets": false,
   "disable_ai": false,
   "minimap": {
     "show": "auto"
@@ -75,6 +76,11 @@
   },
   // --- Agent ---
   "agent": {
+    "inline_assistant_model": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "enable_thinking": false
+    },
     "sidebar_side": "left",
     "tool_permissions": {
       "tools": {
@@ -85,11 +91,7 @@
       "default": "allow",
     },
     "single_file_review": true,
-    "inline_assistant_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-flash",
-    },
-    "default_profile": "write",
+    "default_profile": "ask",
     "dock": "right",
     "default_model": {
       "effort": "high",
@@ -115,7 +117,7 @@
     "line_height": "standard",
     "dock": "bottom",
     "shell": {
-      "program": "fish",
+      "program": "nu",
     },
     "working_directory": "current_project_directory",
     "detect_venv": {
@@ -139,6 +141,21 @@
   "language_models": {},
   "file_types": {},
   "languages": {
+    "HTML": {
+      "tab_size": 2
+    },
+    "Nu": {
+      "show_edit_predictions": true,
+      "format_on_save": "off",
+      "formatter": {
+        "external": {
+          "command": "nufmt",
+          "arguments": [
+            "--stdin"
+          ]
+        }
+      },
+    },
     "Gleam": {
       "indent_guides": {
         "background_coloring": "disabled",
@@ -212,6 +229,16 @@
       ],
       "format_on_save": "on",
       "formatter": "language_server"
+    },
+    "Typst": {
+      "document_folding_ranges": "on"
+    },
+    "SPARQL": {
+      "formatter": {
+        "external": {
+          "command": "sparql-formatter"
+        }
+      }
     },
     "C++": {
       "formatter": {

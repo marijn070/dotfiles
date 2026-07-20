@@ -20,12 +20,10 @@ o.bind("SUPER + SHIFT + E", "Email", { launch = "thunderbird" })
 
 -- Web app bindings.
 o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com" })
-o.bind("SUPER + SHIFT + ALT + A", "Grok", { webapp = "https://grok.com" })
 o.bind("SUPER + SHIFT + Y", "YouTube", { webapp = "https://youtube.com/" })
 o.bind("SUPER + SHIFT + W", "WhatsApp", { webapp = "https://web.whatsapp.com/", focus = true })
 o.bind("SUPER + SHIFT + I", "Immich", { webapp = "https://photos.marijnderijk.com/", focus = true })
 
-o.bind("SUPER + SHIFT + S", "Google Maps", { webapp = "https://maps.google.com/", focus = true })
 
 -- Configure
 o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
@@ -122,6 +120,7 @@ hl.bind("SUPER + SHIFT + 6", hl.dsp.window.move({ workspace = 7 }))
 hl.bind("SUPER + SHIFT + 7", hl.dsp.window.move({ workspace = 8 }))
 hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = 9 }))
 hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 10 }))
+hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
 
 hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))

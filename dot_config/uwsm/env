@@ -10,6 +10,9 @@ source ~/.config/uwsm/default
 # Activate mise if present on the system
 omarchy-cmd-present mise && eval "$(mise activate bash --shims)"
 
+# Display
+export DISPLAY=:1
+
 # Nvidia env variables
 export GBM_BACKEND=nvidia-drm
 export NVD_BACKEND=direct
