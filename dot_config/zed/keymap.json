@@ -118,5 +118,14 @@
     "bindings": {
       "s": "vim::HelixSelectRegex"
     }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "space b": "tab_switcher::ToggleAll"
+    },
+    "bindings": {
+      "space b": "tab_switcher::Toggle"
+    }
   }
 ]
