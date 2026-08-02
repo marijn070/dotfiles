@@ -23,6 +23,9 @@ require("default.hypr.toggles")
 -- float planify
 -- o.window("io.github.alainm23.planify", { float = true })
 
+-- float ZenNotes quick capture
+hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
+
 -- default workspaces
 o.window("zen", { workspace = 2 })
 o.window("org.mozilla.Thunderbird", { workspace = 10 })

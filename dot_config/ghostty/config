@@ -1,6 +1,8 @@
 # Dynamic theme colors
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
+command = /usr/bin/nu
+
 shell-integration = nushell
 
 # Font
