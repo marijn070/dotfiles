@@ -1,34 +1,33 @@
+-- Keep only your personal keybinding overrides here. Add new bindings or
+-- unbind defaults before replacing them.
+
+-- See current bindings and descriptions:
+--   omarchy menu keybindings --print
+
+-- To disable every Omarchy default binding, set this in
+-- ~/.config/hypr/hyprland.lua before require("default.hypr.omarchy"), then add
+-- only the bindings you want below:
+--   omarchy_default_bindings = false
+
+-- To disable all preinstalled app/webapp bindings, set:
+--   omarchy_preinstalled_bindings = false
+
 -- Application bindings.
 hl.unbind("SUPER + T")
 o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
 hl.unbind("SUPER + F")
 o.bind("SUPER + F", "Yazi", { tui = "yazi" })
-o.bind("SUPER + ALT + RETURN", "Tmux", { omarchy = "terminal-tmux" })
 o.bind("SUPER + B", "Browser", { omarchy = "browser" })
-o.bind("SUPER + SHIFT + F", "File manager", { omarchy = "nautilus" })
-o.bind("SUPER + ALT + SHIFT + F", "File manager (cwd)", { omarchy = "nautilus-cwd" })
-o.bind("SUPER + B", "Browser", { omarchy = "browser" })
-o.bind("SUPER + SHIFT + ALT + B", "Browser (private)", { omarchy = "browser --private" })
-o.bind("SUPER + SHIFT + M", "Music", { omarchy = "or-focus spotify-launcher" })
-o.bind("SUPER + SHIFT + ALT + M", "Music TUI", { tui = "cliamp", focus = true })
 o.bind("SUPER + SHIFT + N", "Editor", { omarchy = "editor" })
 o.bind("SUPER + SHIFT + D", "Docker", { tui = "lazydocker" })
 o.bind("SUPER + SHIFT + G", "Signal", { launch = "signal-desktop", focus = "^signal$" })
-o.bind("SUPER + SHIFT + O", "Obsidian", { launch = "obsidian", focus = "^obsidian$" })
 o.bind("SUPER + SHIFT + SLASH", "Passwords", { launch = "1password" })
-o.bind("SUPER + SHIFT + E", "Email", { launch = "thunderbird" })
-
--- Web app bindings.
-o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com" })
-o.bind("SUPER + SHIFT + Y", "YouTube", { webapp = "https://youtube.com/" })
-o.bind("SUPER + SHIFT + W", "WhatsApp", { webapp = "https://web.whatsapp.com/", focus = true })
-o.bind("SUPER + SHIFT + I", "Immich", { webapp = "https://photos.marijnderijk.com/", focus = true })
-
 
 -- Configure
 o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
 
 -- Maximize, Close
+hl.unbind("SUPER + Q")
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 

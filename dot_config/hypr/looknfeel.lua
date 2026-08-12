@@ -1,10 +1,24 @@
 -- Change the default Omarchy look'n'feel.
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#general
+-- hl.config({
+--   general = {
+--     -- No gaps between windows or borders.
+--     gaps_in = 0,
+--     gaps_out = 0,
+--     border_size = 0,
+--
+--     -- Change to niri-like side-scrolling layout.
+--     layout = "scrolling",
+--   },
+-- })
+
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#general
 local gap = 8
 hl.config({
     general = {
-        gaps_out = { top = 0, bottom = gap, left = gap, right = gap },
+        gaps_out = gap,
         gaps_in = gap / 2,
     },
 })
