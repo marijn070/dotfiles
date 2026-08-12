@@ -24,6 +24,7 @@ o.bind("SUPER + SHIFT + G", "Signal", { launch = "signal-desktop", focus = "^sig
 o.bind("SUPER + SHIFT + SLASH", "Passwords", { launch = "1password" })
 
 -- Configure
+hl.unbind("SUPER + SHIFT + C")
 o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
 
 -- Maximize, Close
