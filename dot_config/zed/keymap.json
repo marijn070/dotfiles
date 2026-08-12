@@ -127,5 +127,15 @@
     "bindings": {
       "space b": "tab_switcher::Toggle"
     }
+  },
+  {
+    "bindings": {
+      "alt-)": "editor::RotateSelectionsForward"
+    }
+  },
+  {
+    "bindings": {
+      "alt-(": "editor::RotateSelectionsBackward"
+    }
   }
 ]

@@ -77,8 +77,8 @@
   // --- Agent ---
   "agent": {
     "inline_assistant_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-flash",
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
       "enable_thinking": false
     },
     "sidebar_side": "left",
@@ -91,13 +91,13 @@
       "default": "allow",
     },
     "single_file_review": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "high",
+      "effort": "low",
       "enable_thinking": true,
-      "provider": "deepseek",
-      "model": "deepseek-v4-flash",
+      "provider": "zed.dev",
+      "model": "claude-sonnet-5",
     },
   },
   // --- Edit Predictions ---
@@ -166,7 +166,22 @@
       "show_edit_predictions": false
     },
     "SQL": {
-      "tab_size": 4
+      "tab_size": 2,
+      "formatter": {
+        "external": {
+          "command": "pg_format",
+          "arguments": [
+            "--keyword-case",
+            "1",
+            "--type-case",
+            "1",
+            "--function-case",
+            "1",
+            "--spaces",
+            "2"
+          ]
+        }
+      }
     },
     "Lua": {
       "tab_size": 4
