@@ -23,6 +23,10 @@ o.bind("SUPER + SHIFT + D", "Docker", { tui = "lazydocker" })
 o.bind("SUPER + SHIFT + G", "Signal", { launch = "signal-desktop", focus = "^signal$" })
 o.bind("SUPER + SHIFT + SLASH", "Passwords", { launch = "1password" })
 
+-- Monitors
+hl.unbind("SUPER + CTRL + M")
+o.bind("SUPER + CTRL + M", "Monitor", { tui = "hyprmoncfg" })
+
 -- Configure
 hl.unbind("SUPER + SHIFT + C")
 o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
