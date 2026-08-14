@@ -84,7 +84,7 @@
     }
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && !editing",
     "bindings": {
       "shift-c": "project_panel::Duplicate"
     }
