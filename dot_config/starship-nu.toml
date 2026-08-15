@@ -1,0 +1,15 @@
+# Get editor completions based on the config schema
+"$schema" = "https://starship.rs/config-schema.json"
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# move the rest of the prompt to the right
+format = ""
+right_format = "$all"
+
+[shell]
+disabled = false
+
+[character]
+disabled = true
