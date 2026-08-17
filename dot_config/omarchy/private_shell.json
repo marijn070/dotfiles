@@ -53,12 +53,15 @@
           "id": "crmne.hyprmoncfg"
         },
         {
+          "id": "im0001gt.hw-tooltip"
+        },
+        {
           "id": "omarchy.power"
         }
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
   },
   "idle": {
     "lock": 300,

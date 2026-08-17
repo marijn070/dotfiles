@@ -1,12 +1,13 @@
 {
   "name": "unplugged",
   "created_at": "2026-04-06T14:04:02.792906811Z",
-  "updated_at": "2026-08-15T15:32:55.590709247Z",
+  "updated_at": "2026-08-17T18:06:52.308419748Z",
   "outputs": [
     {
       "key": "boe|0x0a86",
       "match_key": "boe|0x0a86",
       "name": "eDP-1",
+      "description": "BOE 0x0A86",
       "make": "BOE",
       "model": "0x0A86",
       "enabled": true,
@@ -16,7 +17,7 @@
       "refresh": 60,
       "x": 0,
       "y": 0,
-      "scale": 0.9999999999999991,
+      "scale": 1,
       "transform": 0,
       "bitdepth": 8,
       "cm": "srgb",
