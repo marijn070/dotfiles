@@ -1,8 +1,20 @@
-# Changes require a relaunch of Hyprland to take effect.
+# Changes require a restart to take effect.
 
+# Install other terminals via Install > Terminal
 export TERMINAL=xdg-terminal-exec
-export EDITOR=zed
+
+# BROWSER is intentionally not exported here: session-wide, it makes xdg-settings
+# refuse to change the default browser, which breaks the browsers' own "Set as
+# default" buttons. Interactive shells get BROWSER from default/bash/envs instead.
+
+# Used by terminal programs to open files with the selected Omarchy default editor
+export EDITOR="omarchy-launch-editor --inline"
+
+# Use zathura as the PDF viewer
 export PDF=zathura
 
-# Used by terminal programs (like gh) to open URLs detached from the terminal process tree
-export BROWSER=omarchy-launch-browser
+# Use a custom directory for screenshots (remember to make the directory!)
+export OMARCHY_SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+
+# Use a custom directory for screenrecordings (remember to make the directory!)
+export OMARCHY_SCREENRECORD_DIR="$HOME/Videos/Screencasts"
