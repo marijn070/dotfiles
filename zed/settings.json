@@ -33,9 +33,9 @@
   "agent_ui_font_size": 16.0,
   // --- Theme & Icons ---
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Omazed",
-    "dark": "Everforest",
+    "dark": "Omazed",
   },
   "icon_theme": {
     "mode": "system",

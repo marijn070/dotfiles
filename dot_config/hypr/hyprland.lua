@@ -1,7 +1,7 @@
 -- Learn how to configure Hyprland: https://wiki.hypr.land/Configuring/Start/
 
 -- Omarchy's bootstrap keeps path setup out of this user config.
-dofile((os.getenv("OMARCHY_PATH") or "/usr/share/omarchy") .. "/default/hypr/bootstrap.lua")
+dofile("/usr/share/omarchy/default/hypr/bootstrap.lua")
 
 -- Disable all Omarchy default bindings. Add your own in hypr/bindings.lua.
 -- omarchy_default_bindings = false

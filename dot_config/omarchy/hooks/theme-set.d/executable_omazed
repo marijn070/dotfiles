@@ -1,4 +1,2 @@
 #!/bin/bash
-# This hook is called with the snake-cased name of the theme that has just been set.
-
 omazed set "$1"
