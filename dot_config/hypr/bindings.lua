@@ -60,10 +60,12 @@ hl.unbind("SUPER + CTRL + L")
 
 -- moving focus
 -- windows
-hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))
-hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }))
-hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }))
-hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
+hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }), { description = "Focus left" })
+hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }), { description = "Focus down" })
+hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }), { description = "Focus up" })
+hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }), { description = "Focus right" })
+-- Provide a dedicated key for the Keybindings overview without overwriting SUPER+K
+o.bind("SUPER + ALT + K", "Keybindings", "omarchy-menu-keybindings")
 -- workspaces
 hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1" }))
