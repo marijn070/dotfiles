@@ -1,4 +1,4 @@
-include /home/marijn/.config/omarchy/current/theme/zathura
+include /home/marijn/.local/state/omarchy/current/theme/zathura
 set selection-clipboard clipboard
 
 set recolor-keephue true

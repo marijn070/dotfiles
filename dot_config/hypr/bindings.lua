@@ -12,20 +12,11 @@
 -- To disable all preinstalled app/webapp bindings, set:
 --   omarchy_preinstalled_bindings = false
 
--- Application bindings.
 hl.unbind("SUPER + T")
 o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
+
 hl.unbind("SUPER + F")
 o.bind("SUPER + F", "Yazi", { tui = "yazi" })
-o.bind("SUPER + B", "Browser", { omarchy = "browser" })
-o.bind("SUPER + SHIFT + N", "Editor", { omarchy = "editor" })
-o.bind("SUPER + SHIFT + D", "Docker", { tui = "lazydocker" })
-o.bind("SUPER + SHIFT + G", "Signal", { launch = "signal-desktop", focus = "^signal$" })
-o.bind("SUPER + SHIFT + SLASH", "Passwords", { launch = "1password" })
-
--- Monitors
-hl.unbind("SUPER + CTRL + M")
-o.bind("SUPER + CTRL + M", "Monitor", { tui = "hyprmoncfg" })
 
 -- Configure
 hl.unbind("SUPER + SHIFT + C")
@@ -38,102 +29,9 @@ hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "t
 
 hl.unbind("SUPER + code:61")
 
--- Planify Tasks
-hl.unbind("SUPER + P")
-hl.unbind("SUPER + SHIFT + P")
-o.bind("SUPER + P", "Add Task", { launch = "planify.quick-add" })
-o.bind("SUPER + SHIFT + P", "Planify", { launch = "planify" })
 
--- Vim Motions
-hl.unbind("SUPER + H")
-hl.unbind("SUPER + J")
-hl.unbind("SUPER + K")
-hl.unbind("SUPER + L")
-hl.unbind("SUPER + SHIFT + H")
-hl.unbind("SUPER + SHIFT + J")
-hl.unbind("SUPER + SHIFT + K")
-hl.unbind("SUPER + SHIFT + L")
-hl.unbind("SUPER + CTRL + H")
-hl.unbind("SUPER + CTRL + J")
-hl.unbind("SUPER + CTRL + K")
-hl.unbind("SUPER + CTRL + L")
-
--- moving focus
--- windows
-hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }), { description = "Focus left" })
-hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }), { description = "Focus down" })
-hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }), { description = "Focus up" })
-hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }), { description = "Focus right" })
 -- Provide a dedicated key for the Keybindings overview without overwriting SUPER+K
 o.bind("SUPER + ALT + K", "Keybindings", "omarchy-menu-keybindings")
--- workspaces
-hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1" }))
-hl.unbind("SUPER + mouse_up")
-hl.unbind("SUPER + mouse_down")
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "m+1" }))
 
--- moving windows
-hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-
-
--- selecting workspaces
-hl.unbind("SUPER + GRAVE")
-hl.unbind("SUPER + code:11")
-hl.unbind("SUPER + code:12")
-hl.unbind("SUPER + code:13")
-hl.unbind("SUPER + code:14")
-hl.unbind("SUPER + code:15")
-hl.unbind("SUPER + code:16")
-hl.unbind("SUPER + code:17")
-hl.unbind("SUPER + code:18")
-hl.unbind("SUPER + code:19")
-hl.unbind("SUPER + SHIFT + GRAVE")
-hl.unbind("SUPER + SHIFT + code:10")
-hl.unbind("SUPER + SHIFT + code:11")
-hl.unbind("SUPER + SHIFT + code:12")
-hl.unbind("SUPER + SHIFT + code:13")
-hl.unbind("SUPER + SHIFT + code:14")
-hl.unbind("SUPER + SHIFT + code:15")
-hl.unbind("SUPER + SHIFT + code:16")
-hl.unbind("SUPER + SHIFT + code:17")
-hl.unbind("SUPER + SHIFT + code:18")
-hl.unbind("SUPER + SHIFT + code:19")
-
-hl.bind("SUPER + GRAVE", hl.dsp.focus({ workspace = 1 }))
-hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 2 }))
-hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 3 }))
-hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 4 }))
-hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 5 }))
-hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 6 }))
-hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 7 }))
-hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 8 }))
-hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 9 }))
-hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 10 }))
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 11 }))
-
-hl.bind("SUPER + SHIFT + GRAVE", hl.dsp.window.move({ workspace = 1 }))
-hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = 2 }))
-hl.bind("SUPER + SHIFT + 2", hl.dsp.window.move({ workspace = 3 }))
-hl.bind("SUPER + SHIFT + 3", hl.dsp.window.move({ workspace = 4 }))
-hl.bind("SUPER + SHIFT + 4", hl.dsp.window.move({ workspace = 5 }))
-hl.bind("SUPER + SHIFT + 5", hl.dsp.window.move({ workspace = 6 }))
-hl.bind("SUPER + SHIFT + 6", hl.dsp.window.move({ workspace = 7 }))
-hl.bind("SUPER + SHIFT + 7", hl.dsp.window.move({ workspace = 8 }))
-hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = 9 }))
-hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 10 }))
-hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
-hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
-
-hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
-hl.bind("SUPER + CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
-
--- moving workspaces
-hl.bind("SUPER + CTRL + ALT + J", hl.dsp.workspace.move({ monitor = "d" }))
-hl.bind("SUPER + CTRL + ALT + K", hl.dsp.workspace.move({ monitor = "u" }))
-hl.bind("SUPER + CTRL + ALT + H", hl.dsp.workspace.move({ monitor = "l" }))
-hl.bind("SUPER + CTRL + ALT + L", hl.dsp.workspace.move({ monitor = "r" }))
+require("bindings.navigation")
+require("bindings.planify")

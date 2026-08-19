@@ -1,25 +1,16 @@
 -- Change the default Omarchy look'n'feel.
 
--- https://wiki.hypr.land/Configuring/Basics/Variables/#general
-local gap = 8
-hl.config({
-    general = {
-        gaps_out = gap,
-        gaps_in = gap / 2,
-    },
-})
-
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
 hl.config({
     decoration = {
         -- Use round window corners.
-        rounding = 12,
+        rounding = 8,
 
         -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
         dim_inactive = true,
         dim_strength = 0.1,
 
-        inactive_opacity = 0.85,
+        inactive_opacity = 0.75,
         blur = {
             enabled = true,
             size = 5,

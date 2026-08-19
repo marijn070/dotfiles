@@ -15,6 +15,9 @@
   },
   "helix_mode": true,
   "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "default_config_options": {
         "mode": "https://agentclientprotocol.com/protocol/session-modes#agent",
@@ -78,7 +81,7 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4-5",
       "enable_thinking": false
     },
     "sidebar_side": "left",
@@ -94,10 +97,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "low",
+      "effort": "medium",
       "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-5",
+      "provider": "Cerebras",
+      "model": "gpt-oss-120b",
     },
   },
   // --- Edit Predictions ---
@@ -138,7 +141,47 @@
     "delay_ms": 30,
   },
   // --- Languages ---
-  "language_models": {},
+  "language_models": {
+    "openai_compatible": {
+      "Cerebras": {
+        "api_url": "https://api.cerebras.ai/v1",
+        "available_models": [
+          {
+            "name": "gpt-oss-120b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 40000,
+            "reasoning_effort": "low",
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": false
+            }
+          },
+          {
+            "name": "gemma-4-31b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 40000,
+            "reasoning_effort": "low",
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": false
+            }
+          }
+        ]
+      }
+    }
+  },
   "file_types": {},
   "languages": {
     "HTML": {
@@ -200,7 +243,7 @@
       "formatter": "auto",
     },
     "TOML": {
-      "tab_size": 2,
+      "tab_size": 4,
       "formatter": {
         "language_server": {
           "name": "tombi"
