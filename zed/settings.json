@@ -97,10 +97,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "enable_thinking": true,
-      "provider": "Cerebras",
-      "model": "gpt-oss-120b",
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
     },
   },
   // --- Edit Predictions ---
