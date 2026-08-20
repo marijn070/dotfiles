@@ -4,13 +4,13 @@
     "layout": {
       "center": [
         {
-          "id": "tmn73.calendar"
-        },
-        {
           "id": "omarchy.indicators"
         },
         {
           "id": "omarchy.keyboard-layout"
+        },
+        {
+          "id": "tmn73.calendar"
         },
         {
           "id": "omarchy.weather"
@@ -75,7 +75,7 @@
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
   },
   "idle": {
     "lock": 300,

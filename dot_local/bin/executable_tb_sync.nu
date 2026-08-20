@@ -49,6 +49,7 @@ def get-rrules [db_path] {
     | each {|item|
         {item_id: $item.item_id?, cal_id: $item.cal_id, rrule: $item.icalString?}
     }
+    | where rrule starts-with "RRULE:"
 }
 
 def get-events [db_path] {
@@ -93,7 +94,7 @@ def write-document [events] {
     let events = $events
         | where {|event|
             let event_date = $event.dateKey | into datetime
-            let one_month_ago = (date now) - 30day
+            let one_month_ago = (date now) - 365day
             $event_date >= $one_month_ago
         }
 
@@ -115,6 +116,8 @@ def main [] {
         cp $source_db $tmp_db
 
         let events = get-events $tmp_db
+
+        $events | explore
 
         write-document $events
     } catch {|err|
