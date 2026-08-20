@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=$HOME/.local/bin/tb_sync.nu
+ExecStart=%h/.local/bin/tb_sync.nu
 TimeoutSec=120
 Restart=no
 StandardOutput=journal
