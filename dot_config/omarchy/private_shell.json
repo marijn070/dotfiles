@@ -1,16 +1,13 @@
 {
   "bar": {
-    "centerAnchor": "omarchy.clock",
+    "centerAnchor": "tm73.calendar",
     "layout": {
       "center": [
         {
-          "id": "omarchy.indicators"
+          "id": "tmn73.calendar"
         },
         {
-          "format": "dddd HH:mm",
-          "formatAlt": "d MMMM 'W'ww yyyy",
-          "id": "omarchy.clock",
-          "verticalFormat": "HH\n—\nmm"
+          "id": "omarchy.indicators"
         },
         {
           "id": "omarchy.keyboard-layout"
@@ -78,7 +75,7 @@
       ]
     },
     "position": "top",
-    "transparent": true
+    "transparent": false
   },
   "idle": {
     "lock": 300,

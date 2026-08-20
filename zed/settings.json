@@ -79,6 +79,11 @@
   },
   // --- Agent ---
   "agent": {
+    "sandbox_permissions": {
+      "network_hosts": [
+        "docs.ros.org"
+      ]
+    },
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5",
@@ -97,10 +102,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "high",
+      "effort": "low",
       "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "provider": "Cerebras",
+      "model": "gpt-oss-120b",
     },
   },
   // --- Edit Predictions ---

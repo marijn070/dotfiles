@@ -1,0 +1,10 @@
+[Unit]
+Description=Run tb_sync.service every hour
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
