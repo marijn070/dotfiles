@@ -1,0 +1,1 @@
+{{ .chezmoi.homeDir }}/.config/omarchy/plugins/marijn070.calendar-thunderbird/sync/tb-sync.timer
