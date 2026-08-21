@@ -17,6 +17,7 @@
   "agent_servers": {
     "pi-acp": {
       "default_config_options": {
+        "thought_level": "high",
         "model": "cerebras/gemma-4-31b",
       },
       "type": "registry",
@@ -103,10 +104,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "low",
+      "effort": "high",
       "enable_thinking": true,
-      "provider": "Cerebras",
-      "model": "gemma-4-31b",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
     },
   },
   // --- Edit Predictions ---
@@ -259,6 +260,7 @@
       "tasks": {
         "prefer_lsp": true,
       },
+      "format_on_save": "on",
       "show_edit_predictions": false,
     },
     "JSONC": {
