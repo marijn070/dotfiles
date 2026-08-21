@@ -11,20 +11,23 @@
   "colorize_brackets": false,
   "disable_ai": false,
   "minimap": {
-    "show": "auto"
+    "show": "auto",
   },
   "helix_mode": true,
   "agent_servers": {
     "pi-acp": {
-      "type": "registry"
+      "default_config_options": {
+        "model": "cerebras/gemma-4-31b",
+      },
+      "type": "registry",
     },
     "github-copilot-cli": {
       "default_config_options": {
         "mode": "https://agentclientprotocol.com/protocol/session-modes#agent",
-        "allow_all": "on"
+        "allow_all": "on",
       },
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_size": 16.0,
@@ -43,7 +46,7 @@
   "icon_theme": {
     "mode": "dark",
     "light": "Colored Zed Icons Theme Light",
-    "dark": "Colored Zed Icons Theme Dark"
+    "dark": "Colored Zed Icons Theme Dark",
   },
   // --- Editor ---
   "vim_mode": true,
@@ -57,7 +60,7 @@
     "enabled": true,
   },
   "prettier": {
-    "allowed": false
+    "allowed": true,
   },
   // --- UI Panels ---
   "outline_panel": {
@@ -80,14 +83,12 @@
   // --- Agent ---
   "agent": {
     "sandbox_permissions": {
-      "network_hosts": [
-        "docs.ros.org"
-      ]
+      "network_hosts": ["docs.ros.org"],
     },
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5",
-      "enable_thinking": false
+      "enable_thinking": false,
     },
     "sidebar_side": "left",
     "tool_permissions": {
@@ -105,7 +106,7 @@
       "effort": "low",
       "enable_thinking": true,
       "provider": "Cerebras",
-      "model": "gpt-oss-120b",
+      "model": "gemma-4-31b",
     },
   },
   // --- Edit Predictions ---
@@ -130,10 +131,7 @@
     "working_directory": "current_project_directory",
     "detect_venv": {
       "on": {
-        "directories": [
-          ".venv",
-          "venv"
-        ],
+        "directories": [".venv", "venv"],
         "activate_script": "fish",
       },
     },
@@ -164,8 +162,8 @@
               "prompt_cache_key": false,
               "chat_completions": true,
               "interleaved_reasoning": false,
-              "max_tokens_parameter": false
-            }
+              "max_tokens_parameter": false,
+            },
           },
           {
             "name": "gemma-4-31b",
@@ -180,17 +178,21 @@
               "prompt_cache_key": false,
               "chat_completions": true,
               "interleaved_reasoning": false,
-              "max_tokens_parameter": false
-            }
-          }
-        ]
-      }
-    }
+              "max_tokens_parameter": false,
+            },
+          },
+        ],
+      },
+    },
   },
   "file_types": {},
   "languages": {
+    "QML": {
+      "tab_size": 2,
+      // "formatter": "language_server",
+    },
     "HTML": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Nu": {
       "show_edit_predictions": true,
@@ -198,20 +200,18 @@
       "formatter": {
         "external": {
           "command": "nufmt",
-          "arguments": [
-            "--stdin"
-          ]
-        }
+          "arguments": ["--stdin"],
+        },
       },
     },
     "Gleam": {
       "indent_guides": {
         "background_coloring": "disabled",
         "coloring": "indent_aware",
-        "enabled": true
+        "enabled": true,
       },
       "tab_size": 2,
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
     },
     "SQL": {
       "tab_size": 2,
@@ -226,21 +226,21 @@
             "--function-case",
             "1",
             "--spaces",
-            "2"
-          ]
-        }
-      }
+            "2",
+          ],
+        },
+      },
     },
     "Lua": {
-      "tab_size": 4
+      "tab_size": 4,
     },
     "Shell Script": {
-      "tab_size": 4
+      "tab_size": 4,
     },
     "YAML": {
       "hard_tabs": false,
       "tab_size": 2,
-      "formatter": "language_server"
+      "formatter": "language_server",
     },
     "XML": {
       "preferred_line_length": 99,
@@ -251,9 +251,9 @@
       "tab_size": 4,
       "formatter": {
         "language_server": {
-          "name": "tombi"
-        }
-      }
+          "name": "tombi",
+        },
+      },
     },
     "Elixir": {
       "tasks": {
@@ -274,7 +274,7 @@
     },
     "Markdown": {
       "format_on_save": "on",
-      "formatter": "language_server"
+      "formatter": "language_server",
     },
     "Rust": {
       "show_edit_predictions": true,
@@ -286,31 +286,25 @@
       "tab_size": 2,
       "document_symbols": "on",
       "document_folding_ranges": "on",
-      "language_servers": [
-        "ruff",
-        "ty"
-      ],
+      "language_servers": ["ruff", "ty"],
       "format_on_save": "on",
-      "formatter": "language_server"
+      "formatter": "language_server",
     },
     "Typst": {
-      "document_folding_ranges": "on"
+      "document_folding_ranges": "on",
     },
     "SPARQL": {
       "formatter": {
         "external": {
-          "command": "sparql-formatter"
-        }
-      }
+          "command": "sparql-formatter",
+        },
+      },
     },
     "C++": {
       "formatter": {
         "external": {
           "command": "clang-format",
-          "arguments": [
-            "--style=file",
-            "--assume-filename={buffer_path}",
-          ],
+          "arguments": ["--style=file", "--assume-filename={buffer_path}"],
         },
       },
       "format_on_save": "on",
@@ -318,14 +312,23 @@
   },
   // --- LSP ---
   "lsp": {
+    "qmljs": {
+      "binary": {
+        "arguments": [
+          "-E",
+          "-I",
+          "/usr/share/omarchy/shell",
+          "-I",
+          "/home/marijn/.local/share/omarchy-qs",
+        ],
+      },
+    },
     "ruff": {
       "initialization_options": {
         "settings": {
           "lineLength": 100,
           "lint": {
-            "extendSelect": [
-              "I"
-            ],
+            "extendSelect": ["I"],
           },
         },
       },
@@ -352,10 +355,10 @@
               // "-Zshell-escape",
             ],
             "forwardSearchAfter": false,
-            "onSave": true
-          }
-        }
-      }
+            "onSave": true,
+          },
+        },
+      },
     },
     "rust-analyzer": {
       "initialization_options": {
@@ -373,9 +376,7 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "~/stacks"
-          ],
+          "paths": ["~/stacks"],
         },
       ],
     },
@@ -389,9 +390,7 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/marijn/connect-4"
-          ],
+          "paths": ["/home/marijn/connect-4"],
         },
       ],
     },

@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=%h/.local/bin/tb_sync.nu
+ExecStart=/usr/bin/nu %h/.config/omarchy/plugins/marijn070.calendar-thunderbird/sync/thunderbird_sync/mod.nu
 TimeoutSec=120
 Restart=no
 StandardOutput=journal

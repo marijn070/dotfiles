@@ -10,7 +10,8 @@
           "id": "omarchy.keyboard-layout"
         },
         {
-          "id": "tmn73.calendar"
+          "id": "marijn070.calendar-thunderbird",
+          "hiddenCalendars": []
         },
         {
           "id": "omarchy.weather"
@@ -75,7 +76,7 @@
       ]
     },
     "position": "top",
-    "transparent": true
+    "transparent": false
   },
   "idle": {
     "lock": 300,

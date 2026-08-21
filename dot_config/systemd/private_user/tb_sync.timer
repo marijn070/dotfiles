@@ -1,5 +1,5 @@
 [Unit]
-Description=Run tb_sync.service every hour
+Description=Run tb_sync.service every 5 minutes
 
 [Timer]
 OnBootSec=5min
