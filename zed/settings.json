@@ -396,5 +396,15 @@
         },
       ],
     },
+    {
+      "nickname": "triplestar_perf_testing",
+      "host": "perftestws.devpod",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/kas/ws"],
+        },
+      ],
+    },
   ],
 }
