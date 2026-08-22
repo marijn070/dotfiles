@@ -10,11 +10,10 @@
           "id": "omarchy.keyboard-layout"
         },
         {
-          "id": "marijn070.calendar-thunderbird",
-          "hiddenCalendars": []
+          "id": "omarchy.weather"
         },
         {
-          "id": "omarchy.weather"
+          "id": "tmn73.calendar"
         },
         {
           "id": "eduardodallecort.weather-radar"
