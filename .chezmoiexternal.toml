@@ -1,7 +1,7 @@
-[".config/omarchy/plugins/marijn070.calendar-thunderbird"]
+[".config/omarchy/plugins/tmn73.calendar"]
 type = "git-repo"
-url = "git@github.com:marijn070/dotfiles.git"
-refreshPeriod = "24h"
+url = "https://github.com/tmn73/omarchy-calendar.git"
+refreshPeriod = "168h"
 
 [".config/omarchy/plugins/crmne.hyprmoncfg"]
 type = "git-repo"
