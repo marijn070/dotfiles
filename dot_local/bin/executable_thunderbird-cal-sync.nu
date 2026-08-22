@@ -31,6 +31,10 @@ def get-tb-profile-folder [tb_path?: path] {
         error make {msg: $"profiles.ini not found at ($ini)"}
     }
 
+    if not (plugin list | get name | any {$in == "formats" }) {
+        plugin add nu_plugin_formats
+    }
+
     # `open` parses the INI into a record keyed by section name; `transpose`
     # turns that record into rows so we can filter the "Install*" section.
     let profile = (
@@ -92,6 +96,28 @@ def expand-rrule [start_date: datetime, rrule: string] {
     )
 }
 
+# Expand an occurrence's date range into the list of calendar days it spans.
+# All-day events use an exclusive end (the end timestamp is midnight of the day
+# after the last visible day), so they span `span_days` days rather than
+# `span_days + 1`.
+def span-date-keys [start: datetime, end: datetime, all_day: bool] {
+    let start_day = $start | format date "%Y-%m-%d"
+    let end_day = $end | format date "%Y-%m-%d"
+
+    let span_days = (
+        (($end_day | into datetime) - ($start_day | into datetime)) / 1day
+        | into int
+    )
+
+    let day_count = if $all_day {
+        [$span_days 1] | math max
+    } else {
+        $span_days + 1
+    }
+
+    seq date --begin-date $start_day --days $day_count --increment 1day
+}
+
 # Atomically write the piped-in data to `path`: write to a temp file in the
 # same directory, then rename it into place.
 def write-atomic [path: path] {
@@ -130,21 +156,28 @@ def get-events [db_path: path, metadata: list<any>] {
 
         $occurrence_starts
         | each { |occ_start|
-            {
-                id: $event.id
-                calendarId: $event.cal_id
-                calendarName: ($event.name | default "")
-                color: ($event.color | default "")
-                dateKey: ($occ_start | format date "%Y-%m-%d")
-                start: $occ_start
-                end: ($occ_start + $duration)
-                allDay: $event.all_day
-                title: $event.title
-                location: "",
-                rrule: $event.rrule
+            let occ_end = $occ_start + $duration
+            let date_keys = span-date-keys $occ_start $occ_end ($event.all_day | into bool)
+
+            $date_keys
+            | each --flatten { |date_key|
+                {
+                    id: $event.id
+                    calendarId: $event.cal_id
+                    calendarName: ($event.name | default "")
+                    color: ($event.color | default "")
+                    dateKey: $date_key
+                    start: $occ_start
+                    end: $occ_end
+                    allDay: $event.all_day
+                    title: $event.title
+                    location: "",
+                    rrule: $event.rrule
+                }
             }
         }
     }
+    | flatten
     | flatten
     | uniq-by title dateKey
 }
@@ -177,9 +210,6 @@ def write-document [events: list<any>] {
     | to json
     | write-atomic $CONTRACT_PATH
 }
-
-# Entry point
-# ---------------------------------------------------------------------------
 
 def main [] {
     let profile_folder = (get-tb-profile-folder)
