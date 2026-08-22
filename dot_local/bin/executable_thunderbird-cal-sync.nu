@@ -12,15 +12,17 @@ const EVENT_QUERY = "select
   e.cal_id,
   e.event_start,
   e.event_end,
-  (e.flags & 8) != 0 as all_day, -- bit 3 (value 8) marks an all-day event
+  (e.flags & 8) != 0 as all_day,
   e.title,
-  r.icalString as rrule
-from
-  cal_events e
-  left join cal_recurrence r on e.id = r.item_id
-where
-  r.icalString like 'RRULE:%'
-  or r.icalString is null;
+  (
+    select group_concat(icalString, char(10))
+    from (
+      select distinct icalString
+      from cal_recurrence
+      where item_id = e.id
+    )
+  ) as rrule
+from cal_events e;
 "
 
 # Resolve the path to the active Thunderbird profile folder.
