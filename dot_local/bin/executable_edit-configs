@@ -4,13 +4,10 @@ set -e
 
 zed --wait \
   "$XDG_CONFIG_HOME/hypr" \
-  "$XDG_CONFIG_HOME/waybar" \
-  "$XDG_CONFIG_HOME/walker" \
   "$XDG_CONFIG_HOME/omarchy" \
   "$XDG_CONFIG_HOME/uwsm" \
   "$XDG_CONFIG_HOME/swayosd" \
   "$XDG_CONFIG_HOME/fontconfig" \
-  "$XDG_CONFIG_HOME/swayosd"
 
 # only runs after Zed exits
 chezmoi re-add
