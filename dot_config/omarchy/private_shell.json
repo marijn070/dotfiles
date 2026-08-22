@@ -83,14 +83,15 @@
   },
   "plugins": [
     {
-      "id": "b.okomart"
-    },
-    {
       "id": "io.github.sirjul1337.lock-explorer",
       "design": "flip"
     }
   ],
   "version": 1,
-  "disabledPlugins": ["omarchy.lock"],
-  "cloneSourceRestores": ["io.github.sirjul1337.lock-explorer"]
+  "disabledPlugins": [
+    "omarchy.lock"
+  ],
+  "cloneSourceRestores": [
+    "io.github.sirjul1337.lock-explorer"
+  ]
 }
