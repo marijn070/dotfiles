@@ -1,9 +1,34 @@
-[".config/omarchy/plugins/tmn73.calendar"]
-type = "git-repo"
-url = "https://github.com/tmn73/omarchy-calendar.git"
-refreshPeriod = "168h"
-
 [".config/omarchy/plugins/crmne.hyprmoncfg"]
 type = "git-repo"
 url = "https://github.com/crmne/omarchy-hyprmoncfg.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/eduardodallecort.weather-radar"]
+type = "git-repo"
+url = "https://github.com/eduardodallecort/omarchy-weather-radar.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/im0001gt.hw-tooltip"]
+type = "git-repo"
+url = "https://github.com/IM0001GT/omarchy-hw-tooltip.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/io.github.sirjul1337.lock-explorer"]
+type = "git-repo"
+url = "https://github.com/SirJul1337/omarchy-lock-explorer.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/io.github.thetrueferret.decent-workspaces"]
+type = "git-repo"
+url = "https://github.com/TheTrueFerret/omarchy-decent-workspaces.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/quickshell.spotify"]
+type = "git-repo"
+url = "https://github.com/stappmus/Omarchy-Spotify.git"
+refreshPeriod = "168h"
+
+[".config/omarchy/plugins/tmn73.calendar"]
+type = "git-repo"
+url = "https://github.com/tmn73/omarchy-calendar.git"
 refreshPeriod = "168h"
