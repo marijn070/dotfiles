@@ -3,6 +3,7 @@
 const CONTRACT_VERSION = 1
 const RETENTION_WINDOW = 365day
 const CONTRACT_PATH = $nu.home-dir | path join ".local/state/omarchy" "calendar-events.json"
+const TB_PATH = $nu.home-dir | path join ".thunderbird"
 
 # SQL used to read events (and their recurrence rule, if any) from the
 # Thunderbird cache database.
@@ -23,25 +24,19 @@ where
 "
 
 # Resolve the path to the active Thunderbird profile folder.
-def get-tb-profile-folder [tb_path?: path] {
-    let base = $tb_path | default ($nu.home-dir | path join ".thunderbird")
-    let ini = $base | path join "profiles.ini"
-
+def get-tb-profile-folder [tb_path: path] {
+    let ini = $tb_path | path join "profiles.ini"
     if not ($ini | path exists) {
         error make {msg: $"profiles.ini not found at ($ini)"}
     }
 
-    if not (plugin list | get name | any {$in == "formats" }) {
-        plugin add nu_plugin_formats
-    }
-
-    # `open` parses the INI into a record keyed by section name; `transpose`
-    # turns that record into rows so we can filter the "Install*" section.
     let profile = (
-        open $ini
-        | transpose section data
-        | where {|row| $row.section starts-with "Install" }
-        | get data.Default
+        open --raw $ini
+        | lines
+        | parse 'Default={profile}'
+        | get profile
+        | uniq
+        | where {path join $tb_path $in | path exists}
         | first
     )
 
@@ -49,7 +44,7 @@ def get-tb-profile-folder [tb_path?: path] {
         error make {msg: "No default profile found in profiles.ini"}
     }
 
-    $base | path join $profile | path expand
+    $tb_path | path join $profile
 }
 
 # Read calendar id/name/color metadata from Thunderbird's prefs.js.
@@ -212,7 +207,7 @@ def write-document [events: list<any>] {
 }
 
 def main [] {
-    let profile_folder = (get-tb-profile-folder)
+    let profile_folder = get-tb-profile-folder $TB_PATH
     let metadata = (get-calendar-metadata $profile_folder)
     let source_db = $profile_folder | path join "calendar-data" "cache.sqlite"
 
