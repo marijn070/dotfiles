@@ -1,0 +1,3 @@
+[manager]
+sort_by = "birthtime"
+sort_dir_first = false
