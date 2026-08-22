@@ -22,6 +22,8 @@ where
   or r.icalString is null;
 "
 
+# test comment
+
 # Resolve the path to the active Thunderbird profile folder.
 def get-tb-profile-folder [tb_path?: path] {
     let base = $tb_path | default ($nu.home-dir | path join ".thunderbird")
