@@ -87,8 +87,8 @@
       "network_hosts": ["docs.ros.org"],
     },
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
       "enable_thinking": false,
     },
     "sidebar_side": "left",
