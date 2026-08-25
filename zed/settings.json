@@ -285,7 +285,7 @@
       "show_edit_predictions": false,
     },
     "Python": {
-      "tab_size": 2,
+      "tab_size": 4,
       "document_symbols": "on",
       "document_folding_ranges": "on",
       "language_servers": ["ruff", "ty"],
@@ -378,33 +378,45 @@
       "args": [],
       "projects": [
         {
-          "paths": ["~/stacks"],
-        },
-      ],
+          "paths": [
+            "~/stacks"
+          ]
+        }
+      ]
     },
     {
       "host": "kasdevcontainer.devpod",
       "args": [],
-      "projects": [],
+      "projects": [
+        {
+          "paths": [
+            "/kas/ws"
+          ]
+        }
+      ]
     },
     {
       "host": "connect-4",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/marijn/connect-4"],
-        },
-      ],
+          "paths": [
+            "/home/marijn/connect-4"
+          ]
+        }
+      ]
     },
     {
-      "nickname": "triplestar_perf_testing",
       "host": "perftestws.devpod",
       "args": [],
       "projects": [
         {
-          "paths": ["/kas/ws"],
-        },
+          "paths": [
+            "/kas/ws"
+          ]
+        }
       ],
-    },
+      "nickname": "triplestar_perf_testing"
+    }
   ],
 }

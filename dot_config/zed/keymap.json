@@ -8,7 +8,7 @@
 [
   {
     "unbind": {
-      "ctrl-w": "workspace::CloseActiveDock"
+      "ctrl-w": "workspace::CloseActiveDock",
     },
     "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
@@ -20,7 +20,7 @@
       "ctrl-m": "workspace::ToggleZoom",
       // for whichkey to work
       "space": null,
-    }
+    },
   },
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
@@ -37,7 +37,7 @@
         {
           "task_name": "lazygit",
           "reveal_target": "center",
-        }
+        },
       ],
     },
   },
@@ -45,14 +45,14 @@
     "context": "vim_mode == helix_normal && MessageEditor",
     "bindings": {
       "space w q": "workspace::CloseActiveDock",
-    }
+    },
   },
   {
     "context": "ProjectPanel",
     "bindings": {
       "space w q": "workspace::CloseActiveDock",
-      "space e": "workspace::CloseActiveDock"
-    }
+      "space e": "workspace::CloseActiveDock",
+    },
   },
   {
     "context": "Terminal",
@@ -61,7 +61,7 @@
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-[": "pane::ActivatePreviousItem",
       "ctrl-]": "pane::ActivateNextItem",
-    }
+    },
   },
   {
     "context": "Pane",
@@ -69,73 +69,73 @@
       "ctrl-w": [
         "pane::CloseActiveItem",
         {
-          "close_pinned": false
-        }
-      ]
-    }
+          "close_pinned": false,
+        },
+      ],
+    },
   },
   {
     "context": "Terminal",
     "unbind": {
-      "ctrl-backspace": [
-        "terminal::SendKeystroke",
-        "ctrl-w"
-      ]
-    }
+      "ctrl-backspace": ["terminal::SendKeystroke", "ctrl-w"],
+    },
   },
   {
     "context": "ProjectPanel && !editing",
     "bindings": {
-      "shift-c": "project_panel::Duplicate"
-    }
+      "shift-c": "project_panel::Duplicate",
+    },
   },
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select || vim_mode == visual) && !menu",
     "bindings": {
-      "space c": "editor::ToggleComments"
-    }
+      "space c": "editor::ToggleComments",
+    },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-n": "workspace::NewFile"
-    }
+      "ctrl-n": "workspace::NewFile",
+    },
   },
   {
     "context": "Workspace && !Terminal",
     "bindings": {
-      "ctrl-p": "file_finder::Toggle"
-    }
+      "ctrl-p": "file_finder::Toggle",
+    },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-p": "file_finder::Toggle"
-    }
+      "ctrl-p": "file_finder::Toggle",
+    },
   },
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select || vim_mode == visual) && !menu",
     "bindings": {
-      "s": "vim::HelixSelectRegex"
-    }
-  },
-  {
-    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
-    "unbind": {
-      "space b": "tab_switcher::ToggleAll"
+      "s": "vim::HelixSelectRegex",
     },
-    "bindings": {
-      "space b": "tab_switcher::Toggle"
-    }
   },
   {
     "bindings": {
-      "alt-)": "editor::RotateSelectionsForward"
-    }
+      "alt-)": "editor::RotateSelectionsForward",
+    },
   },
   {
     "bindings": {
-      "alt-(": "editor::RotateSelectionsBackward"
-    }
-  }
+      "alt-(": "editor::RotateSelectionsBackward",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-backspace": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false,
+        },
+      ],
+    },
+  },
 ]

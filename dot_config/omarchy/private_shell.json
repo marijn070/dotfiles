@@ -19,20 +19,6 @@
           "id": "eduardodallecort.weather-radar"
         },
         {
-          "id": "quickshell.spotify",
-          "deviceName": "Omarchy Spotify",
-          "idleShutdownMinutes": 15,
-          "showMiniPlayer": "On",
-          "shortcutPlayer": "Omarchy Music app",
-          "showTrackTitle": "On",
-          "showArtistName": "Off",
-          "scrollBarText": "Off",
-          "scrollSpeed": "1",
-          "audioQuality": "320 kbps",
-          "searchHistory": "[\"study\",\"stus\",\"sti\",\"saida\"]",
-          "sessionState": "{\"tab\":\"playlists\",\"searchText\":\"study\",\"searchType\":\"artist\",\"libraryType\":\"tracks\",\"homeType\":\"artists\",\"libraryFilter\":\"\",\"librarySort\":\"default\",\"playlistFilter\":\"\",\"playlistSort\":\"default\",\"detailFilter\":\"\",\"detailSort\":\"default\",\"homeFilter\":\"\",\"discoverFilter\":\"sia\",\"queueFilter\":\"saida\",\"artistSearchText\":\"\",\"scrollPositions\":{\"home:recent\":0,\"search:track\":0,\"playlist:12NB9lUaCBuHdpSmLoq2Y8\":23,\"discover\":0,\"detail:spotify:playlist:37i9dQZF1DX4JAvHpjipBk\":0,\"library:tracks\":0,\"search:artist\":0,\"detail:spotify:artist:18ddrVSTx9Y6FZIiXFG7IU\":0,\"playlist:37i9dQZF1DWW1XLSH8Oafp\":0,\"home:artists\":0},\"detailItem\":null,\"selectedPlaylistId\":\"6fbI5FMfaAEdr5KPV6GdpI\",\"lastRadioPlaylist\":null}"
-        },
-        {
           "id": "omarchy.system-update"
         }
       ],

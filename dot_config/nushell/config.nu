@@ -32,6 +32,8 @@ source ~/.zoxide.nu
 alias cd = z
 alias hx = helix
 alias cat = bat
+alias chezmio = chezmoi
+alias lg = lazygit
 
 # functions
 def invoice [] {
