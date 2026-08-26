@@ -82,10 +82,20 @@ hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 10 }))
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 11 }))
 
-hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
-hl.bind("SUPER + CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
 
 -- moving workspaces
+local function moveWorkspaceForward()
+    if hl.get_active_workspace().id < 11 then
+        hl.dispatch(
+            hl.dsp.window.move({ workspace = "+1" })
+        )
+    end
+end
+
+hl.bind("SUPER + CTRL + SHIFT + J", moveWorkspaceForward)
+
+hl.bind("SUPER + CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
+
 hl.bind("SUPER + CTRL + ALT + J", hl.dsp.workspace.move({ monitor = "d" }))
 hl.bind("SUPER + CTRL + ALT + K", hl.dsp.workspace.move({ monitor = "u" }))
 hl.bind("SUPER + CTRL + ALT + H", hl.dsp.workspace.move({ monitor = "l" }))
