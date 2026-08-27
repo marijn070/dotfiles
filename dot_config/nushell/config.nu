@@ -35,6 +35,13 @@ alias cat = bat
 alias chezmio = chezmoi
 alias lg = lazygit
 
+# pi
+def clear_pi [] {
+    clear
+    pi
+}
+alias pi =  clear_pi
+
 # functions
 def invoice [] {
 

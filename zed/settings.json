@@ -9,7 +9,16 @@
 {
   // --- Font ---
   "colorize_brackets": false,
-  "disable_ai": false,
+  "experimental.theme_overrides": {
+    "syntax": {
+      // "keyword": {
+      //   "font_style": "italic",
+      // },
+      "title": {
+        "font_weight": 900,
+      },
+    },
+  },
   "minimap": {
     "show": "auto",
   },
@@ -378,45 +387,37 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "~/stacks"
-          ]
-        }
-      ]
+          "paths": ["~/stacks"],
+        },
+      ],
     },
     {
       "host": "kasdevcontainer.devpod",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/kas/ws"
-          ]
-        }
-      ]
+          "paths": ["/kas/ws"],
+        },
+      ],
     },
     {
       "host": "connect-4",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/marijn/connect-4"
-          ]
-        }
-      ]
+          "paths": ["/home/marijn/connect-4"],
+        },
+      ],
     },
     {
       "host": "perftestws.devpod",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/kas/ws"
-          ]
-        }
+          "paths": ["/kas/ws"],
+        },
       ],
-      "nickname": "triplestar_perf_testing"
-    }
+      "nickname": "triplestar_perf_testing",
+    },
   ],
 }

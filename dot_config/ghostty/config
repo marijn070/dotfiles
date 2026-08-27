@@ -24,7 +24,6 @@ shell-integration-features = sudo
 mouse-hide-while-typing = true
 
 # Keyboard bindings
-keybind = f11=toggle_fullscreen
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
 # Legacy encoding sends Alt+Shift+Enter the same as Alt+Enter; send CSI-u so tmux can match M-S-Enter.
@@ -35,11 +34,6 @@ keybind = super+control+shift+alt+arrow_down=resize_split:down,100
 keybind = super+control+shift+alt+arrow_up=resize_split:up,100
 keybind = super+control+shift+alt+arrow_left=resize_split:left,100
 keybind = super+control+shift+alt+arrow_right=resize_split:right,100
-
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
 
 
 keybind = super+r=reload_config
