@@ -31,9 +31,12 @@ o.window("org.mozilla.Thunderbird", { workspace = 10 })
 o.window("signal", { workspace = 11 })
 o.window("chrome-web.whatsapp.com__-Default", { workspace = 11 })
 o.window("Spotify", { workspace = 9 })
---
+
 -- float ZenNotes quick capture
 hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
+
+-- Herdr always gapless
+hl.window_rule({ match = { title = "Herdr" }, fullscreen_state =  3 })
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 dofile(os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua")
