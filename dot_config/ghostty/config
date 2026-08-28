@@ -6,8 +6,7 @@ command = nu
 shell-integration = nushell
 
 # Font
-font-family = "IosevkaTerm Nerd Font Mono"
-font-style = Regular
+font-family = "IosevkaTerm Nerd Font"
 font-size = 12
 
 # Window
@@ -24,6 +23,7 @@ shell-integration-features = sudo
 mouse-hide-while-typing = true
 
 keybind = super+r=reload_config
+keybind = ctrl+shift+j=unbind
 
 window-save-state = always
 
