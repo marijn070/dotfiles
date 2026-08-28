@@ -4,6 +4,7 @@ $env.config.buffer_editor = 'helix'
 $env.config.completions.algorithm = "fuzzy"
 
 # carapace
+source omarchy-carapace.nu
 source $"($nu.cache-dir)/carapace.nu"
 
 $env.config.edit_mode = 'helix'
@@ -34,13 +35,6 @@ alias hx = helix
 alias cat = bat
 alias chezmio = chezmoi
 alias lg = lazygit
-
-# pi
-def clear_pi [] {
-    clear
-    pi
-}
-alias pi =  clear_pi
 
 # functions
 def invoice [] {
@@ -76,3 +70,4 @@ def fonts [] {
 }
 
 use ~/Projects/gnucash_invoice/nucash/
+
