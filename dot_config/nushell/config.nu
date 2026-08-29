@@ -11,13 +11,6 @@ $env.config.edit_mode = 'helix'
 $env.config.cursor_shape.helix_insert = "blink_line"
 $env.config.cursor_shape.helix_normal = "blink_block"
 
-$env.config.keybindings ++= [({
-    name: complete_history_hint
-    modifier: control
-    keycode: Char_l
-    mode: helix_normal
-    event: { edit: Clear }
-})]
 
 $env.PROMPT_INDICATOR_VI_NORMAL = "❮ "
 $env.PROMPT_INDICATOR_VI_INSERT = "❯ "
@@ -37,16 +30,16 @@ alias chezmio = chezmoi
 alias lg = lazygit
 
 # functions
-def invoice [] {
+def factuur [] {
 
     cd ~/Projects/gnucash_invoice/
     just latest
     cd out
     let invoice_pdf = ls | sort-by modified | last | get name | path expand
     thunderbird -compose $"from=marijn@marijnsklusjes.nl,attachment=($invoice_pdf)"
-    let answer = (input -d "Y" -n 1 "save PDF to paperless? [Y/n]")
+    let answer = (input -d "Y" -n 1 "pdf opslaan in Paperless? [Y/n]")
     if ($answer | str capitalize) == "Y" {
-        print "Saving PDF"
+        print "Factuur PDF opslaan"
         cp $invoice_pdf ~/Paperless
     }
     

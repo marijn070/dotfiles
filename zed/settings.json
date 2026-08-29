@@ -100,7 +100,7 @@
       "model": "deepseek-v4-pro",
       "enable_thinking": false,
     },
-    "sidebar_side": "left",
+    "sidebar_side": "right",
     "tool_permissions": {
       "tools": {
         "open": {

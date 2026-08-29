@@ -16,10 +16,10 @@
           "id": "tmn73.calendar"
         },
         {
-          "id": "b.omadoro"
+          "id": "omarchy.system-update"
         },
         {
-          "id": "omarchy.system-update"
+          "id": "pnkm0nk.omodoro"
         }
       ],
       "left": [
@@ -61,7 +61,7 @@
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
   },
   "idle": {
     "lock": 300,
@@ -74,10 +74,6 @@
     }
   ],
   "version": 1,
-  "disabledPlugins": [
-    "omarchy.lock"
-  ],
-  "cloneSourceRestores": [
-    "io.github.sirjul1337.lock-explorer"
-  ]
+  "disabledPlugins": ["omarchy.lock"],
+  "cloneSourceRestores": ["io.github.sirjul1337.lock-explorer"]
 }

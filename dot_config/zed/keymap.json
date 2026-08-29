@@ -138,4 +138,28 @@
       ],
     },
   },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "bindings": {
+      "space w -": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "space w d": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode==helix_select) && !menu",
+    "bindings": {
+      "space shift-w": "git::Worktree"
+    }
+  },
+  {
+    "context": "(vim_mode==helix_normal || vim_mode==helix_select) && !menu",
+    "bindings": {
+      "space shift-r": "projects::OpenRecent"
+    }
+  }
 ]

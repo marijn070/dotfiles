@@ -20,8 +20,8 @@ hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }), { description = "Focus 
 hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }), { description = "Focus right" })
 
 -- workspaces
-hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1" }))
+hl.bind("SUPER + CTRL + J", hl.dsp.focus({ workspace = "m+1"}))
+hl.bind("SUPER + CTRL + K", hl.dsp.focus({ workspace = "m-1"}))
 hl.unbind("SUPER + mouse_up")
 hl.unbind("SUPER + mouse_down")
 hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "m-1" }))

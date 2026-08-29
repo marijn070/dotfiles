@@ -3,13 +3,17 @@ dictionaries = [
     "nl_nl",
 ]
 words = [
+    "Hyprland",
+    "Omarchy's",
     "crs",
     "derijk",
     "geof",
     "geospatial",
     "hypergraph",
     "hypergraphs",
+    "hyprmoncfg",
     "lazydocker",
+    "looknfeel",
     "natively",
     "omarchy",
     "planify",

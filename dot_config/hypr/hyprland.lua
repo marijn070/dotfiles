@@ -3,6 +3,7 @@
 -- Omarchy's bootstrap keeps path setup out of this user config.
 dofile("/usr/share/omarchy/default/hypr/bootstrap.lua")
 
+
 -- Disable all Omarchy default bindings. Add your own in hypr/bindings.lua.
 -- omarchy_default_bindings = false
 --
@@ -34,9 +35,6 @@ o.window("Spotify", { workspace = 9 })
 
 -- float ZenNotes quick capture
 hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
-
--- Herdr always gapless
-hl.window_rule({ match = { title = "Herdr" }, fullscreen_state =  3 })
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 dofile(os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua")
