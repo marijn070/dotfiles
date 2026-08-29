@@ -4,6 +4,7 @@
 hl.config({
     decoration = {
         -- Use round window corners.
+        -- Remove window borders (applies globally)
         rounding = 8,
 
         -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
@@ -25,6 +26,8 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default
 
 -- workspace rules
 hl.workspace_rule({ workspace = "1", gaps_in = 0, gaps_out = { top = 0 }, no_rounding = true, no_border = true })
+
+hl.workspace_rule({ workspace = "w[v1]", no_border = true })
 
 -- -- terminal rules
 -- hl.window_rule({

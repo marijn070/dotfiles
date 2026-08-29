@@ -8,6 +8,9 @@
 // command palette
 {
   // --- Font ---
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.6
+  },
   "colorize_brackets": false,
   "experimental.theme_overrides": {
     "syntax": {
