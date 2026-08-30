@@ -161,5 +161,11 @@
     "bindings": {
       "space shift-r": "projects::OpenRecent"
     }
+  },
+  {
+    "context": "(vim_mode == helix_normal) && !menu",
+    "bindings": {
+      "space shift-p": "projects::OpenRecent"
+    }
   }
 ]

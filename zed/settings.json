@@ -9,18 +9,11 @@
 {
   // --- Font ---
   "active_pane_modifiers": {
-    "inactive_opacity": 0.6
+    "inactive_opacity": 0.6,
   },
   "colorize_brackets": false,
   "experimental.theme_overrides": {
-    "syntax": {
-      // "keyword": {
-      //   "font_style": "italic",
-      // },
-      "title": {
-        "font_weight": 900,
-      },
-    },
+    "background_apperarance": "blurred",
   },
   "minimap": {
     "show": "auto",
@@ -134,7 +127,7 @@
   // --- Terminal ---
   "terminal": {
     "font_size": 16.0,
-    "font_family": "IosevkaTerm Nerd Font Mono",
+    "font_family": "IosevkaTerm Nerd Font",
     "cursor_shape": "block",
     "line_height": "standard",
     "dock": "bottom",
