@@ -3,14 +3,9 @@ $env.config.buffer_editor = 'helix'
 
 $env.config.completions.algorithm = "fuzzy"
 
-# carapace
-source omarchy-carapace.nu
-source $"($nu.cache-dir)/carapace.nu"
-
 $env.config.edit_mode = 'helix'
 $env.config.cursor_shape.helix_insert = "blink_line"
 $env.config.cursor_shape.helix_normal = "blink_block"
-
 
 $env.PROMPT_INDICATOR_VI_NORMAL = "❮ "
 $env.PROMPT_INDICATOR_VI_INSERT = "❯ "
