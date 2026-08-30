@@ -1,0 +1,147 @@
+[
+  {
+    "plugin_id": "artisann.zed-herdr",
+    "name": "Zed Workspace Sync",
+    "version": "0.1.0",
+    "min_herdr_version": "0.7.3",
+    "manifest_path": "/tmp/zed-herdr/herdr-plugin.toml",
+    "plugin_root": "/tmp/zed-herdr",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "build": [
+      {
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "install",
+          "--frozen-lockfile"
+        ]
+      },
+      {
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "run",
+          "build"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "toggle",
+        "title": "Toggle Zed Workspace Sync",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "./dist/index.js",
+          "toggle"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "workspace.created",
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "./dist/index.js",
+          "hook"
+        ]
+      },
+      {
+        "on": "workspace.focused",
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "./dist/index.js",
+          "hook"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "daemon",
+        "title": "Zed Workspace Sync",
+        "placement": "tab",
+        "command": [
+          "/home/marijn/.bun/bin/bun",
+          "./dist/index.js",
+          "daemon"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "local"
+    }
+  },
+  {
+    "plugin_id": "ray.file-explorer",
+    "name": "Yazi Explorer",
+    "version": "1.1.0",
+    "min_herdr_version": "0.7.0",
+    "description": "Open Yazi (terminal file manager) in a herdr pane",
+    "manifest_path": "/home/marijn/.config/herdr/plugins/github/ray.file-explorer-921f378e3e1b/herdr-plugin.toml",
+    "plugin_root": "/home/marijn/.config/herdr/plugins/github/ray.file-explorer-921f378e3e1b",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "bash",
+          "-c",
+          "command -v yazi >/dev/null 2>&1 || { [ \"$(uname -s)\" = \"Darwin\" ] && command -v brew >/dev/null 2>&1 && exec brew install yazi; echo \"Yazi is required. Install it from https://yazi-rs.github.io/docs/installation\" >&2; exit 1; }"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "open",
+        "title": "Open file explorer",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "-c",
+          "DIR=\"$(bash \"$HERDR_PLUGIN_ROOT/bin/resolve-dir.sh\")\"; exec \"${HERDR_BIN_PATH:-herdr}\" plugin pane open --plugin ray.file-explorer --entrypoint explorer --placement split --cwd \"$DIR\""
+        ]
+      },
+      {
+        "id": "open-tab",
+        "title": "Open file explorer (new tab)",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "-c",
+          "DIR=\"$(bash \"$HERDR_PLUGIN_ROOT/bin/resolve-dir.sh\")\"; exec \"${HERDR_BIN_PATH:-herdr}\" plugin pane open --plugin ray.file-explorer --entrypoint explorer --placement tab --cwd \"$DIR\""
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "explorer",
+        "title": "Explorer",
+        "placement": "split",
+        "command": [
+          "bash",
+          "-c",
+          "exec yazi"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "speardragon",
+      "repo": "herdr-yazi",
+      "resolved_commit": "54aa4e6dff480189630fa3593146cdcc2768ade9",
+      "managed_path": "/home/marijn/.config/herdr/plugins/github/ray.file-explorer-921f378e3e1b",
+      "installed_unix_ms": 1787912643382
+    }
+  }
+]

@@ -1,0 +1,78 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+
+auto_switch = false
+
+[theme.custom]
+# The active tab is drawn as panel_bg text on an accent background, so panel_bg
+# has to be dark for it to read - same colors as status-left's "#[fg=black,bg=blue]"
+panel_bg = "black"
+
+[terminal]
+# Matches -c "#{pane_current_path}" on every split, window, and session
+new_cwd = "follow"
+default_shell = "nu"
+
+[ui]
+pane_gaps = false
+pane_outer_borders = false
+sidebar_collapsed_mode = "hidden"
+hide_tab_bar_when_single_tab = true
+tab_bar_right = [{type = "datetime"}]
+tab_bar_right_separator = " | "
+
+[ui.toast]
+delivery = "system"
+
+[ui.sound]
+enabled = true
+
+
+[keys]
+prefix = "ctrl+space"
+
+focus_pane_left = ["ctrl+h"]
+focus_pane_down = ["ctrl+j"]
+focus_pane_up = ["ctrl+k"]
+focus_pane_right = ["ctrl+l"]
+
+new_tab = ["prefix+t"]
+
+zoom = ["ctrl+m"]
+
+navigate_workspace_up = ["alt+p"]
+navigate_workspace_down = ["alt+n"]
+previous_workspace = ["prefix+k"]
+next_workspace = ["prefix+j"]
+
+swap_pane_left = ["ctrl+H"]
+swap_pane_right = ["ctrl+L"]
+swap_pane_up = ["ctrl+K"]
+swap_pane_down = ["ctrl+J"]
+
+next_tab = ["prefix+l", "ctrl+]"]
+previous_tab = ["prefix+h", "ctrl+["]
+
+# yazi commands
+[[keys.command]]              # open in a split pane
+key = "prefix+y"
+type = "plugin_action"
+command = "ray.file-explorer.open"
+description = "open file explorer"
+
+[[keys.command]]              # open in a new tab
+key = "prefix+Y"
+type = "plugin_action"
+command = "ray.file-explorer.open-tab"
+description = "open file explorer in a new tab"
+
+[[keys.command]]
+key = "prefix+shift+z"
+type = "plugin_action"
+command = "artisann.zed-herdr.toggle"
+description = "Toggle Zed workspace sync"
+
+[experimental]
+kitty_graphics = true

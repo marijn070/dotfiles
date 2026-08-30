@@ -1,0 +1,144 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "wH",
+      "custom_name": "config",
+      "identity_cwd": "/home/marijn/.config",
+      "public_pane_numbers": {
+        "27": 4,
+        "54": 22
+      },
+      "next_public_pane_number": 30,
+      "public_tab_numbers": [
+        3,
+        6
+      ],
+      "next_public_tab_number": 7,
+      "tabs": [
+        {
+          "custom_name": "config",
+          "layout": {
+            "Pane": 27
+          },
+          "panes": {
+            "27": {
+              "cwd": "/home/marijn/.config"
+            }
+          },
+          "zoomed": false,
+          "focused": 27,
+          "root_pane": 27
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 54
+          },
+          "panes": {
+            "54": {
+              "cwd": "/home/marijn/.config"
+            }
+          },
+          "zoomed": false,
+          "focused": 54,
+          "root_pane": 54
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wJ",
+      "custom_name": null,
+      "identity_cwd": "/home/marijn/.config/herdr",
+      "public_pane_numbers": {
+        "30": 2,
+        "34": 4
+      },
+      "next_public_pane_number": 5,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 30
+          },
+          "panes": {
+            "30": {
+              "cwd": "/home/marijn/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 30,
+          "root_pane": 30
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 34
+          },
+          "panes": {
+            "34": {
+              "cwd": "/tmp/zed-herdr",
+              "label": "Zed Workspace Sync",
+              "launch_argv": [
+                "/home/marijn/.bun/bin/bun",
+                "./dist/index.js",
+                "daemon"
+              ]
+            }
+          },
+          "zoomed": false,
+          "focused": 34,
+          "root_pane": 34
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wN",
+      "custom_name": null,
+      "identity_cwd": "/home/marijn",
+      "public_pane_numbers": {
+        "47": 1
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 47
+          },
+          "panes": {
+            "47": {
+              "cwd": "/home/marijn",
+              "agent_session": {
+                "source": "herdr:pi",
+                "agent": "pi",
+                "kind": "path",
+                "value": "/home/marijn/.pi/agent/sessions/--home-marijn--/2026-08-30T16-21-39-274Z_01a05379-ff4a-799c-82eb-c4ea252fa4fb.jsonl"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 47,
+          "root_pane": 47
+        }
+      ],
+      "active_tab": 0
+    }
+  ],
+  "active": 2,
+  "selected": 2,
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.5081967,
+  "collapsed_space_keys": []
+}
