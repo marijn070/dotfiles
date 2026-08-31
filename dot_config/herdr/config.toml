@@ -23,6 +23,7 @@ hide_tab_bar_when_single_tab = true
 tab_bar_right = [{type = "datetime"}]
 tab_bar_right_separator = " | "
 
+agent_panel_sort = "spaces"
 [ui.toast]
 delivery = "system"
 

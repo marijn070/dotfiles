@@ -13,6 +13,8 @@ $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship-nu.toml"
 
 $env.GNC_FILE = "/home/marijn/Documents/3_Marijns_Klusjes/Boekhouding/marijns_klusjes.gnucash"
 
+source $"($nu.cache-dir)/carapace.nu"
+
 # zoxide
 source ~/.zoxide.nu
 
