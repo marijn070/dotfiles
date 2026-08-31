@@ -45,8 +45,8 @@
   "agent_ui_font_size": 16.0,
   // --- Theme & Icons ---
   "theme": {
-    "mode": "dark",
-    "light": "Omazed",
+    "mode": "light",
+    "light": "Flexoki Light",
     "dark": "Omazed",
   },
   "icon_theme": {
