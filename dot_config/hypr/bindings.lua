@@ -15,6 +15,11 @@
 hl.unbind("SUPER + T")
 o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
 
+-- Keep one dedicated Herdr session in its own scratchpad.
+o.window({ initial_title = "^herdr$" }, { workspace = "special:herdr" })
+hl.unbind("SUPER + A")
+o.bind("SUPER + A", "Herdr scratchpad", os.getenv("HOME") .. "/.local/bin/herdr-scratchpad")
+
 hl.unbind("SUPER + F")
 o.bind("SUPER + F", "Yazi", { tui = "yazi" })
 

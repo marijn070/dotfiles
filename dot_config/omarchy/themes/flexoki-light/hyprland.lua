@@ -7,11 +7,11 @@ hl.config({
   general = {
     gaps_out = {
       top = 8,
-      bottom = 12,
-      left = 12,
-      right = 12,
+      bottom = 15,
+      left = 8,
+      right = 15,
     },
-    gaps_in = 8,
+    gaps_in = 6,
     border_size = 3,
     col = {
       active_border = active_border_color,

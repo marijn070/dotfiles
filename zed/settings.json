@@ -12,9 +12,7 @@
     "inactive_opacity": 0.6,
   },
   "colorize_brackets": false,
-  "experimental.theme_overrides": {
-    "background_apperarance": "blurred",
-  },
+  "experimental.theme_overrides": {},
   "minimap": {
     "show": "auto",
   },
@@ -45,7 +43,7 @@
   "agent_ui_font_size": 16.0,
   // --- Theme & Icons ---
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Flexoki Light",
     "dark": "Omazed",
   },
@@ -92,8 +90,8 @@
       "network_hosts": ["docs.ros.org"],
     },
     "inline_assistant_model": {
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "Cerebras",
+      "model": "gpt-oss-120b",
       "enable_thinking": false,
     },
     "sidebar_side": "right",
@@ -109,10 +107,10 @@
     "default_profile": "write",
     "dock": "right",
     "default_model": {
-      "effort": "high",
+      "effort": "low",
       "enable_thinking": true,
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "Cerebras",
+      "model": "gpt-oss-120b",
     },
   },
   // --- Edit Predictions ---

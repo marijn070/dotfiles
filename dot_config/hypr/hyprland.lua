@@ -33,8 +33,19 @@ o.window("signal", { workspace = 11 })
 o.window("chrome-web.whatsapp.com__-Default", { workspace = 11 })
 o.window("Spotify", { workspace = 9 })
 
--- float ZenNotes quick capture
+-- float specific windows
 hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
+hl.window_rule({ match = { title = "Planify" }, float = true })
+
+
+-- Load the active theme again after personal config so theme-specific styling
+-- can intentionally override shared look'n'feel settings.
+local active_theme_hyprland = os.getenv("HOME") .. "/.local/state/omarchy/current/theme/hyprland.lua"
+local active_theme_file = io.open(active_theme_hyprland, "r")
+if active_theme_file then
+  active_theme_file:close()
+  dofile(active_theme_hyprland)
+end
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 dofile(os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua")
