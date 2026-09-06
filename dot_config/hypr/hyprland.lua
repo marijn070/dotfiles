@@ -36,6 +36,7 @@ o.window("Spotify", { workspace = 9 })
 -- float specific windows
 hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
 hl.window_rule({ match = { title = "Planify" }, float = true })
+hl.window_rule({ match = { title = "Omamail" }, float = true })
 
 
 -- Load the active theme again after personal config so theme-specific styling
@@ -48,4 +49,4 @@ if active_theme_file then
 end
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
-dofile(os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua")
+do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end

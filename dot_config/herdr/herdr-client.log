@@ -622,3 +622,21 @@
 2026-09-01T16:40:58.370210Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
 2026-09-01T16:40:58.375415Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
 2026-09-01T16:42:58.930852Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=2408296
+2026-09-04T08:28:19.277429Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=2338934
+2026-09-04T08:40:22.559140Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=961128
+2026-09-04T08:40:22.559228Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-04T08:40:22.601221Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-09-04T17:31:07.742497Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=156572
+2026-09-04T17:31:07.742825Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-04T17:31:07.750424Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-09-05T09:51:02.711556Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=38339
+2026-09-05T09:51:02.711952Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-05T09:51:02.770511Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-09-06T00:16:49.202275Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=38339
+2026-09-06T08:35:47.642222Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=45449
+2026-09-06T08:35:47.643647Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-06T08:35:47.709973Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-09-06T09:05:07.395952Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=45449
+2026-09-06T09:22:48.004293Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=516447
+2026-09-06T09:22:48.004356Z  INFO herdr::client: connecting to server path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-06T09:22:48.216808Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame

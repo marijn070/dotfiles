@@ -2,11 +2,11 @@
   "version": 3,
   "workspaces": [
     {
-      "id": "wW",
-      "custom_name": "First Mate",
+      "id": "wZ",
+      "custom_name": null,
       "identity_cwd": "/home/marijn/firstmate",
       "public_pane_numbers": {
-        "1": 1
+        "8": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -17,68 +17,65 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 1
+            "Pane": 8
           },
           "panes": {
-            "1": {
-              "cwd": "/home/marijn/firstmate",
-              "agent_session": {
-                "source": "herdr:pi",
-                "agent": "pi",
-                "kind": "path",
-                "value": "/home/marijn/.pi/agent/sessions/--home-marijn-firstmate--/2026-09-01T16-22-09-010Z_01a05dc7-2b72-756e-9e84-0be47fde8c59.jsonl"
-              }
+            "8": {
+              "cwd": "/home/marijn/firstmate"
             }
           },
           "zoomed": false,
-          "focused": 1,
-          "root_pane": 1
+          "focused": 8,
+          "root_pane": 8
         }
       ],
       "active_tab": 0
     },
     {
-      "id": "wY",
+      "id": "w0",
       "custom_name": null,
-      "identity_cwd": "/home/marijn",
+      "identity_cwd": "/home/marijn/.config/hypr",
       "public_pane_numbers": {
-        "3": 1,
-        "4": 2
+        "10": 2,
+        "9": 1
       },
       "next_public_pane_number": 3,
       "public_tab_numbers": [
-        1
+        1,
+        2
       ],
-      "next_public_tab_number": 2,
+      "next_public_tab_number": 3,
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 3
-              },
-              "second": {
-                "Pane": 4
-              }
-            }
+            "Pane": 9
           },
           "panes": {
-            "3": {
-              "cwd": "/home/marijn"
-            },
-            "4": {
-              "cwd": "/usr/share/omarchy"
+            "9": {
+              "cwd": "/home/marijn/.config/hypr"
             }
           },
           "zoomed": false,
-          "focused": 4,
-          "root_pane": 3
+          "focused": 9,
+          "root_pane": 9
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 10
+          },
+          "panes": {
+            "10": {
+              "cwd": "/home/marijn/.config/hypr"
+            }
+          },
+          "zoomed": false,
+          "focused": 10,
+          "root_pane": 10
         }
       ],
-      "active_tab": 0
+      "active_tab": 1
     }
   ],
   "active": 1,

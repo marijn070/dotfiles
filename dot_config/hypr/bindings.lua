@@ -34,6 +34,18 @@ hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "t
 
 hl.unbind("SUPER + code:61")
 
+-- Toggle the Zotero search panel. This replaces the default zoom-in shortcut.
+hl.unbind("SUPER + CTRL + Z")
+o.bind("SUPER + CTRL + Z", "Zotero search", "omarchy-shell shell toggle marijn.zotero")
+
+-- Toggle Omamail
+hl.unbind("SUPER + SHIFT + M")
+o.bind("SUPER + SHIFT + M", "Omamail", "omarchy shell shell toggle omamail '{}'")
+
+-- Open Signal
+hl.unbind("SUPER + SHIFT + S")
+o.bind("SUPER + SHIFT + S", "Signal", { omarchy = "signal" })
+
 
 -- Provide a dedicated key for the Keybindings overview without overwriting SUPER+K
 o.bind("SUPER + ALT + K", "Keybindings", "omarchy-menu-keybindings")

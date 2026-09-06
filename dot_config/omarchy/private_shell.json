@@ -1,22 +1,28 @@
 {
   "bar": {
-    "centerAnchor": "tm73.calendar",
+    "centerAnchor": "tmn73.calendar",
     "layout": {
       "center": [
         {
           "id": "omarchy.keyboard-layout"
         },
         {
-          "id": "omarchy.system-update"
-        },
-        {
-          "id": "pnkm0nk.omodoro"
+          "id": "omarchy.indicators"
         },
         {
           "id": "tmn73.calendar"
         },
         {
           "id": "omarchy.weather"
+        },
+        {
+          "id": "omamail"
+        },
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "marijn.zotero"
         }
       ],
       "left": [
@@ -25,9 +31,6 @@
         },
         {
           "id": "io.github.thetrueferret.decent-workspaces"
-        },
-        {
-          "id": "omarchy.indicators"
         }
       ],
       "right": [
@@ -61,7 +64,7 @@
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
   },
   "idle": {
     "lock": 300,
