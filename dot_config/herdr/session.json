@@ -6,7 +6,7 @@
       "custom_name": null,
       "identity_cwd": "/home/marijn/firstmate",
       "public_pane_numbers": {
-        "8": 1
+        "1": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -17,16 +17,22 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 8
+            "Pane": 1
           },
           "panes": {
-            "8": {
-              "cwd": "/home/marijn/firstmate"
+            "1": {
+              "cwd": "/home/marijn/firstmate",
+              "agent_session": {
+                "source": "herdr:pi",
+                "agent": "pi",
+                "kind": "path",
+                "value": "/home/marijn/.pi/agent/sessions/--home-marijn-firstmate--/2026-09-06T22-27-59-792Z_01a078d5-e8b0-7437-896f-8708664e8442.jsonl"
+              }
             }
           },
           "zoomed": false,
-          "focused": 8,
-          "root_pane": 8
+          "focused": 1,
+          "root_pane": 1
         }
       ],
       "active_tab": 0
@@ -36,8 +42,8 @@
       "custom_name": null,
       "identity_cwd": "/home/marijn/.config/hypr",
       "public_pane_numbers": {
-        "10": 2,
-        "9": 1
+        "2": 1,
+        "3": 2
       },
       "next_public_pane_number": 3,
       "public_tab_numbers": [
@@ -49,30 +55,30 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 9
+            "Pane": 2
           },
           "panes": {
-            "9": {
+            "2": {
               "cwd": "/home/marijn/.config/hypr"
             }
           },
           "zoomed": false,
-          "focused": 9,
-          "root_pane": 9
+          "focused": 2,
+          "root_pane": 2
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 10
+            "Pane": 3
           },
           "panes": {
-            "10": {
-              "cwd": "/home/marijn/.config/hypr"
+            "3": {
+              "cwd": "/home/marijn"
             }
           },
           "zoomed": false,
-          "focused": 10,
-          "root_pane": 10
+          "focused": 3,
+          "root_pane": 3
         }
       ],
       "active_tab": 1

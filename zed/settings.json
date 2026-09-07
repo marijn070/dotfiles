@@ -23,7 +23,7 @@
   "agent_servers": {
     "pi-acp": {
       "default_config_options": {
-        "thought_level": "high",
+        "thought_level": "low",
         "model": "openai-codex/gpt-5.6-terra",
       },
       "type": "registry",

@@ -26820,3 +26820,157 @@
 2026-09-06T09:36:03.131285Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=2
 2026-09-06T09:36:51.640080Z  INFO herdr::server::headless: client resize client_id=4 cols=317 rows=71 cell_width_px=8 cell_height_px=20
 2026-09-06T09:36:51.940487Z  INFO herdr::server::headless: client resize client_id=4 cols=314 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-06T09:43:48.380982Z  INFO herdr::server::headless: client resize client_id=4 cols=317 rows=71 cell_width_px=8 cell_height_px=20
+2026-09-06T09:43:48.681553Z  INFO herdr::server::headless: client resize client_id=4 cols=314 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-06T10:05:48.466048Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T10:21:49.997916Z  INFO herdr::server::headless: client resize client_id=4 cols=317 rows=71 cell_width_px=8 cell_height_px=20
+2026-09-06T10:21:50.097907Z  INFO herdr::server::headless: client resize client_id=4 cols=314 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-06T10:21:51.418547Z  INFO herdr::server::headless: client detached client_id=4
+2026-09-06T10:21:51.420137Z  INFO herdr::server::headless: client disconnected client_id=4
+2026-09-06T10:35:48.466871Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T11:05:48.467206Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T11:18:09.939030Z  INFO herdr::server::headless: client connected client_id=6 cols=314 rows=68 cell_width_px=8 cell_height_px=20 render_encoding=SemanticFrame
+2026-09-06T11:35:48.468660Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T12:05:48.469740Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T12:09:24.123570Z  INFO herdr::server::headless: client resize client_id=6 cols=154 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-06T12:35:48.470191Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T13:05:48.472070Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T13:35:48.473206Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T14:05:48.474643Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T14:35:48.475225Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T15:05:48.476340Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T15:35:48.477100Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T16:05:48.478703Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T16:35:48.479253Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T17:05:48.481291Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T17:35:48.481968Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T18:05:48.483247Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T18:35:48.485566Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T19:35:50.869118Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T20:05:50.870160Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T20:35:51.349869Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T20:54:56.104574Z  INFO herdr::server::headless: client resize client_id=6 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-06T21:05:51.362377Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T21:35:51.351796Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T22:05:56.630941Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T22:27:57.186805Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="wZ"
+2026-09-06T22:27:57.189082Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="wZ" tab_id="wZ:t1"
+2026-09-06T22:27:59.668239Z  INFO herdr::pane: agent changed pane=8 previous_agent=None agent=Some(Pi) process=pi pgid=Some(540553)
+2026-09-06T22:28:00.790504Z  INFO herdr::pane: agent changed pane=8 previous_agent=None agent=Some(Pi) process=pi pgid=Some(540553)
+2026-09-06T22:28:01.282715Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.284605Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.286344Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.286421Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.301629Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.352697Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:01.354819Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:01.357878Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.359376Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.359439Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:01.364970Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.392720Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.393706Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:01.406428Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:02.085393Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:02.091649Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:02.143407Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:02.239531Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:02.245624Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:03.534885Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:03.538779Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:03.630970Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:03.634890Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:03.959520Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:03.963915Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:04.052802Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:04.056198Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:04.235682Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-06T22:28:04.240411Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:05.691730Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=2
+2026-09-06T22:28:08.136739Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.146350Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.156608Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.166813Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.177445Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.187553Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.197394Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.206522Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:28:08.214809Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-06T22:39:57.411453Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T22:48:03.850795Z  INFO herdr::server::headless: client resize client_id=6 cols=237 rows=53 cell_width_px=8 cell_height_px=20
+2026-09-06T22:48:04.551711Z  INFO herdr::server::headless: client resize client_id=6 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-06T22:50:13.940163Z  INFO herdr::server::headless: client resize client_id=6 cols=237 rows=53 cell_width_px=8 cell_height_px=20
+2026-09-06T22:50:14.440986Z  INFO herdr::server::headless: client resize client_id=6 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-06T22:50:16.443749Z  INFO herdr::server::headless: client resize client_id=6 cols=237 rows=53 cell_width_px=8 cell_height_px=20
+2026-09-06T22:50:17.445173Z  INFO herdr::server::headless: client resize client_id=6 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-06T22:57:49.024603Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w0"
+2026-09-06T22:57:49.025289Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w0" tab_id="w0:t2"
+2026-09-06T22:57:54.029788Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=2
+2026-09-06T23:09:57.412392Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-06T23:39:57.413631Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T00:09:57.414761Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T08:17:29.019247Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-07T08:17:29.020875Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-07T08:17:29.021911Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=86313
+2026-09-07T08:17:29.022118Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-07T08:17:29.022784Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=86316
+2026-09-07T08:17:29.022894Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=2
+2026-09-07T08:17:29.022903Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-07T08:17:29.071214Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T08:17:29.072441Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-07T08:17:29.073200Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-07T08:17:29.073252Z  INFO herdr::server::headless: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-07T08:17:29.073676Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=86297
+2026-09-07T08:17:29.176517Z  INFO herdr::server::headless: client connected client_id=2 cols=313 rows=68 cell_width_px=8 cell_height_px=20 render_encoding=SemanticFrame
+2026-09-07T08:17:29.186138Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=67 cols=286 scrollback_limit_bytes=10000000
+2026-09-07T08:17:29.187095Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=86432
+2026-09-07T08:17:29.739415Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(86505)
+2026-09-07T08:17:30.780479Z  INFO herdr::server::headless: client resize client_id=2 cols=154 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T08:17:34.188474Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=2
+2026-09-07T08:17:35.210900Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(86505)
+2026-09-07T08:17:35.738559Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.744861Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.746132Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.749469Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.755563Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.756572Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.800875Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:35.802077Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:35.804519Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.806147Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.806993Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:35.810670Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.832608Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:35.846617Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:36.773147Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:36.776506Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:36.805786Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:36.860377Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:36.863520Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:37.844019Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:37.848706Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:37.947481Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:37.951423Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:38.314794Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:38.318295Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:38.419505Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:38.422785Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:38.609017Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:read" method="pane.read"
+2026-09-07T08:17:38.613587Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.787025Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.797866Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.810528Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.821868Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.832702Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.845970Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.859651Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.869275Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:17:42.880827Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="error" request_id="cli:pane:get" method="pane.get"
+2026-09-07T08:18:26.744375Z  INFO herdr::server::headless: client resize client_id=2 cols=317 rows=71 cell_width_px=8 cell_height_px=20
+2026-09-07T08:18:27.144761Z  INFO herdr::server::headless: client resize client_id=2 cols=154 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T08:47:29.073532Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T09:06:58.509564Z  INFO herdr::server::headless: client resize client_id=2 cols=313 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T09:06:59.010213Z  INFO herdr::server::headless: client resize client_id=2 cols=317 rows=71 cell_width_px=8 cell_height_px=20
+2026-09-07T09:06:59.410772Z  INFO herdr::server::headless: client resize client_id=2 cols=313 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T09:17:29.074408Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T09:47:29.075262Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"

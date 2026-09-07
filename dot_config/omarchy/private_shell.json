@@ -74,6 +74,9 @@
     {
       "id": "io.github.sirjul1337.lock-explorer",
       "design": "flip"
+    },
+    {
+      "id": "meviusisback.keybinds"
     }
   ],
   "version": 1,
