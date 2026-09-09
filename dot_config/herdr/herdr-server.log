@@ -27089,3 +27089,24 @@
 2026-09-09T10:16:35.614215Z  INFO herdr::server::headless: headless server exiting
 2026-09-09T10:16:35.614302Z  INFO herdr::pane: pane session terminated pane=1 pid=18563 signal=Hangup
 2026-09-09T10:16:35.616713Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=18546
+2026-09-09T10:24:38.996425Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-09T10:24:38.997265Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-09T10:24:38.997278Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-09T10:24:39.035381Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-09T10:24:39.036916Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-09T10:24:39.037017Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-09T10:24:39.037051Z  INFO herdr::server::headless: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-09T10:24:39.037086Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=237673
+2026-09-09T10:24:39.097208Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-09T10:24:39.142147Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.9.0"
+2026-09-09T10:24:39.142167Z  INFO herdr::update: new stable build available at https://github.com/herdrdev/herdr/releases/download/v0.9.0/herdr-linux-x86_64
+2026-09-09T10:24:39.142455Z  INFO herdr::update: auto-update check: 0.9.0 available, waiting for explicit install
+2026-09-09T10:24:39.143187Z  INFO herdr::server::headless: client connected client_id=2 cols=233 rows=50 cell_width_px=8 cell_height_px=20 render_encoding=SemanticFrame
+2026-09-09T10:24:39.162590Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=50 cols=207 scrollback_limit_bytes=10000000
+2026-09-09T10:24:39.163790Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=237729
+2026-09-09T10:24:39.716521Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(237783)
+2026-09-09T10:24:40.542222Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(237783)
+2026-09-09T10:24:44.165976Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-09T10:54:39.100187Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-09T11:24:39.172435Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-09T11:54:39.156196Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
