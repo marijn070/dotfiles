@@ -10,7 +10,8 @@
           "id": "omarchy.indicators"
         },
         {
-          "id": "tmn73.calendar"
+          "id": "tmn73.calendar",
+          "format": "HH:mm"
         },
         {
           "id": "omarchy.weather"
@@ -36,9 +37,6 @@
       "right": [
         {
           "id": "omarchy.tray"
-        },
-        {
-          "id": "omarchy.dropbox"
         },
         {
           "id": "omarchy.agents"

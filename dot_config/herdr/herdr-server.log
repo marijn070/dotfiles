@@ -26974,3 +26974,118 @@
 2026-09-07T09:06:59.410772Z  INFO herdr::server::headless: client resize client_id=2 cols=313 rows=68 cell_width_px=8 cell_height_px=20
 2026-09-07T09:17:29.074408Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
 2026-09-07T09:47:29.075262Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T10:17:29.076805Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T10:47:29.078742Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T11:17:29.079762Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T11:47:29.080636Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T12:17:29.081453Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T12:47:29.082988Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T13:17:29.084400Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T13:47:29.085272Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T14:17:29.086629Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T14:47:29.087403Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T15:17:29.088976Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T15:47:29.090595Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T16:17:29.091395Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T16:47:29.092790Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T17:17:29.093493Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T17:47:29.094318Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T18:17:29.095513Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T18:47:29.096929Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T18:57:19.822688Z  INFO herdr::server::headless: client resize client_id=2 cols=314 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T18:57:22.024768Z  INFO herdr::server::headless: client resize client_id=2 cols=154 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T19:17:29.098585Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T19:17:29.181847Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-07T19:19:58.169725Z  INFO herdr::server::headless: client resize client_id=2 cols=314 rows=68 cell_width_px=8 cell_height_px=20
+2026-09-07T19:47:29.099949Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-07T19:47:29.204570Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-07T19:47:29.298346Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.9.0"
+2026-09-07T19:47:29.302495Z  INFO herdr::update: new stable build available at https://github.com/herdrdev/herdr/releases/download/v0.9.0/herdr-linux-x86_64
+2026-09-07T19:47:29.306486Z  INFO herdr::update: auto-update check: 0.9.0 available, waiting for explicit install
+2026-09-07T20:17:29.184308Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-07T20:47:29.190208Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-07T21:17:29.225037Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-07T21:47:29.183822Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T06:44:14.571024Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T07:14:14.558082Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T07:44:15.592020Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T09:09:13.828817Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T09:39:13.841732Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T10:15:48.742213Z  INFO herdr::server::headless: client resize client_id=2 cols=234 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-08T10:15:51.240500Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(Pi) process=pi pgid=Some(301164)
+2026-09-08T10:15:51.922896Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(Pi) process=pi pgid=Some(301164)
+2026-09-08T10:15:54.333794Z  INFO herdr::pane: agent changed pane=3 previous_agent=Some(Pi) agent=None pgid=Some(86316)
+2026-09-08T10:15:56.345663Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(Pi) process=pi pgid=Some(301511)
+2026-09-08T10:15:57.008882Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(Pi) process=pi pgid=Some(301511)
+2026-09-08T10:16:01.908006Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=2
+2026-09-08T10:16:59.946420Z  INFO herdr::server::headless: client resize client_id=2 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-08T10:21:04.159442Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-08T10:21:27.465264Z  INFO herdr::server::headless: client detached client_id=2
+2026-09-08T10:21:27.465661Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-09-08T10:21:29.456578Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: Some(\"Terminated\") }"
+2026-09-08T10:21:29.466010Z  INFO herdr::pane: pane session terminated pane=1 pid=86432 signal=Hangup
+2026-09-08T10:21:29.466259Z  INFO herdr::server::headless: server shutdown initiated
+2026-09-08T10:21:29.469650Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: Some(\"Terminated\") }"
+2026-09-08T10:21:29.477184Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: Some(\"Terminated\") }"
+2026-09-08T10:21:29.518014Z  INFO herdr::server::headless: completing server shutdown
+2026-09-08T10:21:29.825853Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-08T10:21:29.825881Z  INFO herdr::server::headless: headless server exiting
+2026-09-08T10:21:29.826007Z  INFO herdr::pane: pane session terminated pane=2 pid=86313 signal=Hangup
+2026-09-08T10:21:29.826031Z  INFO herdr::pane: pane session terminated pane=3 pid=86316 signal=Hangup
+2026-09-08T10:21:29.836677Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=86297
+2026-09-09T09:17:26.654262Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-09T09:17:26.655367Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-09T09:17:26.656289Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=18563
+2026-09-09T09:17:26.656464Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-09T09:17:26.656478Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-09T09:17:26.715367Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-09T09:17:26.716950Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-09T09:17:26.717833Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-09T09:17:26.717866Z  INFO herdr::server::headless: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-09T09:17:26.717905Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=18546
+2026-09-09T09:17:26.793148Z  INFO herdr::server::headless: client connected client_id=2 cols=233 rows=50 cell_width_px=8 cell_height_px=20 render_encoding=SemanticFrame
+2026-09-09T09:17:26.797849Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=49 cols=207 scrollback_limit_bytes=10000000
+2026-09-09T09:17:26.798981Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=18614
+2026-09-09T09:17:26.820338Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-09T09:17:26.845492Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.9.0"
+2026-09-09T09:17:26.845513Z  INFO herdr::update: new stable build available at https://github.com/herdrdev/herdr/releases/download/v0.9.0/herdr-linux-x86_64
+2026-09-09T09:17:26.845960Z  INFO herdr::update: auto-update check: 0.9.0 available, waiting for explicit install
+2026-09-09T09:17:27.351114Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(Pi) process=pi pgid=Some(18698)
+2026-09-09T09:17:31.426129Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(Pi) process=pi pgid=Some(18698)
+2026-09-09T09:17:31.801100Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-09T09:17:38.343567Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: Some(\"Hangup\") }"
+2026-09-09T09:17:38.408260Z  INFO herdr::pane: pane session terminated pane=2 pid=18614 signal=Hangup
+2026-09-09T09:17:38.408744Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-09-09T09:17:39.779789Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(19334)
+2026-09-09T09:17:40.707812Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(19334)
+2026-09-09T09:17:45.507330Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-09T09:26:41.918376Z  INFO herdr::server::headless: client resize client_id=2 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:27:14.346096Z  INFO herdr::server::headless: client resize client_id=2 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:35:51.095919Z  INFO herdr::server::headless: client resize client_id=2 cols=237 rows=53 cell_width_px=8 cell_height_px=20
+2026-09-09T09:35:51.396169Z  INFO herdr::server::headless: client resize client_id=2 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:35:52.051766Z  INFO herdr::server::headless: client detached client_id=2
+2026-09-09T09:35:52.054486Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-09-09T09:40:35.853370Z  INFO herdr::server::headless: client connected client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20 render_encoding=SemanticFrame
+2026-09-09T09:42:55.399332Z  INFO herdr::server::headless: client resize client_id=4 cols=237 rows=53 cell_width_px=8 cell_height_px=20
+2026-09-09T09:42:55.699599Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:47:26.821220Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="muse"
+2026-09-09T09:49:20.174251Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:26.782108Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:36.495456Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:36.995909Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:38.498228Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:44.205160Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:45.707324Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:46.307774Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:48.510485Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T09:49:49.111010Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T10:09:25.327517Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T10:09:25.728047Z  INFO herdr::server::headless: client resize client_id=4 cols=233 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T10:09:27.529853Z  INFO herdr::server::headless: client resize client_id=4 cols=114 rows=50 cell_width_px=8 cell_height_px=20
+2026-09-09T10:16:35.511556Z  INFO herdr::server::headless: server shutdown initiated
+2026-09-09T10:16:35.514066Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: Some(\"Terminated\") }"
+2026-09-09T10:16:35.563721Z  INFO herdr::server::headless: completing server shutdown
+2026-09-09T10:16:35.614194Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-09T10:16:35.614215Z  INFO herdr::server::headless: headless server exiting
+2026-09-09T10:16:35.614302Z  INFO herdr::pane: pane session terminated pane=1 pid=18563 signal=Hangup
+2026-09-09T10:16:35.616713Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=18546
