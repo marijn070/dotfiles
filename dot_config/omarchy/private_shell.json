@@ -36,10 +36,11 @@
           "id": "omarchy.tray"
         },
         {
-          "id": "org.ren.caldir"
+          "id": "akitaonrails.ai-usagebar",
+          "lastSelectedEntryId": "openai"
         },
         {
-          "id": "omarchy.agents"
+          "id": "org.ren.caldir"
         },
         {
           "id": "omarchy.bluetooth"
