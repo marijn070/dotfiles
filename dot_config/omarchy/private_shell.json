@@ -11,7 +11,7 @@
         },
         {
           "id": "tmn73.calendar",
-          "format": "HH:mm"
+          "format": "dddd HH:mm"
         },
         {
           "id": "omarchy.weather"
@@ -21,6 +21,9 @@
         },
         {
           "id": "omarchy.system-update"
+        },
+        {
+          "id": "org.ren.caldir"
         }
       ],
       "left": [
@@ -38,9 +41,6 @@
         {
           "id": "akitaonrails.ai-usagebar",
           "lastSelectedEntryId": "openai"
-        },
-        {
-          "id": "org.ren.caldir"
         },
         {
           "id": "omarchy.bluetooth"

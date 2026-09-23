@@ -27137,3 +27137,67 @@
 2026-09-20T09:20:56.478307Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(51083)
 2026-09-20T09:20:58.524267Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(51083)
 2026-09-20T09:21:03.122445Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-20T09:50:17.885537Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T10:20:17.887083Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T10:50:17.888140Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T11:20:17.890004Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T11:50:17.891654Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T12:20:17.892343Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T12:50:17.893703Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T13:20:17.894166Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T13:50:17.895860Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T14:20:17.896265Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T14:50:17.897831Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T15:20:17.898899Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T15:50:17.900131Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T16:52:28.843245Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T17:50:50.692674Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T19:26:17.975737Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T19:56:17.976463Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T20:29:10.180297Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T20:59:10.182015Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-20T21:29:10.183558Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T07:37:19.540018Z  INFO herdr::server::headless::lifecycle: server shutdown initiated
+2026-09-21T07:37:19.543002Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: Some(\"Terminated\") }"
+2026-09-21T07:37:19.613962Z  INFO herdr::server::headless::lifecycle: completing server shutdown
+2026-09-21T07:37:19.672346Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-21T07:37:19.672377Z  INFO herdr::server::headless: headless server exiting
+2026-09-21T07:37:19.672595Z  INFO herdr::pane: pane session terminated pane=1 pid=48952 signal=Hangup
+2026-09-21T07:37:19.682011Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=48739
+2026-09-21T08:56:00.299707Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-21T08:56:00.302768Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-21T08:56:00.302823Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-21T08:56:00.468191Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T08:56:00.468470Z  INFO herdr::server::headless::bootstrap: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-21T08:56:00.468537Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-21T08:56:00.468564Z  INFO herdr::server::headless::bootstrap: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-21T08:56:00.468617Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=2808679
+2026-09-21T08:56:00.720880Z  INFO herdr::server::headless: client connected client_id=2 cols=208 rows=49 cell_width_px=8 cell_height_px=20 surface_active=true render_encoding=SemanticFrame
+2026-09-21T08:56:00.800810Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=50 cols=208 scrollback_limit_bytes=10000000
+2026-09-21T08:56:00.804728Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=2808743
+2026-09-21T08:56:01.357204Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(2808808)
+2026-09-21T08:56:01.733547Z  INFO herdr::server::headless: client detached client_id=2
+2026-09-21T08:56:02.484421Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(2808808)
+2026-09-21T08:56:05.806842Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-21T09:26:00.469859Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T09:56:00.471783Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T10:26:00.473220Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T12:17:02.850913Z  INFO herdr::server::headless: client connected client_id=4 cols=208 rows=49 cell_width_px=8 cell_height_px=20 surface_active=true render_encoding=SemanticFrame
+2026-09-21T12:23:23.166617Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T12:53:23.739019Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T13:23:23.740074Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T15:03:40.863102Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-21T15:03:40.866196Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-21T15:03:40.866243Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-21T15:03:41.066907Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-21T15:03:41.067500Z  INFO herdr::server::headless::bootstrap: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-21T15:03:41.067736Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-21T15:03:41.067878Z  INFO herdr::server::headless::bootstrap: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-21T15:03:41.067969Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=136616
+2026-09-21T15:03:41.318909Z  INFO herdr::server::headless: client connected client_id=2 cols=208 rows=49 cell_width_px=8 cell_height_px=20 surface_active=true render_encoding=SemanticFrame
+2026-09-21T15:03:41.357018Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=50 cols=208 scrollback_limit_bytes=10000000
+2026-09-21T15:03:41.369160Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=136727
+2026-09-21T15:03:41.921800Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(136829)
+2026-09-21T15:03:46.371924Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-21T15:03:47.571220Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(136829)
+2026-09-21T15:33:41.069004Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
