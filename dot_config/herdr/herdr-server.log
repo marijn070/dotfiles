@@ -27201,3 +27201,17 @@
 2026-09-21T15:03:46.371924Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
 2026-09-21T15:03:47.571220Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(136829)
 2026-09-21T15:33:41.069004Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-23T12:20:53.385084Z  INFO herdr::api::server: api server listening path=/home/marijn/.config/herdr/herdr.sock
+2026-09-23T12:20:53.388439Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-23T12:20:53.388498Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-23T12:20:53.510057Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-23T12:20:53.510330Z  INFO herdr::server::headless::bootstrap: restored session already has workspaces; ignoring startup cwd cwd=/home/marijn
+2026-09-23T12:20:53.510445Z  INFO herdr::server::headless: client protocol socket listening path=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-23T12:20:53.510473Z  INFO herdr::server::headless::bootstrap: herdr server started api_socket=/home/marijn/.config/herdr/herdr.sock client_socket=/home/marijn/.config/herdr/herdr-client.sock
+2026-09-23T12:20:53.510506Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=751636
+2026-09-23T12:20:53.761583Z  INFO herdr::server::headless: client connected client_id=2 cols=208 rows=49 cell_width_px=8 cell_height_px=20 surface_active=true render_encoding=SemanticFrame
+2026-09-23T12:20:53.841483Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=50 cols=208 scrollback_limit_bytes=10000000
+2026-09-23T12:20:53.853865Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=751682
+2026-09-23T12:20:54.406027Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(751766)
+2026-09-23T12:20:58.855704Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/marijn/.config/herdr/session.json workspaces=1
+2026-09-23T12:20:59.303960Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Pi) process=pi pgid=Some(751766)
