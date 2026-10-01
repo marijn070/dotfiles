@@ -17,7 +17,20 @@
           "id": "omarchy.weather"
         },
         {
-          "id": "omamail"
+          "id": "omamail",
+          "refreshIntervalSec": 120,
+          "maxMessages": 25,
+          "heavyMessageRendering": "Show plain text first",
+          "contentDirection": "Auto",
+          "defaultQuery": "in:inbox",
+          "notifyNewMail": "On",
+          "oauthPort": 9481,
+          "undoSendSeconds": 10,
+          "unifiedCalendarView": false,
+          "showBarIcon": true,
+          "unifiedMailboxes": true,
+          "previewOnCursor": false,
+          "markReadDelaySec": 2
         },
         {
           "id": "omarchy.system-update"
@@ -37,6 +50,12 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "marijn.zotero"
+        },
+        {
+          "id": "omarchy.tailscale"
         },
         {
           "id": "akitaonrails.ai-usagebar",

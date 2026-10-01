@@ -11,7 +11,11 @@ hl.monitor({
 
 hl.monitor({
   output = "desc:BOE 0x0A86",
-  disabled = true,
+  mode = "1920x1080@60.00",
+  position = "0x1080",
+  scale = 1,
+  sdr_min_luminance = 0.2,
+  sdr_max_luminance = 80,
 })
 
 hl.workspace_rule({ workspace = "1", monitor = "desc:AOC 2490W1 APGL69A003315", default = true, persistent = true })

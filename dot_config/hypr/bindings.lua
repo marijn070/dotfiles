@@ -23,9 +23,10 @@ o.bind("SUPER + A", "Herdr scratchpad", os.getenv("HOME") .. "/.local/bin/herdr-
 hl.unbind("SUPER + F")
 o.bind("SUPER + F", "Yazi", { tui = "yazi" })
 
--- Configure
+-- Calendar overlay. SUPER + SHIFT + C was previously bound to Config.
 hl.unbind("SUPER + SHIFT + C")
-o.bind("SUPER + SHIFT + C", "Config", { launch = "edit-configs" })
+o.bind("SUPER + SHIFT + C", "Calendar", os.getenv("HOME") .. "/.local/bin/rencal-toggle")
+o.bind("SUPER + SHIFT + ALT + C", "Config", { launch = "edit-configs" })
 
 -- Maximize, Close
 hl.unbind("SUPER + Q")

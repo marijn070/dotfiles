@@ -13,6 +13,10 @@ hl.config({
         -- follow_mouse = 2,
         -- mouse_refocus = false,
 
+        -- Allow clicks to reach normal-workspace windows outside floating
+        -- calendar/scratchpad panels.
+        special_fallthrough = true,
+
         -- Change speed of keyboard repeat.
         repeat_rate = 40,
         repeat_delay = 250,

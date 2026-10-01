@@ -38,6 +38,20 @@ hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
 hl.window_rule({ match = { title = "Planify" }, float = true })
 hl.window_rule({ match = { title = "Omamail" }, float = true })
 
+-- renCal normally opens as a regular app. The toggle script alone moves it
+-- into this special workspace as a top-down calendar HUD.
+hl.workspace_rule({
+  workspace = "special:calendar",
+  animation = "slidefadevert -50%",
+  no_border = true,
+  no_rounding = true,
+})
+hl.window_rule({
+  match = { workspace = "special:calendar" },
+  border_size = 0,
+  rounding = 0,
+})
+
 
 -- Load the active theme again after personal config so theme-specific styling
 -- can intentionally override shared look'n'feel settings.
@@ -47,6 +61,11 @@ if active_theme_file then
   active_theme_file:close()
   dofile(active_theme_hyprland)
 end
+
+-- Apply to the already-created calendar special workspace as well as future
+-- ones. A negative vertical movement starts above the monitor.
+hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 2, bezier = "default", style = "slidefadevert -50%" })
+hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 4, bezier = "default", style = "slidefadevert -50%" })
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end

@@ -1,0 +1,132 @@
+{
+  "name": "DUKTEEP",
+  "created_at": "2026-09-25T08:44:42.674340811Z",
+  "updated_at": "2026-09-25T08:45:21.033084295Z",
+  "outputs": [
+    {
+      "key": "boe|0x0a86",
+      "match_key": "boe|0x0a86",
+      "name": "eDP-1",
+      "description": "BOE 0x0A86",
+      "make": "BOE",
+      "model": "0x0A86",
+      "enabled": true,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 59.999,
+      "x": 0,
+      "y": 0,
+      "scale": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    },
+    {
+      "key": "iiyama corporation|pl2483h|1156383043687",
+      "match_key": "iiyama corporation|pl2483h|1156383043687",
+      "name": "DP-1",
+      "description": "iiyama Corporation PL2483H 1156383043687",
+      "make": "iiyama Corporation",
+      "model": "PL2483H",
+      "serial": "1156383043687",
+      "enabled": true,
+      "mode": "1920x1080@60.00Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60,
+      "x": 264,
+      "y": -1080,
+      "scale": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    }
+  ],
+  "workspaces": {
+    "enabled": true,
+    "strategy": "manual",
+    "max_workspaces": 9,
+    "group_size": 3,
+    "monitor_order": [
+      "boe|0x0a86",
+      "iiyama corporation|pl2483h|1156383043687"
+    ],
+    "rules": [
+      {
+        "workspace": "1",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "2",
+        "output_key": "iiyama corporation|pl2483h|1156383043687",
+        "output_name": "DP-1",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "3",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "4",
+        "output_key": "iiyama corporation|pl2483h|1156383043687",
+        "output_name": "DP-1"
+      },
+      {
+        "workspace": "5",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "6",
+        "output_key": "iiyama corporation|pl2483h|1156383043687",
+        "output_name": "DP-1"
+      },
+      {
+        "workspace": "7",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "8",
+        "output_key": "iiyama corporation|pl2483h|1156383043687",
+        "output_name": "DP-1"
+      },
+      {
+        "workspace": "9",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "10",
+        "output_key": "iiyama corporation|pl2483h|1156383043687",
+        "output_name": "DP-1"
+      },
+      {
+        "workspace": "11",
+        "output_key": "boe|0x0a86",
+        "output_name": "eDP-1"
+      },
+      {
+        "workspace": "special:calendar",
+        "output_key": ""
+      }
+    ]
+  },
+  "exec": ""
+}
