@@ -1,7 +1,38 @@
-zed/settings.json
-zed
+{{- $isOmarchy := and (eq .chezmoi.os "linux") (eq (default "" .chezmoi.osRelease.id) "omarchy") -}}
+# Repository scaffolding that lives here but is not part of $HOME.
 bootstrap.sh
 ansible
 joplin
 README.md
 install.sh
+
+# `zed/settings.json` is deliberately kept at the repository root: the real
+# `~/.config/zed/settings.json` is a symlink into the chezmoi source directory
+# (see dot_config/zed/symlink_settings.json.tmpl), so Zed writes straight into
+# the repo. Ignoring `zed` keeps chezmoi from also creating a literal `~/zed`.
+zed
+
+# Runtime state, never configuration.
+**/*.log
+.config/herdr/session.json
+.config/herdr/release-notes.json
+
+# Nested git repositories that got swallowed when a directory was added
+# wholesale. Herdr and other tools clone into the managed tree.
+**/.git
+**/.git/**
+
+# Plugin payloads that Herdr installs and updates itself. The user-owned
+# parts (config.toml, plugins.json, .plugins.lock, plugins/config) stay.
+.config/herdr/plugins/github/**
+
+{{ if not $isOmarchy -}}
+# Omarchy / Hyprland desktop configuration, only applied on Omarchy
+# (auto-detected via /etc/os-release ID, no per-machine setup needed).
+.config/omarchy/**
+.config/hypr/**
+.config/hyprmoncfg/**
+.config/waybar/**
+.config/walker/**
+.config/swayosd/**
+{{ end -}}

@@ -1,3 +1,7 @@
+{{- $isOmarchy := and (eq .chezmoi.os "linux") (eq (default "" .chezmoi.osRelease.id) "omarchy") -}}
+{{ if $isOmarchy -}}
+# Omarchy plugin repositories. Only cloned on Omarchy, which is
+# auto-detected from /etc/os-release.
 [".config/omarchy/plugins/crmne.hyprmoncfg"]
 type = "git-repo"
 url = "https://github.com/crmne/omarchy-hyprmoncfg.git"
@@ -27,3 +31,4 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/tmn73/omarchy-calendar.git"
 refreshPeriod = "168h"
+{{ end -}}
