@@ -38,6 +38,9 @@ hl.window_rule({ match = { title = "ZenNotes Quick Capture" }, float = true })
 hl.window_rule({ match = { title = "Planify" }, float = true })
 hl.window_rule({ match = { title = "Omamail" }, float = true })
 
+-- make zen web apps fulscreen
+o.window("^zen\\.webapp-.*$", { fullscreen_state = "0 2" })
+
 -- renCal normally opens as a regular app. The toggle script alone moves it
 -- into this special workspace as a top-down calendar HUD.
 hl.workspace_rule({

@@ -1,42 +1,10 @@
 {
   "bar": {
-    "centerAnchor": "tmn73.calendar",
     "layout": {
       "center": [
         {
-          "id": "omarchy.keyboard-layout"
-        },
-        {
-          "id": "omarchy.indicators"
-        },
-        {
           "id": "tmn73.calendar",
           "format": "dddd HH:mm"
-        },
-        {
-          "id": "omarchy.weather"
-        },
-        {
-          "id": "omamail",
-          "refreshIntervalSec": 120,
-          "maxMessages": 25,
-          "heavyMessageRendering": "Show plain text first",
-          "contentDirection": "Auto",
-          "defaultQuery": "in:inbox",
-          "notifyNewMail": "On",
-          "oauthPort": 9481,
-          "undoSendSeconds": 10,
-          "unifiedCalendarView": false,
-          "showBarIcon": true,
-          "unifiedMailboxes": true,
-          "previewOnCursor": false,
-          "markReadDelaySec": 2
-        },
-        {
-          "id": "omarchy.system-update"
-        },
-        {
-          "id": "org.ren.caldir"
         }
       ],
       "left": [
@@ -52,7 +20,10 @@
           "id": "omarchy.tray"
         },
         {
-          "id": "marijn.zotero"
+          "id": "superwhisper.panel"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
         },
         {
           "id": "omarchy.tailscale"
@@ -79,10 +50,74 @@
         {
           "id": "omarchy.power"
         }
-      ]
+      ],
+      "centerBegin": [
+        {
+          "id": "omarchy.indicators"
+        }
+      ],
+      "centerEnd": [
+        {
+          "id": "omarchy.elsewhen",
+          "cities": [
+            {
+              "name": "Amsterdam",
+              "zone": "Europe/Amsterdam"
+            },
+            {
+              "name": "Delhi",
+              "zone": "Asia/Kolkata"
+            },
+            {
+              "name": "Tokyo",
+              "zone": "Asia/Tokyo"
+            },
+            {
+              "name": "Los Angeles",
+              "zone": "America/Los_Angeles"
+            },
+            {
+              "name": "New York",
+              "zone": "America/New_York"
+            }
+          ]
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "omamail",
+          "refreshIntervalSec": 120,
+          "maxMessages": 25,
+          "heavyMessageRendering": "Show plain text first",
+          "contentDirection": "Auto",
+          "appearance": "System",
+          "defaultQuery": "in:inbox",
+          "notifyNewMail": "On",
+          "oauthPort": 9481,
+          "undoSendSeconds": 10,
+          "unifiedCalendarView": true,
+          "calendarRemindersEnabled": true,
+          "calendarSnoozeMinutes": 5,
+          "showBarIcon": true,
+          "unifiedMailboxes": true,
+          "suggestEvents": true,
+          "aiAgent": "System default",
+          "aiModel": "",
+          "markReadDelaySec": 2,
+          "previewOnCursor": false
+        },
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "org.ren.caldir"
+        }
+      ],
+      "tray": []
     },
     "position": "top",
-    "transparent": true
+    "transparent": false
   },
   "idle": {
     "lock": 300,
