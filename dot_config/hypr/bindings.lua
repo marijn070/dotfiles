@@ -1,5 +1,5 @@
 -- Keep only your personal keybinding overrides here. Add new bindings or
--- unbind defaults before replacing them.
+-- use o.rebind to replace defaults.
 
 -- See current bindings and descriptions:
 --   omarchy menu keybindings --print
@@ -12,40 +12,31 @@
 -- To disable all preinstalled app/webapp bindings, set:
 --   omarchy_preinstalled_bindings = false
 
-hl.unbind("SUPER + T")
-o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
+o.rebind("SUPER + T", "Terminal", { omarchy = "terminal" })
+
+o.rebind("SUPER + CTRL + D", "hyprmoncfg" ,"omarchy-shell shell toggle crmne.hyprmoncfg")
 
 -- Keep one dedicated Herdr session in its own scratchpad.
 o.window({ initial_title = "^herdr$" }, { workspace = "special:herdr" })
-hl.unbind("SUPER + A")
-o.bind("SUPER + A", "Herdr scratchpad", os.getenv("HOME") .. "/.local/bin/herdr-scratchpad")
+o.rebind("SUPER + A", "Herdr scratchpad", os.getenv("HOME") .. "/.local/bin/herdr-scratchpad")
 
-hl.unbind("SUPER + F")
-o.bind("SUPER + F", "Yazi", { tui = "yazi" })
+o.rebind("SUPER + F", "Yazi", { tui = "yazi" })
 
 -- Calendar overlay. SUPER + SHIFT + C was previously bound to Config.
-hl.unbind("SUPER + SHIFT + C")
-o.bind("SUPER + SHIFT + C", "Calendar", os.getenv("HOME") .. "/.local/bin/rencal-toggle")
+o.rebind("SUPER + SHIFT + C", "Calendar", os.getenv("HOME") .. "/.local/bin/rencal-toggle")
 o.bind("SUPER + SHIFT + ALT + C", "Config", { launch = "edit-configs" })
 
 -- Maximize, Close
-hl.unbind("SUPER + Q")
-hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
-hl.unbind("SUPER + code:61")
-
 -- Toggle the Zotero search panel. This replaces the default zoom-in shortcut.
-hl.unbind("SUPER + CTRL + Z")
-o.bind("SUPER + CTRL + Z", "Zotero search", "omarchy-shell shell toggle marijn.zotero")
+o.rebind("SUPER + CTRL + Z", "Zotero search", "omarchy-shell shell toggle marijn.zotero")
 
 -- Toggle Omamail
-hl.unbind("SUPER + SHIFT + M")
-o.bind("SUPER + SHIFT + M", "Omamail", "omarchy shell shell toggle omamail '{}'")
+o.rebind("SUPER + SHIFT + M", "Omamail", "omarchy shell shell toggle omamail '{}'")
 
 -- Open Signal
-hl.unbind("SUPER + SHIFT + S")
-o.bind("SUPER + SHIFT + S", "Signal", { omarchy = "signal" })
+o.rebind("SUPER + SHIFT + S", "Signal", { omarchy = "signal" })
 
 
 -- Provide a dedicated key for the Keybindings overview without overwriting SUPER+K

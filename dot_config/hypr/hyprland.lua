@@ -1,5 +1,3 @@
--- Learn how to configure Hyprland: https://wiki.hypr.land/Configuring/Start/
-
 -- Omarchy's bootstrap keeps path setup out of this user config.
 dofile("/usr/share/omarchy/default/hypr/bootstrap.lua")
 
@@ -41,21 +39,6 @@ hl.window_rule({ match = { title = "Omamail" }, float = true })
 -- make zen web apps fulscreen
 o.window("^zen\\.webapp-.*$", { fullscreen_state = "0 2" })
 
--- renCal normally opens as a regular app. The toggle script alone moves it
--- into this special workspace as a top-down calendar HUD.
-hl.workspace_rule({
-  workspace = "special:calendar",
-  animation = "slidefadevert -50%",
-  no_border = true,
-  no_rounding = true,
-})
-hl.window_rule({
-  match = { workspace = "special:calendar" },
-  border_size = 0,
-  rounding = 0,
-})
-
-
 -- Load the active theme again after personal config so theme-specific styling
 -- can intentionally override shared look'n'feel settings.
 local active_theme_hyprland = os.getenv("HOME") .. "/.local/state/omarchy/current/theme/hyprland.lua"
@@ -65,10 +48,11 @@ if active_theme_file then
   dofile(active_theme_hyprland)
 end
 
--- Apply to the already-created calendar special workspace as well as future
--- ones. A negative vertical movement starts above the monitor.
-hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 2, bezier = "default", style = "slidefadevert -50%" })
-hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 4, bezier = "default", style = "slidefadevert -50%" })
+-- Present both personal special workspaces like Omarchy's built-in
+-- Quake-style Scratchpad.
+local scratchpad_console = require("hypr.scratchpad-console")
+scratchpad_console("special:herdr")
+scratchpad_console("special:calendar", 0.58)
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end
